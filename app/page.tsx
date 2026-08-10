@@ -1,7 +1,26 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import MobileNav from "@/components/MobileNav";
 import QuoteForm from "@/components/QuoteForm";
 import ProjectEstimator from "@/components/ProjectEstimator";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Web Development, AI & Mobile App Company",
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation",
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation",
+    description: SITE_DESCRIPTION,
+  },
+};
 
 const whatsapp =
   "https://wa.me/918446000784?text=Hi%20Prakhar%2C%20I%20am%20interested%20in%20your%20website%2C%20mobile%20app%20or%20AI%20development%20services.";
@@ -41,6 +60,59 @@ const services = [
   },
 ];
 
+
+const faqItems = [
+  [
+    "Can you handle design, development and deployment?",
+    "Yes. A project can include UI implementation, application development, database/API integration, hosting setup, SSL and production deployment depending on scope.",
+  ],
+  [
+    "Do I need to know the technical stack?",
+    "No. Describe the business problem, users and features. The implementation choices can be proposed from there.",
+  ],
+  [
+    "Can you work on an existing website or app?",
+    "Yes. Existing Next.js/React applications, responsive issues, integrations, feature additions and selected redesign work can be scoped separately.",
+  ],
+  [
+    "Can we start with a smaller MVP?",
+    "Yes. For uncertain ideas, starting with the smallest version that proves the workflow is usually better than building every feature at once.",
+  ],
+  [
+    "How is pricing decided?",
+    "Pricing depends on screens, workflows, integrations, backend complexity, design depth and timeline. The estimator provides a planning range; the final quote follows the scope.",
+  ],
+  [
+    "Do you provide post-launch support?",
+    "Post-launch fixes, monitoring and ongoing development can be included as a defined support period or a separate ongoing engagement.",
+  ],
+] as const;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map(([question, answer]) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
+};
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${SITE_NAME} services`,
+  itemListElement: services.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: `${SITE_URL}${service.href}`,
+    name: service.title,
+  })),
+};
+
 const reasons = [
   ["Production-focused", "Solutions are built to be deployed and used — not left as prototypes."],
   ["Mobile-first", "Responsive experiences across phones, tablets and desktop screens."],
@@ -73,6 +145,10 @@ const demos = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-slate-950 text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, servicesSchema]) }}
+      />
       <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
         <div className="relative mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#" className="flex items-center gap-3">
@@ -360,14 +436,7 @@ export default function Home() {
               <p className="mt-5 leading-8 text-slate-400">If your requirement is unusual, send it directly. The first discussion is for narrowing the scope and identifying what is actually needed.</p>
             </div>
             <div className="grid gap-3">
-              {[
-                ["Can you handle design, development and deployment?", "Yes. A project can include UI implementation, application development, database/API integration, hosting setup, SSL and production deployment depending on scope."],
-                ["Do I need to know the technical stack?", "No. Describe the business problem, users and features. The implementation choices can be proposed from there."],
-                ["Can you work on an existing website or app?", "Yes. Existing Next.js/React applications, responsive issues, integrations, feature additions and selected redesign work can be scoped separately."],
-                ["Can we start with a smaller MVP?", "Yes. For uncertain ideas, starting with the smallest version that proves the workflow is usually better than building every feature at once."],
-                ["How is pricing decided?", "Pricing depends on screens, workflows, integrations, backend complexity, design depth and timeline. The estimator provides a planning range; the final quote follows the scope."],
-                ["Do you provide post-launch support?", "Post-launch fixes, monitoring and ongoing development can be included as a defined support period or a separate ongoing engagement."],
-              ].map(([question, answer]) => (
+              {faqItems.map(([question, answer]) => (
                 <details key={question} className="group rounded-2xl border border-white/10 bg-slate-950 p-5 open:border-orange-400/25">
                   <summary className="cursor-pointer list-none pr-6 font-bold text-slate-100">{question}<span className="float-right text-orange-400 transition group-open:rotate-45">+</span></summary>
                   <p className="mt-4 border-t border-white/10 pt-4 leading-7 text-slate-400">{answer}</p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { serviceData, type ServiceSlug } from "../serviceData";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const whatsapp = "https://wa.me/918446000784?text=Hi%20Prakhar%2C%20I%20want%20to%20discuss%20a%20project%20with%20Vishwakarma%20Digital%20Labs.";
 
@@ -116,14 +117,54 @@ export function generateStaticParams() {
   return Object.keys(serviceData).map((slug) => ({ slug }));
 }
 
+const seoBySlug: Record<ServiceSlug, { title: string; description: string }> = {
+  "web-development": {
+    title: "Web Development Services | Next.js & React Websites",
+    description:
+      "Fast, responsive business websites, landing pages, e-commerce and web applications built with modern Next.js and React workflows.",
+  },
+  "mobile-app-development": {
+    title: "Mobile App Development Services | Business & Customer Apps",
+    description:
+      "Mobile app development for booking, marketplace, healthcare, education and business workflows with production-ready backend integration.",
+  },
+  "ai-development": {
+    title: "AI Application Development Services | AI Agents & RAG",
+    description:
+      "Build AI agents, copilots, RAG knowledge assistants and AI-powered applications connected to your business data, tools and APIs.",
+  },
+  "business-automation": {
+    title: "Business Automation Services | APIs, Workflows & AI",
+    description:
+      "Automate repetitive business workflows, lead routing, reporting and operations with APIs, databases, webhooks and AI-assisted processing.",
+  },
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const service = serviceData[slug as ServiceSlug];
+  const typedSlug = slug as ServiceSlug;
+  const service = serviceData[typedSlug];
   if (!service) return {};
+
+  const seo = seoBySlug[typedSlug];
+  const url = `${SITE_URL}/services/${slug}`;
+
   return {
-    title: `${service.eyebrow} Services`,
-    description: service.description,
+    title: seo.title,
+    description: seo.description,
     alternates: { canonical: `/services/${slug}` },
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+      url,
+      type: "website",
+      siteName: SITE_NAME,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.title,
+      description: seo.description,
+    },
   };
 }
 
@@ -185,8 +226,29 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const typedSlug = slug as ServiceSlug;
   const theme = themes[typedSlug];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}/services/${typedSlug}#service`,
+    name: service.eyebrow,
+    description: seoBySlug[typedSlug].description,
+    url: `${SITE_URL}/services/${typedSlug}`,
+    provider: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    areaServed: "Worldwide",
+    serviceType: service.eyebrow,
+  };
+
   return (
     <main className={`min-h-screen ${theme.page}`}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <header className={`sticky top-0 z-40 border-b backdrop-blur-xl ${theme.header}`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <Link href="/" className="flex items-center gap-3 font-black"><span className={`grid h-10 w-10 place-items-center ${theme.badge}`}>V</span><span>Vishwakarma Digital Labs</span></Link>

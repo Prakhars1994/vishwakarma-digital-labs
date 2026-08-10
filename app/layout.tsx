@@ -1,70 +1,106 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
-
-
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import "./globals.css";
+import { CONTACT, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Vishwakarma Digital Labs | Websites, Apps & AI Automation",
+    default: "Web Development, AI & Mobile App Company | Vishwakarma Digital Labs",
     template: "%s | Vishwakarma Digital Labs",
   },
-  description:
-    "Vishwakarma Digital Labs builds professional websites, mobile apps, AI-powered applications and business automation solutions.",
-  keywords: [
-    "web development",
-    "mobile app development",
-    "AI development",
-    "AI automation",
-    "Next.js developer",
-    "React developer",
-    "Vishwakarma Digital Labs",
-  ],
-  alternates: { canonical: "/" },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  category: "technology",
+  creator: "Vishwakarma Digital Labs",
+  publisher: "Vishwakarma Digital Labs",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
-    title: "Vishwakarma Digital Labs",
-    description:
-      "Websites, mobile apps, AI applications and automation — built from idea to production.",
     type: "website",
-    url: siteUrl,
-    siteName: "Vishwakarma Digital Labs",
+    locale: "en_IN",
+    siteName: SITE_NAME,
+    title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation",
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Vishwakarma Digital Labs — Websites, mobile apps, AI applications and automation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vishwakarma Digital Labs",
-    description: "Websites, mobile apps, AI applications and business automation.",
+    title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation",
+    description: SITE_DESCRIPTION,
+    images: ["/opengraph-image"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#020617",
+  colorScheme: "dark light",
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Vishwakarma Digital Labs",
-  url: siteUrl,
-  description: "Website, mobile app, AI application and business automation development services.",
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/icon.svg`,
+  description: SITE_DESCRIPTION,
   founder: { "@type": "Person", name: "Prakhar Singh" },
-  email: "prakhars389@gmail.com",
-  telephone: "+918446000784",
-  sameAs: ["https://github.com/Prakhars1994"],
-  areaServed: "Worldwide",
-  serviceType: ["Website Development", "Mobile App Development", "AI Application Development", "Business Automation"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: CONTACT.phone,
+    email: CONTACT.email,
+    contactType: "sales",
+    availableLanguage: ["English", "Hindi"],
+    areaServed: "Worldwide",
+  },
+  sameAs: [CONTACT.github],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  inLanguage: "en-IN",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html lang="en-IN" data-scroll-behavior="smooth">
       <body>
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema]) }}
         />
-
-<Analytics />
+        <Analytics />
       </body>
     </html>
   );
