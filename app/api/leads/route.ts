@@ -2,13 +2,50 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
+const allowedServices = new Set([
+  "Website Development",
+  "Mobile App Development",
+  "AI Application",
+  "Business Automation",
+  "Website / App Redesign",
+  "Other",
+]);
+
 function clean(value: unknown, max = 1000) {
   return typeof value === "string" ? value.trim().slice(0, max) : "";
 }
 
+function sameOrigin(request: Request) {
+  const origin = request.headers.get("origin");
+  if (!origin) return true;
+
+  try {
+    return new URL(origin).host === new URL(request.url).host;
+  } catch {
+    return false;
+  }
+}
+
 export async function POST(request: Request) {
   try {
+    if (!request.headers.get("content-type")?.toLowerCase().includes("application/json")) {
+      return NextResponse.json({ saved: false, error: "Unsupported content type" }, { status: 415 });
+    }
+
+    if (!sameOrigin(request)) {
+      return NextResponse.json({ saved: false, error: "Invalid origin" }, { status: 403 });
+    }
+
     const body = await request.json();
+    const honeypot = clean(body.website, 200);
+    const startedAt = Number(body.startedAt || 0);
+
+    // Silently accept obvious bot submissions so automated form fillers do not
+    // learn how the trap works, but never write them to the database.
+    if (honeypot || (startedAt > 0 && Date.now() - startedAt < 700)) {
+      return NextResponse.json({ saved: true });
+    }
+
     const name = clean(body.name, 120);
     const contact = clean(body.contact, 80);
     const service = clean(body.service, 120);
@@ -16,9 +53,17 @@ export async function POST(request: Request) {
     const timeline = clean(body.timeline, 120);
     const details = clean(body.details, 3000);
     const source = clean(body.source, 120) || "website";
+    const phoneDigits = contact.replace(/\D/g, "").length;
 
-    if (!name || !contact || !service || !details) {
-      return NextResponse.json({ saved: false, error: "Missing required fields" }, { status: 400 });
+    if (
+      !name ||
+      !contact ||
+      !allowedServices.has(service) ||
+      details.length < 10 ||
+      phoneDigits < 6 ||
+      phoneDigits > 20
+    ) {
+      return NextResponse.json({ saved: false, error: "Invalid lead details" }, { status: 400 });
     }
 
     const supabaseUrl = process.env.SUPABASE_URL;
@@ -49,6 +94,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ saved: false, error: "Database write failed" }, { status: 502 });
     }
 
+    console.info("Lead saved", { service, source });
     return NextResponse.json({ saved: true });
   } catch (error) {
     console.error("Lead API error:", error);
