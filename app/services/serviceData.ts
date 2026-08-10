@@ -1,0 +1,48 @@
+export const serviceData = {
+  "web-development": {
+    eyebrow: "Web Development",
+    icon: "🌐",
+    title: "High-converting websites built for real business goals.",
+    description: "Modern websites, landing pages, portals and e-commerce experiences that are fast, responsive, SEO-ready and easy to operate.",
+    gradient: "from-orange-500/25 via-amber-500/10 to-slate-950",
+    deliverables: ["Responsive UI across mobile, tablet and desktop", "Next.js / React implementation", "CMS or admin workflows where required", "Forms, WhatsApp, Maps and business integrations", "SEO foundations, metadata, sitemap and performance", "Vercel deployment, SSL and production setup"],
+    bestFor: ["Local businesses", "Startups", "Restaurants", "Consultants", "Professional services", "D2C brands"],
+    process: ["Discovery & references", "Wireframe / visual direction", "Development", "Content & integrations", "Testing", "Launch"],
+    demos: [{ label: "Restaurant", href: "/demos/restaurant" }, { label: "E-commerce", href: "/demos/ecommerce" }, { label: "Real estate", href: "/demos/real-estate" }],
+  },
+  "mobile-app-development": {
+    eyebrow: "Mobile App Development",
+    icon: "📱",
+    title: "Mobile products designed around customers and operations.",
+    description: "From customer-facing apps to internal business tools, we plan and build mobile experiences with clear workflows and production-ready backend integration.",
+    gradient: "from-sky-500/25 via-indigo-500/10 to-slate-950",
+    deliverables: ["Mobile-first UX and product flows", "Authentication and user profiles", "API and database integration", "Notifications and business workflows", "Admin / operations dashboard when needed", "Deployment support and release readiness"],
+    bestFor: ["Booking apps", "Marketplaces", "Service businesses", "Education", "Healthcare", "Operations teams"],
+    process: ["Product flow", "Screen architecture", "Backend / API plan", "Development", "Device testing", "Release readiness"],
+    demos: [{ label: "Clinic booking", href: "/demos/clinic" }, { label: "Home services", href: "/demos/home-services" }, { label: "Logistics", href: "/demos/logistics" }],
+  },
+  "ai-development": {
+    eyebrow: "AI Application Development",
+    icon: "🤖",
+    title: "AI features that do useful work — not just generate text.",
+    description: "AI applications, copilots, knowledge assistants and intelligent workflows connected to the data and tools your business actually uses.",
+    gradient: "from-violet-500/30 via-cyan-500/10 to-slate-950",
+    deliverables: ["LLM / AI API integration", "Structured outputs and prompt workflows", "RAG / knowledge workflows where suitable", "Tool and API calling patterns", "Guardrails, validation and fallback handling", "Usage, cost and reliability considerations"],
+    bestFor: ["Customer support", "Internal knowledge", "Content operations", "Sales teams", "Research workflows", "SaaS products"],
+    process: ["Use-case definition", "Data & tool mapping", "AI workflow design", "Prototype", "Evaluation & safeguards", "Production integration"],
+    demos: [{ label: "NOVA AI Copilot", href: "/demos/ai-assistant" }, { label: "PipelineOS CRM", href: "/demos/crm" }],
+  },
+  "business-automation": {
+    eyebrow: "Business Automation",
+    icon: "⚡",
+    title: "Connect your systems and remove repetitive manual work.",
+    description: "Custom automation for leads, operations, content, reporting, notifications and internal workflows using APIs, databases and AI where it adds value.",
+    gradient: "from-emerald-500/25 via-cyan-500/10 to-slate-950",
+    deliverables: ["Workflow and bottleneck audit", "API / webhook integrations", "Lead routing and notifications", "Database and admin workflows", "AI-assisted processing where useful", "Monitoring, error states and handoff documentation"],
+    bestFor: ["Agencies", "Sales teams", "Operations", "Content teams", "Clinics", "Logistics businesses"],
+    process: ["Workflow audit", "Automation map", "Integration plan", "Build", "Failure-path testing", "Production handoff"],
+    demos: [{ label: "Lead platform", href: "/demos/service-business" }, { label: "Logistics", href: "/demos/logistics" }, { label: "CRM", href: "/demos/crm" }],
+  },
+} as const;
+
+export type ServiceSlug = keyof typeof serviceData;
