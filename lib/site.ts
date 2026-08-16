@@ -1,5 +1,5 @@
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://vishwakarma-digital-labs.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://vdl.vliab.workers.dev"
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Vishwakarma Digital Labs";
