@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation",
+    title: "Vishwakarma Digital Labs â€” Web, Mobile, AI & Automation",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation",
+    title: "Vishwakarma Digital Labs â€” Web, Mobile, AI & Automation",
     description: SITE_DESCRIPTION,
   },
 };
@@ -27,7 +27,7 @@ const whatsapp =
 
 const services = [
   {
-    icon: "🌐",
+    icon: "ðŸŒ",
     title: "Website Development",
     href: "/services/web-development",
     description:
@@ -35,7 +35,7 @@ const services = [
     items: ["Business Websites", "E-commerce", "Landing Pages", "Portfolios"],
   },
   {
-    icon: "📱",
+    icon: "ðŸ“±",
     title: "Mobile App Development",
     href: "/services/mobile-app-development",
     description:
@@ -43,7 +43,7 @@ const services = [
     items: ["Android Apps", "iOS Apps", "Business Apps", "Custom Solutions"],
   },
   {
-    icon: "🤖",
+    icon: "ðŸ¤–",
     title: "AI Applications",
     href: "/services/ai-development",
     description:
@@ -51,7 +51,7 @@ const services = [
     items: ["AI Chatbots", "AI Web Apps", "LLM Integration", "Smart Assistants"],
   },
   {
-    icon: "⚡",
+    icon: "âš¡",
     title: "Business Automation",
     href: "/services/business-automation",
     description:
@@ -114,7 +114,7 @@ const servicesSchema = {
 };
 
 const reasons = [
-  ["Production-focused", "Solutions are built to be deployed and used — not left as prototypes."],
+  ["Production-focused", "Solutions are built to be deployed and used â€” not left as prototypes."],
   ["Mobile-first", "Responsive experiences across phones, tablets and desktop screens."],
   ["Modern stack", "Next.js, React, Supabase, PostgreSQL, APIs, GitHub and modern AI tooling."],
   ["Direct communication", "Discuss requirements directly with the developer working on your product."],
@@ -130,16 +130,16 @@ const steps = [
 ];
 
 const demos = [
-  { label:"RESTAURANT",icon:"🍽️",title:"Saffron Table",text:"Premium restaurant experience with interactive menu, reservations and tasting-list flow.",tags:["Menu","Reservations","Gallery"],href:"/demos/restaurant",card:"border-amber-300/20 bg-gradient-to-br from-[#5b2018] via-[#2d1512] to-[#153e34] rounded-[3.5rem_3.5rem_1rem_1rem]",glow:"bg-amber-300/20",labelClass:"text-amber-300",button:"border-amber-300/25 bg-amber-300/10 text-amber-200 group-hover:bg-amber-300 group-hover:text-[#2d1512]" },
-  { label:"AI AGENT",icon:"✦",title:"NOVA AI Operations Copilot",text:"Agent workspace with live chat simulation, connected tools, RAG indicators and automation safeguards.",tags:["AI Agent","RAG","Automation"],href:"/demos/ai-assistant",card:"border-violet-300/20 bg-gradient-to-br from-[#23135a] via-[#101744] to-[#073448] rounded-[2.6rem] ring-1 ring-cyan-300/10",glow:"bg-cyan-300/20",labelClass:"text-cyan-300",button:"border-cyan-300/25 bg-cyan-300/10 text-cyan-200 group-hover:bg-cyan-400 group-hover:text-slate-950" },
-  { label:"LEAD GENERATION",icon:"↗",title:"Northstar Growth Platform",text:"Conversion-first business platform with lead flow, pipeline visuals and interactive ROI calculator.",tags:["Lead Capture","CRM","Analytics"],href:"/demos/service-business",card:"border-sky-300/20 bg-gradient-to-br from-[#0c3d69] via-[#0c3850] to-[#08604f] rounded-none border-2",glow:"bg-emerald-300/20",labelClass:"text-emerald-300",button:"border-emerald-300/25 bg-emerald-300/10 text-emerald-200 group-hover:bg-emerald-300 group-hover:text-[#083c35]" },
-  { label:"HIGH-DEMAND ECOMMERCE",icon:"🛍️",title:"LumaCart D2C Store",text:"Production-style D2C store with search, product variants, wishlist, quantity cart, coupons, shipping logic and checkout.",tags:["E-commerce","Cart","D2C"],href:"/demos/ecommerce",card:"border-orange-300/20 bg-gradient-to-br from-[#7c2d12] via-[#9a3412] to-[#365314] rounded-none border-4",glow:"bg-lime-300/20",labelClass:"text-lime-300",button:"border-lime-300/25 bg-lime-300/10 text-lime-200 group-hover:bg-lime-300 group-hover:text-black" },
-  { label:"HIGH-DEMAND HEALTHCARE",icon:"🏥",title:"MediNova Clinic Portal",text:"Production-style clinic portal with specialty filters, doctor booking, visit modes, patient intake, fee summary and portal preview.",tags:["Booking","Healthcare","Portal"],href:"/demos/clinic",card:"border-teal-300/20 bg-gradient-to-br from-[#134e4a] via-[#155e75] to-[#164e63] rounded-[3rem]",glow:"bg-cyan-300/20",labelClass:"text-cyan-200",button:"border-cyan-300/25 bg-cyan-300/10 text-cyan-100 group-hover:bg-cyan-300 group-hover:text-teal-950" },
-  { label:"HIGH-VALUE REAL ESTATE",icon:"🏡",title:"Aurelia Property Portal",text:"Luxury property discovery with filters, viewing requests and an interactive mortgage estimator.",tags:["Listings","Search","Mortgage"],href:"/demos/real-estate",card:"border-yellow-200/20 bg-gradient-to-br from-[#3f3f46] via-[#18181b] to-[#713f12] rounded-none border-y-2",glow:"bg-yellow-300/20",labelClass:"text-yellow-200",button:"border-yellow-200/25 bg-yellow-200/10 text-yellow-100 group-hover:bg-yellow-200 group-hover:text-black" },
-  { label:"EDTECH / COACHING",icon:"🎓",title:"SkillForge LMS",text:"Modern learning portal with course progress, lessons, quiz interaction and live-class touchpoints.",tags:["LMS","Courses","Quiz"],href:"/demos/lms",card:"border-violet-300/20 bg-gradient-to-br from-[#4c1d95] via-[#312e81] to-[#9a3412] rounded-[3rem_0.75rem_3rem_0.75rem]",glow:"bg-yellow-300/20",labelClass:"text-yellow-200",button:"border-yellow-200/25 bg-yellow-200/10 text-yellow-100 group-hover:bg-yellow-300 group-hover:text-violet-950" },
-  { label:"B2B SAAS / CRM",icon:"📊",title:"PipelineOS CRM",text:"Production-style CRM with lead capture, forecasting, scoring, activity history, pipeline stages and AI-assisted follow-ups.",tags:["CRM","SaaS","Pipeline"],href:"/demos/crm",card:"border-indigo-300/20 bg-gradient-to-br from-[#312e81] via-[#1e3a8a] to-[#065f46] rounded-lg",glow:"bg-emerald-300/20",labelClass:"text-indigo-200",button:"border-indigo-200/25 bg-indigo-200/10 text-indigo-100 group-hover:bg-indigo-300 group-hover:text-indigo-950" },
-  { label:"LOCAL SERVICES MARKETPLACE",icon:"🧰",title:"Fixly Home Services",text:"On-demand home-services booking with instant estimates, schedule selection and provider workflow.",tags:["Marketplace","Booking","Pricing"],href:"/demos/home-services",card:"border-orange-300/20 bg-gradient-to-br from-[#1e3a5f] via-[#172554] to-[#9a3412] rounded-none border-4",glow:"bg-orange-300/20",labelClass:"text-orange-200",button:"border-orange-200/25 bg-orange-200/10 text-orange-100 group-hover:bg-orange-300 group-hover:text-slate-950" },
-  { label:"LOGISTICS / OPERATIONS",icon:"🚚",title:"RoutePilot Logistics",text:"Shipment tracking, live route progress, fleet KPIs and operations automation dashboard.",tags:["Tracking","Fleet","Dashboard"],href:"/demos/logistics",card:"border-cyan-300/20 bg-gradient-to-br from-[#083344] via-[#0c4a6e] to-[#064e3b] rounded-sm",glow:"bg-cyan-300/20",labelClass:"text-cyan-200",button:"border-cyan-200/25 bg-cyan-200/10 text-cyan-100 group-hover:bg-cyan-300 group-hover:text-slate-950" },
+  { label:"RESTAURANT",icon:"ðŸ½ï¸",title:"Saffron Table",text:"Premium restaurant experience with interactive menu, reservations and tasting-list flow.",tags:["Menu","Reservations","Gallery"],href:"/demos/restaurant",card:"border-amber-300/20 bg-gradient-to-br from-[#5b2018] via-[#2d1512] to-[#153e34] rounded-[3.5rem_3.5rem_1rem_1rem]",glow:"bg-amber-300/20",labelClass:"text-amber-300",button:"border-amber-300/25 bg-amber-300/10 text-amber-200 group-hover:bg-amber-300 group-hover:text-[#2d1512]" },
+  { label:"AI AGENT",icon:"âœ¦",title:"NOVA AI Operations Copilot",text:"Agent workspace with live chat simulation, connected tools, RAG indicators and automation safeguards.",tags:["AI Agent","RAG","Automation"],href:"/demos/ai-assistant",card:"border-violet-300/20 bg-gradient-to-br from-[#23135a] via-[#101744] to-[#073448] rounded-[2.6rem] ring-1 ring-cyan-300/10",glow:"bg-cyan-300/20",labelClass:"text-cyan-300",button:"border-cyan-300/25 bg-cyan-300/10 text-cyan-200 group-hover:bg-cyan-400 group-hover:text-slate-950" },
+  { label:"LEAD GENERATION",icon:"â†—",title:"Northstar Growth Platform",text:"Conversion-first business platform with lead flow, pipeline visuals and interactive ROI calculator.",tags:["Lead Capture","CRM","Analytics"],href:"/demos/service-business",card:"border-sky-300/20 bg-gradient-to-br from-[#0c3d69] via-[#0c3850] to-[#08604f] rounded-none border-2",glow:"bg-emerald-300/20",labelClass:"text-emerald-300",button:"border-emerald-300/25 bg-emerald-300/10 text-emerald-200 group-hover:bg-emerald-300 group-hover:text-[#083c35]" },
+  { label:"HIGH-DEMAND ECOMMERCE",icon:"ðŸ›ï¸",title:"LumaCart D2C Store",text:"Production-style D2C store with search, product variants, wishlist, quantity cart, coupons, shipping logic and checkout.",tags:["E-commerce","Cart","D2C"],href:"/demos/ecommerce",card:"border-orange-300/20 bg-gradient-to-br from-[#7c2d12] via-[#9a3412] to-[#365314] rounded-none border-4",glow:"bg-lime-300/20",labelClass:"text-lime-300",button:"border-lime-300/25 bg-lime-300/10 text-lime-200 group-hover:bg-lime-300 group-hover:text-black" },
+  { label:"HIGH-DEMAND HEALTHCARE",icon:"ðŸ¥",title:"MediNova Clinic Portal",text:"Production-style clinic portal with specialty filters, doctor booking, visit modes, patient intake, fee summary and portal preview.",tags:["Booking","Healthcare","Portal"],href:"/demos/clinic",card:"border-teal-300/20 bg-gradient-to-br from-[#134e4a] via-[#155e75] to-[#164e63] rounded-[3rem]",glow:"bg-cyan-300/20",labelClass:"text-cyan-200",button:"border-cyan-300/25 bg-cyan-300/10 text-cyan-100 group-hover:bg-cyan-300 group-hover:text-teal-950" },
+  { label:"HIGH-VALUE REAL ESTATE",icon:"ðŸ¡",title:"Aurelia Property Portal",text:"Luxury property discovery with filters, viewing requests and an interactive mortgage estimator.",tags:["Listings","Search","Mortgage"],href:"/demos/real-estate",card:"border-yellow-200/20 bg-gradient-to-br from-[#3f3f46] via-[#18181b] to-[#713f12] rounded-none border-y-2",glow:"bg-yellow-300/20",labelClass:"text-yellow-200",button:"border-yellow-200/25 bg-yellow-200/10 text-yellow-100 group-hover:bg-yellow-200 group-hover:text-black" },
+  { label:"EDTECH / COACHING",icon:"ðŸŽ“",title:"SkillForge LMS",text:"Modern learning portal with course progress, lessons, quiz interaction and live-class touchpoints.",tags:["LMS","Courses","Quiz"],href:"/demos/lms",card:"border-violet-300/20 bg-gradient-to-br from-[#4c1d95] via-[#312e81] to-[#9a3412] rounded-[3rem_0.75rem_3rem_0.75rem]",glow:"bg-yellow-300/20",labelClass:"text-yellow-200",button:"border-yellow-200/25 bg-yellow-200/10 text-yellow-100 group-hover:bg-yellow-300 group-hover:text-violet-950" },
+  { label:"B2B SAAS / CRM",icon:"ðŸ“Š",title:"PipelineOS CRM",text:"Production-style CRM with lead capture, forecasting, scoring, activity history, pipeline stages and AI-assisted follow-ups.",tags:["CRM","SaaS","Pipeline"],href:"/demos/crm",card:"border-indigo-300/20 bg-gradient-to-br from-[#312e81] via-[#1e3a8a] to-[#065f46] rounded-lg",glow:"bg-emerald-300/20",labelClass:"text-indigo-200",button:"border-indigo-200/25 bg-indigo-200/10 text-indigo-100 group-hover:bg-indigo-300 group-hover:text-indigo-950" },
+  { label:"LOCAL SERVICES MARKETPLACE",icon:"ðŸ§°",title:"Fixly Home Services",text:"On-demand home-services booking with instant estimates, schedule selection and provider workflow.",tags:["Marketplace","Booking","Pricing"],href:"/demos/home-services",card:"border-orange-300/20 bg-gradient-to-br from-[#1e3a5f] via-[#172554] to-[#9a3412] rounded-none border-4",glow:"bg-orange-300/20",labelClass:"text-orange-200",button:"border-orange-200/25 bg-orange-200/10 text-orange-100 group-hover:bg-orange-300 group-hover:text-slate-950" },
+  { label:"LOGISTICS / OPERATIONS",icon:"ðŸšš",title:"RoutePilot Logistics",text:"Shipment tracking, live route progress, fleet KPIs and operations automation dashboard.",tags:["Tracking","Fleet","Dashboard"],href:"/demos/logistics",card:"border-cyan-300/20 bg-gradient-to-br from-[#083344] via-[#0c4a6e] to-[#064e3b] rounded-sm",glow:"bg-cyan-300/20",labelClass:"text-cyan-200",button:"border-cyan-200/25 bg-cyan-200/10 text-cyan-100 group-hover:bg-cyan-300 group-hover:text-slate-950" },
 ];
 
 export default function Home() {
@@ -157,7 +157,7 @@ export default function Home() {
             </div>
             <div>
               <div className="font-bold tracking-tight">Vishwakarma Digital Labs</div>
-              <div className="text-xs text-slate-400">Build • Automate • Grow</div>
+              <div className="text-xs text-slate-400">Build â€¢ Automate â€¢ Grow</div>
             </div>
           </a>
 
@@ -165,6 +165,7 @@ export default function Home() {
             <a href="#services" className="transition hover:text-white">Services</a>
             <a href="#work" className="transition hover:text-white">Our Work</a>
             <a href="#estimator" className="transition hover:text-white">Estimator</a>
+            <a href="/pricing" className="transition hover:text-white">Pricing</a>
             <a href="#process" className="transition hover:text-white">Process</a>
             <a href="#about" className="transition hover:text-white">About</a>
             <a href="#contact" className="transition hover:text-white">Contact</a>
@@ -184,7 +185,7 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 py-24 lg:grid-cols-2 lg:px-8 lg:py-32">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-400/10 px-4 py-2 text-sm text-orange-300">
-              <span className="text-emerald-400">●</span> Taking new projects
+              <span className="text-emerald-400">â—</span> Taking new projects
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
@@ -195,22 +196,23 @@ export default function Home() {
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-              Professional websites, mobile apps, AI-powered applications and automation solutions — from idea to production.
+              Professional websites, mobile apps, AI-powered applications and automation solutions â€” from idea to production.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a href={whatsapp} target="_blank" rel="noreferrer" className="rounded-xl bg-orange-500 px-7 py-4 text-center font-bold shadow-xl shadow-orange-500/20 transition hover:-translate-y-1 hover:bg-orange-400">
-                💬 Get a Free Quote
+                ðŸ’¬ Get a Free Quote
               </a>
               <a href="#work" className="rounded-xl border border-white/15 bg-white/5 px-7 py-4 text-center font-semibold transition hover:bg-white/10">
-                View Our Work →
+                View Our Work â†’
               </a>
             </div>
 
             <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm text-slate-400">
-              <span>✓ Free initial consultation</span>
-              <span>✓ Fixed-price options</span>
-              <span>✓ Complete deployment</span>
+              <span>âœ“ Free initial consultation</span>
+              <span>âœ“ Fixed-price options</span>
+              <span>âœ“ Complete deployment</span>
+              <span>Websites from &#8377;19,999</span>
             </div>
           </div>
 
@@ -230,11 +232,11 @@ export default function Home() {
                     <div className="text-xs uppercase tracking-[0.3em] text-orange-400">Digital Solutions</div>
                     <div className="mt-2 text-2xl font-bold">From idea to launch.</div>
                   </div>
-                  <div className="rounded-xl bg-orange-500/15 p-4 text-2xl">⚡</div>
+                  <div className="rounded-xl bg-orange-500/15 p-4 text-2xl">âš¡</div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
-                  {[["🌐", "Websites"], ["📱", "Mobile Apps"], ["🤖", "AI Apps"], ["⚙️", "Automation"]].map(([icon, title]) => (
+                  {[["ðŸŒ", "Websites"], ["ðŸ“±", "Mobile Apps"], ["ðŸ¤–", "AI Apps"], ["âš™ï¸", "Automation"]].map(([icon, title]) => (
                     <div key={title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                       <div className="text-2xl">{icon}</div>
                       <div className="mt-3 font-semibold">{title}</div>
@@ -244,7 +246,7 @@ export default function Home() {
 
                 <div className="mt-4 rounded-xl border border-emerald-400/20 bg-emerald-400/10 p-4">
                   <div className="text-xs uppercase tracking-wider text-emerald-400">Production</div>
-                  <div className="mt-1 font-semibold">Built • Tested • Deployed</div>
+                  <div className="mt-1 font-semibold">Built â€¢ Tested â€¢ Deployed</div>
                 </div>
               </div>
             </div>
@@ -274,7 +276,7 @@ export default function Home() {
               <div className="mt-6 flex flex-wrap gap-2">
                 {service.items.map((item) => <span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300">{item}</span>)}
               </div>
-              <div className="mt-7 font-bold text-orange-300">Explore service →</div>
+              <div className="mt-7 font-bold text-orange-300">Explore service â†’</div>
             </Link>
           ))}
         </div>
@@ -289,9 +291,9 @@ export default function Home() {
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {[
-              ["01", "Fixed-scope project", "Best when requirements are clear. Agree deliverables, timeline and price before development starts.", "Websites • Landing pages • Defined features"],
-              ["02", "MVP sprint", "Best for a new idea that needs a working first version quickly before investing in a larger build.", "Startups • AI concepts • Internal tools"],
-              ["03", "Ongoing development", "Best when features evolve continuously and you need regular improvements, integrations or support.", "SaaS • Automation • Product teams"],
+              ["01", "Fixed-scope project", "Best when requirements are clear. Agree deliverables, timeline and price before development starts.", "Websites â€¢ Landing pages â€¢ Defined features"],
+              ["02", "MVP sprint", "Best for a new idea that needs a working first version quickly before investing in a larger build.", "Startups â€¢ AI concepts â€¢ Internal tools"],
+              ["03", "Ongoing development", "Best when features evolve continuously and you need regular improvements, integrations or support.", "SaaS â€¢ Automation â€¢ Product teams"],
             ].map(([number, title, text, fit]) => (
               <article key={number} className="rounded-3xl border border-white/10 bg-slate-950 p-7">
                 <div className="text-3xl font-black text-orange-500/40">{number}</div>
@@ -326,7 +328,7 @@ export default function Home() {
               <div className="font-semibold uppercase tracking-[0.25em] text-orange-400">Featured Work</div>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Real production experience, presented clearly.</h2>
             </div>
-            <a href="https://github.com/Prakhars1994" target="_blank" rel="noreferrer" className="text-sm font-semibold text-orange-400 hover:text-orange-300">View GitHub →</a>
+            <a href="https://github.com/Prakhars1994" target="_blank" rel="noreferrer" className="text-sm font-semibold text-orange-400 hover:text-orange-300">View GitHub â†’</a>
           </div>
 
           <div className="mt-14 overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900">
@@ -339,7 +341,8 @@ export default function Home() {
                   {['Next.js', 'React', 'Supabase', 'PostgreSQL', 'AI APIs', 'Automation', 'Vercel'].map((tech) => <span key={tech} className="rounded-lg bg-white/5 px-3 py-2 text-sm text-slate-300">{tech}</span>)}
                 </div>
                 <div className="mt-9 flex flex-wrap gap-4">
-                  <a href="https://currentpulse-ai.vercel.app" target="_blank" rel="noreferrer" className="rounded-xl bg-white px-6 py-3 font-bold text-slate-950 transition hover:bg-orange-400">View Live Project ↗</a>
+                  <a href="https://cp.vishwakarma-labs.workers.dev/" target="_blank" rel="noreferrer" className="rounded-xl bg-white px-6 py-3 font-bold text-slate-950 transition hover:bg-orange-400">View Live Project â†—</a>
+                  <Link href="/case-studies/currentpulse-ai" className="rounded-xl border border-orange-400/30 bg-orange-400/10 px-6 py-3 font-semibold text-orange-200 transition hover:bg-orange-400 hover:text-slate-950">Read case study</Link>
                   <a href="https://github.com/Prakhars1994" target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 px-6 py-3 font-semibold transition hover:bg-white/10">GitHub</a>
                 </div>
               </div>
@@ -350,7 +353,7 @@ export default function Home() {
                   <div className="mb-5 flex gap-2"><span className="h-2.5 w-2.5 rounded-full bg-red-400" /><span className="h-2.5 w-2.5 rounded-full bg-yellow-400" /><span className="h-2.5 w-2.5 rounded-full bg-green-400" /></div>
                   <div className="rounded-xl bg-white/5 p-5"><div className="text-xs text-orange-400">CURRENT PULSE AI</div><div className="mt-2 text-xl font-bold">AI-Powered Publishing Platform</div></div>
                   <div className="mt-4 grid grid-cols-2 gap-3">
-                    {['AI Processing', 'Automation', 'Admin System', 'Database', 'Search', 'SEO'].map((item) => <div key={item} className="rounded-xl border border-white/10 bg-white/[0.035] p-4 text-sm text-slate-300">✓ {item}</div>)}
+                    {['AI Processing', 'Automation', 'Admin System', 'Database', 'Search', 'SEO'].map((item) => <div key={item} className="rounded-xl border border-white/10 bg-white/[0.035] p-4 text-sm text-slate-300">âœ“ {item}</div>)}
                   </div>
                 </div>
               </div>
@@ -387,7 +390,7 @@ export default function Home() {
                 </div>
                 <div className={`relative mt-auto flex items-center justify-between rounded-xl border px-4 py-3 text-sm font-black transition ${demo.button}`}>
                   <span>Launch full demo</span>
-                  <span className="text-lg transition group-hover:translate-x-1">→</span>
+                  <span className="text-lg transition group-hover:translate-x-1">â†’</span>
                 </div>
               </Link>
             ))}
@@ -470,20 +473,20 @@ export default function Home() {
             <div className="text-sm font-semibold uppercase tracking-[0.25em] text-orange-300">Have a project in mind?</div>
             <h2 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl">Let&apos;s turn your idea into a working product.</h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">Tell us what you need. We&apos;ll discuss your requirements and recommend a practical solution.</p>
-            <a href={whatsapp} target="_blank" rel="noreferrer" className="mt-9 inline-block rounded-xl bg-orange-500 px-8 py-4 font-bold shadow-xl shadow-orange-500/20 transition hover:-translate-y-1 hover:bg-orange-400">💬 Discuss Your Project on WhatsApp</a>
-            <div className="mt-6 text-sm text-slate-400">Free initial discussion • No obligation</div>
+            <a href={whatsapp} target="_blank" rel="noreferrer" className="mt-9 inline-block rounded-xl bg-orange-500 px-8 py-4 font-bold shadow-xl shadow-orange-500/20 transition hover:-translate-y-1 hover:bg-orange-400">ðŸ’¬ Discuss Your Project on WhatsApp</a>
+            <div className="mt-6 text-sm text-slate-400">Free initial discussion â€¢ No obligation</div>
           </div>
         </div>
       </section>
 
       <footer className="border-t border-white/10 bg-black/20">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-5 py-9 text-sm text-slate-500 sm:flex-row sm:items-center lg:px-8">
-          <div><div className="font-bold text-slate-200">Vishwakarma Digital Labs</div><div className="mt-1">© 2026. All rights reserved.</div></div>
-          <div className="flex flex-wrap gap-5"><a href="#services" className="hover:text-white">Services</a><a href="#work" className="hover:text-white">Work</a><a href="#contact" className="hover:text-white">Contact</a><a href="https://github.com/Prakhars1994" target="_blank" rel="noreferrer" className="hover:text-white">GitHub</a></div>
+          <div><div className="font-bold text-slate-200">Vishwakarma Digital Labs</div><div className="mt-1">Â© 2026. All rights reserved.</div></div>
+          <div className="flex flex-wrap gap-5"><a href="#services" className="hover:text-white">Services</a><a href="#work" className="hover:text-white">Work</a><a href="/pricing" className="hover:text-white">Pricing</a><a href="/about" className="hover:text-white">About</a><a href="/contact" className="hover:text-white">Contact</a><a href="/privacy" className="hover:text-white">Privacy</a><a href="/terms" className="hover:text-white">Terms</a><a href="https://github.com/Prakhars1994" target="_blank" rel="noreferrer" className="hover:text-white">GitHub</a></div>
         </div>
       </footer>
 
-      <a href={whatsapp} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp" className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-emerald-500 text-2xl shadow-2xl transition hover:scale-110">💬</a>
+      <a href={whatsapp} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp" className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-emerald-500 text-2xl shadow-2xl transition hover:scale-110">ðŸ’¬</a>
     </main>
   );
 }

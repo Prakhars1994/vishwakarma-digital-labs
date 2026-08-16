@@ -26,6 +26,8 @@ export default function MobileNav() {
               ["Services", "#services"],
               ["Work", "#work"],
               ["Estimator", "#estimator"],
+              ["Pricing", "/pricing"],
+              ["Case Study", "/case-studies/currentpulse-ai"],
               ["Process", "#process"],
               ["About", "#about"],
               ["Contact", "#contact"],

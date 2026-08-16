@@ -47,7 +47,7 @@ export default function QuoteForm() {
 
     const source = leadSource();
     const message = [
-      "NEW PROJECT ENQUIRY — Vishwakarma Digital Labs",
+      "NEW PROJECT ENQUIRY â€” Vishwakarma Digital Labs",
       "",
       `Name: ${name}`,
       `Contact: ${countryCode} ${normalizedContact}`,
@@ -127,10 +127,10 @@ export default function QuoteForm() {
           <span className="mb-2 block text-sm font-medium text-slate-300">Approx. budget</span>
           <select value={budget} onChange={(event) => setBudget(event.target.value)} className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none focus:border-orange-400/60">
             <option>Not sure yet</option>
-            <option>Under ₹25,000</option>
-            <option>₹25,000 – ₹50,000</option>
-            <option>₹50,000 – ₹1,00,000</option>
-            <option>₹1,00,000+</option>
+            <option>Under â‚¹25,000</option>
+            <option>â‚¹25,000 â€“ â‚¹50,000</option>
+            <option>â‚¹50,000 â€“ â‚¹1,00,000</option>
+            <option>â‚¹1,00,000+</option>
             <option>Need hourly pricing</option>
           </select>
         </label>
@@ -138,9 +138,9 @@ export default function QuoteForm() {
           <span className="mb-2 block text-sm font-medium text-slate-300">Target timeline</span>
           <select value={timeline} onChange={(event) => setTimeline(event.target.value)} className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none focus:border-orange-400/60">
             <option>As soon as possible</option>
-            <option>1–2 weeks</option>
-            <option>2–4 weeks</option>
-            <option>1–3 months</option>
+            <option>1â€“2 weeks</option>
+            <option>2â€“4 weeks</option>
+            <option>1â€“3 months</option>
             <option>Just exploring</option>
           </select>
         </label>
@@ -152,11 +152,11 @@ export default function QuoteForm() {
       </label>
 
       <button type="submit" className="mt-6 w-full rounded-xl bg-orange-500 px-6 py-4 font-bold text-white transition hover:bg-orange-400">
-        Send Requirements on WhatsApp →
+        Send Requirements on WhatsApp â†’
       </button>
 
       <p className="mt-3 text-center text-xs leading-5 text-slate-500">
-        Your details are placed into a WhatsApp message addressed to Vishwakarma Digital Labs. The phone number you enter remains your contact number.
+        Your details prepare a WhatsApp enquiry and may also be stored for project follow-up when lead capture is configured. <a href="/privacy" className="text-orange-300 hover:text-orange-200">Privacy policy</a>.
       </p>
     </form>
   );

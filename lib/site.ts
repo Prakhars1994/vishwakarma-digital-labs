@@ -5,7 +5,7 @@ export const SITE_URL = (
 export const SITE_NAME = "Vishwakarma Digital Labs";
 
 export const SITE_DESCRIPTION =
-  "Vishwakarma Digital Labs builds fast websites, mobile apps, AI applications and business automation for startups, local businesses and growing teams in India and worldwide.";
+  "Vishwakarma Digital Labs builds conversion-focused business websites, Next.js web apps, mobile products, AI applications and workflow automation for startups and growing businesses in India and worldwide.";
 
 export const CONTACT = {
   phone: "+918446000784",
