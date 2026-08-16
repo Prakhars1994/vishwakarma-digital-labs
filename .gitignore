@@ -23,16 +23,18 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# env files
+# environment files
 .env*
+!.env.example
 
-# vercel
+# legacy deployment metadata (never commit local state)
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
+# Cloudflare/OpenNext generated output
 /.open-next/
 /.wrangler/
 .dev.vars

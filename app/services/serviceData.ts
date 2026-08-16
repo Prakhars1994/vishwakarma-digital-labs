@@ -5,7 +5,7 @@ export const serviceData = {
     title: "High-converting websites built for real business goals.",
     description: "Modern websites, landing pages, portals and e-commerce experiences that are fast, responsive, SEO-ready and easy to operate.",
     gradient: "from-orange-500/25 via-amber-500/10 to-slate-950",
-    deliverables: ["Responsive UI across mobile, tablet and desktop", "Next.js / React implementation", "CMS or admin workflows where required", "Forms, WhatsApp, Maps and business integrations", "SEO foundations, metadata, sitemap and performance", "Vercel deployment, SSL and production setup"],
+    deliverables: ["Responsive UI across mobile, tablet and desktop", "Next.js / React implementation", "CMS or admin workflows where required", "Forms, WhatsApp, Maps and business integrations", "SEO foundations, metadata, sitemap and performance", "Production deployment, SSL and hosting setup"],
     bestFor: ["Local businesses", "Startups", "Restaurants", "Consultants", "Professional services", "D2C brands"],
     process: ["Discovery & references", "Wireframe / visual direction", "Development", "Content & integrations", "Testing", "Launch"],
     demos: [{ label: "Restaurant", href: "/demos/restaurant" }, { label: "E-commerce", href: "/demos/ecommerce" }, { label: "Real estate", href: "/demos/real-estate" }],

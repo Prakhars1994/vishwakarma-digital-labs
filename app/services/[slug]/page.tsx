@@ -243,11 +243,21 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     serviceType: service.eyebrow,
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}/#services` },
+      { "@type": "ListItem", position: 3, name: service.eyebrow, item: `${SITE_URL}/services/${typedSlug}` },
+    ],
+  };
+
   return (
     <main className={`min-h-screen ${theme.page}`}>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, breadcrumbSchema]) }}
       />
       <header className={`sticky top-0 z-40 border-b backdrop-blur-xl ${theme.header}`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
@@ -291,7 +301,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
-        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><div className={`text-xs font-black uppercase tracking-[0.22em] ${theme.sectionEyebrow}`}>Relevant demos</div><h2 className="mt-3 text-3xl font-black">See the product thinking in action.</h2></div><Link href="/#work" className={`text-sm font-bold ${theme.demoAction}`}>View all portfolio demos →</Link></div>
+        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><div className={`text-xs font-black uppercase tracking-[0.22em] ${theme.sectionEyebrow}`}>Relevant demos</div><h2 className="mt-3 text-3xl font-black">See the product thinking in action.</h2></div><Link href="/work" className={`text-sm font-bold ${theme.demoAction}`}>View all portfolio demos →</Link></div>
         <div className="mt-8 grid gap-4 md:grid-cols-3">{service.demos.map((demo) => <Link key={demo.href} href={demo.href} className={`group p-6 transition hover:-translate-y-1 ${theme.demoCard}`}><div className={`text-sm ${theme.demoMeta}`}>Interactive demo</div><div className="mt-2 text-xl font-black">{demo.label}</div><div className={`mt-6 font-bold ${theme.demoAction}`}>Open demo <span className="transition group-hover:translate-x-1">→</span></div></Link>)}</div>
       </section>
 

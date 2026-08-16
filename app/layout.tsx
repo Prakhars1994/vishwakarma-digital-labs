@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 import "./globals.css";
-import { CONTACT, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { CONTACT, OWNER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   category: "technology",
-  creator: "Vishwakarma Digital Labs",
-  publisher: "Vishwakarma Digital Labs",
+  creator: OWNER.name,
+  publisher: SITE_NAME,
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
@@ -60,6 +60,16 @@ export const viewport: Viewport = {
   colorScheme: "dark light",
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${SITE_URL}/#founder`,
+  name: OWNER.name,
+  jobTitle: OWNER.role,
+  url: `${SITE_URL}/about`,
+  sameAs: [CONTACT.github],
+};
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -68,7 +78,7 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/icon.svg`,
   description: SITE_DESCRIPTION,
-  founder: { "@type": "Person", name: "Prakhar Singh" },
+  founder: { "@id": `${SITE_URL}/#founder` },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: CONTACT.phone,
@@ -91,16 +101,26 @@ const websiteSchema = {
   inLanguage: "en-IN",
 };
 
+const cloudflareAnalyticsToken = process.env.NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN || "";
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-IN" data-scroll-behavior="smooth">
       <body>
+        <a className="skip-link" href="#main-content">Skip to main content</a>
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema]) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([personSchema, organizationSchema, websiteSchema]) }}
         />
-        <Analytics />
+        {cloudflareAnalyticsToken ? (
+          <Script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: cloudflareAnalyticsToken })}
+            strategy="afterInteractive"
+          />
+        ) : null}
       </body>
     </html>
   );

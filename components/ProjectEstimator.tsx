@@ -3,14 +3,14 @@
 import { useMemo, useState } from "react";
 
 type ProductKey = "website" | "ecommerce" | "mobile" | "ai" | "automation";
-type CurrencyKey = "INR" | "USD";
+type MarketKey = "india" | "international";
 
-const products: Record<ProductKey, { label: string; short: string; inr: [number, number]; usd: [number, number] }> = {
-  website: { label: "Business website", short: "WEB", inr: [18000, 45000], usd: [450, 1100] },
-  ecommerce: { label: "E-commerce platform", short: "SHOP", inr: [45000, 110000], usd: [1100, 2800] },
-  mobile: { label: "Mobile app", short: "APP", inr: [65000, 180000], usd: [1600, 4500] },
-  ai: { label: "AI application / agent", short: "AI", inr: [55000, 160000], usd: [1400, 4000] },
-  automation: { label: "Business automation", short: "AUTO", inr: [30000, 90000], usd: [750, 2250] },
+const products: Record<ProductKey, { label: string; short: string; india: [number, number]; international: [number, number] }> = {
+  website: { label: "Business website", short: "WEB", india: [18000, 45000], international: [450, 1100] },
+  ecommerce: { label: "E-commerce platform", short: "SHOP", india: [45000, 110000], international: [1100, 2800] },
+  mobile: { label: "Mobile app", short: "APP", india: [65000, 180000], international: [1600, 4500] },
+  ai: { label: "AI application / agent", short: "AI", india: [55000, 160000], international: [1400, 4000] },
+  automation: { label: "Business automation", short: "AUTO", india: [30000, 90000], international: [750, 2250] },
 };
 
 const featureOptions = [
@@ -22,45 +22,64 @@ const featureOptions = [
   { id: "realtime", label: "Real-time features", factor: 0.16 },
 ];
 
-function formatMoney(value: number, currency: CurrencyKey) {
-  return currency === "INR"
+function formatMoney(value: number, market: MarketKey) {
+  return market === "india"
     ? `₹${Math.round(value).toLocaleString("en-IN")}`
     : `$${Math.round(value).toLocaleString("en-US")}`;
 }
 
 export default function ProjectEstimator() {
   const [product, setProduct] = useState<ProductKey>("website");
-  const [currency, setCurrency] = useState<CurrencyKey>("INR");
+  const [market, setMarket] = useState<MarketKey>("india");
   const [complexity, setComplexity] = useState("standard");
   const [timeline, setTimeline] = useState("normal");
   const [features, setFeatures] = useState<string[]>([]);
 
   const estimate = useMemo(() => {
-    const base = products[product][currency === "INR" ? "inr" : "usd"];
+    const base = products[product][market];
     const complexityFactor = complexity === "simple" ? 0.82 : complexity === "advanced" ? 1.38 : 1;
     const timelineFactor = timeline === "urgent" ? 1.18 : timeline === "flexible" ? 0.95 : 1;
-    const featureFactor = 1 + featureOptions
-      .filter((item) => features.includes(item.id))
-      .reduce((sum, item) => sum + item.factor, 0);
+    const featureFactor =
+      1 +
+      featureOptions
+        .filter((item) => features.includes(item.id))
+        .reduce((sum, item) => sum + item.factor, 0);
 
-    return [base[0] * complexityFactor * timelineFactor * featureFactor, base[1] * complexityFactor * timelineFactor * featureFactor] as const;
-  }, [product, currency, complexity, timeline, features]);
+    return [
+      base[0] * complexityFactor * timelineFactor * featureFactor,
+      base[1] * complexityFactor * timelineFactor * featureFactor,
+    ] as const;
+  }, [product, market, complexity, timeline, features]);
 
   const toggleFeature = (id: string) => {
-    setFeatures((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
+    setFeatures((current) =>
+      current.includes(id) ? current.filter((item) => item !== id) : [...current, id],
+    );
   };
 
-  const whatsappMessage = encodeURIComponent([
-    "Hi Prakhar, I used the project estimator on Vishwakarma Digital Labs.",
-    "",
-    `Project: ${products[product].label}`,
-    `Complexity: ${complexity}`,
-    `Timeline: ${timeline}`,
-    `Features: ${features.length ? featureOptions.filter((item) => features.includes(item.id)).map((item) => item.label).join(", ") : "No extra features selected"}`,
-    `Estimated range: ${formatMoney(estimate[0], currency)} – ${formatMoney(estimate[1], currency)}`,
-    "",
-    "Please give me a final quote.",
-  ].join("\n"));
+  const marketLabel = market === "india" ? "India pricing" : "International pricing";
+
+  const whatsappMessage = encodeURIComponent(
+    [
+      "Hi Prakhar, I used the project estimator on Vishwakarma Digital Labs.",
+      "",
+      `Project: ${products[product].label}`,
+      `Pricing market: ${marketLabel}`,
+      `Complexity: ${complexity}`,
+      `Timeline: ${timeline}`,
+      `Features: ${
+        features.length
+          ? featureOptions
+              .filter((item) => features.includes(item.id))
+              .map((item) => item.label)
+              .join(", ")
+          : "No extra features selected"
+      }`,
+      `Estimated range: ${formatMoney(estimate[0], market)} – ${formatMoney(estimate[1], market)}`,
+      "",
+      "Please give me a final quote.",
+    ].join("\n"),
+  );
 
   return (
     <div className="overflow-hidden border-2 border-blue-950 bg-[#f4f7ff] text-blue-950 shadow-[12px_12px_0_#172554]">
@@ -101,10 +120,23 @@ export default function ProjectEstimator() {
             </label>
 
             <div>
-              <span className="mb-2 block font-mono text-xs font-black uppercase tracking-wider">Currency</span>
-              <div className="grid grid-cols-2 border-2 border-blue-950 bg-white p-1">
-                {(["INR", "USD"] as CurrencyKey[]).map((item) => (
-                  <button key={item} type="button" onClick={() => setCurrency(item)} className={`px-4 py-2.5 text-sm font-black transition ${currency === item ? "bg-blue-950 text-white" : "text-blue-950 hover:bg-blue-100"}`}>{item}</button>
+              <span className="mb-2 block font-mono text-xs font-black uppercase tracking-wider">Pricing market</span>
+              <div className="grid grid-cols-2 border-2 border-blue-950 bg-white p-1" aria-label="Pricing market">
+                {([
+                  ["india", "India"],
+                  ["international", "International"],
+                ] as const).map(([key, label]) => (
+                  <button
+                    key={key}
+                    type="button"
+                    onClick={() => setMarket(key)}
+                    aria-pressed={market === key}
+                    className={`px-3 py-2.5 text-sm font-black transition ${
+                      market === key ? "bg-blue-950 text-white" : "text-blue-950 hover:bg-blue-100"
+                    }`}
+                  >
+                    {label}
+                  </button>
                 ))}
               </div>
             </div>
@@ -116,8 +148,17 @@ export default function ProjectEstimator() {
               {featureOptions.map((item) => {
                 const active = features.includes(item.id);
                 return (
-                  <button key={item.id} type="button" onClick={() => toggleFeature(item.id)} className={`flex items-center justify-between border-2 px-4 py-3 text-left text-sm font-bold transition ${active ? "border-blue-950 bg-[#d8ff3e]" : "border-blue-200 bg-white hover:border-blue-950"}`}>
-                    <span>{item.label}</span><span className="font-mono">{active ? "[x]" : "[ ]"}</span>
+                  <button
+                    key={item.id}
+                    type="button"
+                    aria-pressed={active}
+                    onClick={() => toggleFeature(item.id)}
+                    className={`flex items-center justify-between border-2 px-4 py-3 text-left text-sm font-bold transition ${
+                      active ? "border-blue-950 bg-[#d8ff3e]" : "border-blue-200 bg-white hover:border-blue-950"
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                    <span className="font-mono" aria-hidden="true">{active ? "[x]" : "[ ]"}</span>
                   </button>
                 );
               })}
@@ -137,18 +178,21 @@ export default function ProjectEstimator() {
 
             <div className="mt-10 border-y border-white/20 py-8">
               <div className="font-mono text-xs uppercase tracking-widest text-blue-200">Indicative project range</div>
-              <div className="mt-4 text-4xl font-black sm:text-5xl">{formatMoney(estimate[0], currency)}</div>
-              <div className="mt-2 text-2xl font-black text-cyan-300">→ {formatMoney(estimate[1], currency)}</div>
+              <div className="mt-2 text-sm font-semibold text-cyan-200">{marketLabel}</div>
+              <div className="mt-4 text-4xl font-black sm:text-5xl">{formatMoney(estimate[0], market)}</div>
+              <div className="mt-2 text-2xl font-black text-cyan-300">→ {formatMoney(estimate[1], market)}</div>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-px bg-white/20">
               <div className="bg-blue-950 p-4"><div className="font-mono text-[10px] uppercase text-blue-300">Complexity</div><div className="mt-1 font-bold capitalize">{complexity}</div></div>
               <div className="bg-blue-950 p-4"><div className="font-mono text-[10px] uppercase text-blue-300">Timeline</div><div className="mt-1 font-bold capitalize">{timeline}</div></div>
               <div className="bg-blue-950 p-4"><div className="font-mono text-[10px] uppercase text-blue-300">Modules</div><div className="mt-1 font-bold">{features.length}</div></div>
-              <div className="bg-blue-950 p-4"><div className="font-mono text-[10px] uppercase text-blue-300">Currency</div><div className="mt-1 font-bold">{currency}</div></div>
+              <div className="bg-blue-950 p-4"><div className="font-mono text-[10px] uppercase text-blue-300">Market</div><div className="mt-1 font-bold">{market === "india" ? "India" : "International"}</div></div>
             </div>
 
-            <p className="mt-7 text-sm leading-6 text-blue-200">Planning range only. Final pricing depends on actual screens, integrations, content, data migration and deployment requirements.</p>
+            <p className="mt-7 text-sm leading-6 text-blue-200">
+              Planning range only. India and international rates are separate commercial pricing bands, not a currency conversion. Final pricing depends on actual screens, integrations, content, data migration and deployment requirements.
+            </p>
           </div>
 
           <a href={`https://wa.me/918446000784?text=${whatsappMessage}`} target="_blank" rel="noreferrer" className="relative mt-8 flex items-center justify-between border-2 border-[#d8ff3e] bg-[#d8ff3e] px-5 py-4 font-black text-blue-950 transition hover:bg-white">

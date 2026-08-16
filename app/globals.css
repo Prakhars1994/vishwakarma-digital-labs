@@ -24,3 +24,25 @@ body {
   background: #f97316;
   color: white;
 }
+
+:focus-visible {
+  outline: 2px solid #fb923c;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -5rem;
+  z-index: 1000;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #020617;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
