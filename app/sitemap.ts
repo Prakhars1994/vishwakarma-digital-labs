@@ -1,9 +1,8 @@
 import type { MetadataRoute } from "next";
-import { portfolioDemos } from "@/lib/portfolio";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const corePages: MetadataRoute.Sitemap = [
+  return [
     { url: SITE_URL, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/services/web-development`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/services/mobile-app-development`, changeFrequency: "monthly", priority: 0.9 },
@@ -16,12 +15,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/privacy`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE_URL}/terms`, changeFrequency: "yearly", priority: 0.2 },
   ];
-
-  const demos: MetadataRoute.Sitemap = portfolioDemos.map((demo) => ({
-    url: `${SITE_URL}${demo.href}`,
-    changeFrequency: "monthly",
-    priority: 0.55,
-  }));
-
-  return [...corePages, ...demos];
 }
