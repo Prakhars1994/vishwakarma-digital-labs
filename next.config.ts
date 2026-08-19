@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+﻿import type { NextConfig } from "next";
 
 const csp = [
   "default-src 'self'",
@@ -19,6 +19,21 @@ const csp = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "vishwakarma-digital-labs.vercel.app",
+          },
+        ],
+        destination: "https://vdl.vliab.workers.dev/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
@@ -36,3 +51,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
