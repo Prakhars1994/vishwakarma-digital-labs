@@ -98,7 +98,7 @@ To load the Cloudflare Web Analytics beacon, set:
 NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN=...
 ```
 
-No Vercel Analytics component is used in the application runtime.
+The site is deployed only through Cloudflare Workers.
 
 ## Production build
 

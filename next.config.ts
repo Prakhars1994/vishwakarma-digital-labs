@@ -19,21 +19,6 @@ const csp = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "vishwakarma-digital-labs.vercel.app",
-          },
-        ],
-        destination: "https://vdl.vliab.workers.dev/:path*",
-        permanent: true,
-      },
-    ];
-  },
   async headers() {
     return [
       {
