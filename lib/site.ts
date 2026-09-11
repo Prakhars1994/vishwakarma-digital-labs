@@ -7,7 +7,7 @@ export const SITE_NAME = "Vishwakarma Digital Labs";
 export const SITE_DESCRIPTION =
   "Vishwakarma Digital Labs builds fast websites, mobile apps, AI applications and business automation for startups, local businesses and growing teams in India and worldwide.";
 
-export const CURRENT_PULSE_URL = "https://cp.vishwakarma-labs.workers.dev";
+export const CURRENT_PULSE_URL = "https://cp.vliab.workers.dev/";
 
 export const CONTACT = {
   phone: "+918446000784",
