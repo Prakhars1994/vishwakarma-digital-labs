@@ -161,7 +161,7 @@ export default function Home() {
             <div>
               <div className="text-sm font-black uppercase tracking-[0.22em] text-orange-300">Featured Production Case Study</div>
               <h2 className="mt-4 text-4xl font-black sm:text-5xl">CurrentPulse AI</h2>
-              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">A live publishing and exam-information platform combining automated source collection, Supabase/PostgreSQL, multi-provider AI routing, quality gates, search/SEO, Cloudflare delivery and GitHub Actions background automation.</p>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">A live publishing and exam-information platform with administrator-controlled Current Affairs and News publishing, Supabase/PostgreSQL, quality gates, search/SEO, ResultPulse official-source monitoring, Cloudflare delivery and GitHub Actions.</p>
               <div className="mt-7 flex flex-wrap gap-2">{["Next.js","React","Supabase","PostgreSQL","Multi-provider AI","Cloudflare","GitHub Actions","Automation"].map((item)=><span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300">{item}</span>)}</div>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link href="/work/currentpulse-ai" className="rounded-xl bg-white px-6 py-3 font-bold text-slate-950 transition hover:bg-orange-300">Read full case study →</Link>
@@ -172,9 +172,9 @@ export default function Home() {
             <div className="relative min-h-[390px] overflow-hidden rounded-2xl border border-white/10 bg-slate-950/80 p-5 shadow-2xl">
               <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-orange-500/15 blur-3xl" />
               <div className="relative flex items-center gap-2 border-b border-white/10 pb-4" aria-hidden="true"><span className="h-2.5 w-2.5 rounded-full bg-red-400"/><span className="h-2.5 w-2.5 rounded-full bg-yellow-400"/><span className="h-2.5 w-2.5 rounded-full bg-green-400"/><span className="ml-2 text-[10px] font-bold uppercase tracking-[.18em] text-slate-500">CurrentPulse / Production</span></div>
-              <div className="relative mt-5 rounded-xl border border-orange-400/20 bg-orange-400/10 p-5"><div className="text-xs font-black uppercase tracking-[.2em] text-orange-300">AI Publishing + ResultPulse</div><div className="mt-2 text-xl font-black">Automated information platform</div></div>
+              <div className="relative mt-5 rounded-xl border border-orange-400/20 bg-orange-400/10 p-5"><div className="text-xs font-black uppercase tracking-[.2em] text-orange-300">Admin Publishing + ResultPulse</div><div className="mt-2 text-xl font-black">Editorial + exam information platform</div></div>
               <div className="relative mt-4 grid grid-cols-2 gap-3">
-                {["News + CA workflows","ResultPulse monitoring","Multi-provider AI","Supabase database","Search + SEO","Quality gates"].map((item)=><div key={item} className="rounded-xl border border-white/10 bg-white/[0.035] p-4 text-sm font-semibold text-slate-300">✓ {item}</div>)}
+                {["Admin CA + News publishing","ResultPulse monitoring","Supabase database","Search + SEO","Quality gates","Cloudflare delivery"].map((item)=><div key={item} className="rounded-xl border border-white/10 bg-white/[0.035] p-4 text-sm font-semibold text-slate-300">✓ {item}</div>)}
               </div>
               <div className="relative mt-4 flex items-center justify-between rounded-xl border border-emerald-400/20 bg-emerald-400/10 p-4"><div><div className="text-[10px] uppercase tracking-widest text-emerald-300">Delivery</div><div className="mt-1 font-bold">Cloudflare + GitHub Actions</div></div><div className="text-2xl" aria-hidden="true">⚡</div></div>
             </div>
