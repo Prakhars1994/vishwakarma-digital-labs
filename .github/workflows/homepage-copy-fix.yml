@@ -1,0 +1,48 @@
+name: Homepage CurrentPulse Copy Fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/homepage-copy-fix.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Patch stale CurrentPulse homepage copy
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path("app/page.tsx")
+          s = p.read_text()
+          replacements = {
+              "A live publishing and exam-information platform combining automated source collection, Supabase/PostgreSQL, multi-provider AI routing, quality gates, search/SEO, Cloudflare delivery and GitHub Actions background automation.":
+              "A live publishing and exam-information platform with administrator-controlled Current Affairs and News publishing, Supabase/PostgreSQL, quality gates, search/SEO, ResultPulse official-source monitoring, Cloudflare delivery and GitHub Actions.",
+              "AI Publishing + ResultPulse": "Admin Publishing + ResultPulse",
+              "Automated information platform": "Editorial + exam information platform",
+              '["News + CA workflows","ResultPulse monitoring","Multi-provider AI","Supabase database","Search + SEO","Quality gates"]':
+              '["Admin CA + News publishing","ResultPulse monitoring","Supabase database","Search + SEO","Quality gates","Cloudflare delivery"]',
+          }
+          for old, new in replacements.items():
+              if old not in s:
+                  raise SystemExit(f"Expected text not found: {old}")
+              s = s.replace(old, new, 1)
+          p.write_text(s)
+
+      - name: Commit patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "CurrentPulse Audit Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add app/page.tsx
+          git commit -m "Align homepage CurrentPulse production copy"
+          git push origin HEAD:main
