@@ -81,22 +81,22 @@ export default function CurrentPulseCaseStudy() {
           <div className="grid gap-5 md:grid-cols-2">
             <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
               <div className="text-sm font-black uppercase tracking-[.2em] text-cyan-300">Current Affairs + News publishing</div>
-              <ol className="mt-6 space-y-4 text-slate-300">
-                <li>1. Administrator selects and uploads the publishing source.</li>
-                <li>2. The import path preserves editorially selected text and provenance.</li>
-                <li>3. Quality gates clean structural artifacts without inventing new reporting.</li>
-                <li>4. Articles are published into date-wise public readers with SEO metadata.</li>
-                <li>5. Cloudflare serves the validated production build.</li>
+              <ol className="mt-6 ml-5 list-decimal space-y-4 text-slate-300">
+                <li>Administrator selects and uploads the publishing source.</li>
+                <li>The import path preserves editorially selected text and provenance.</li>
+                <li>Quality gates clean structural artifacts without inventing new reporting.</li>
+                <li>Articles are published into date-wise public readers with SEO metadata.</li>
+                <li>Cloudflare serves the validated production build.</li>
               </ol>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
               <div className="text-sm font-black uppercase tracking-[.2em] text-emerald-300">ResultPulse pipeline</div>
-              <ol className="mt-6 space-y-4 text-slate-300">
-                <li>1. Track official exam/recruitment authority updates.</li>
-                <li>2. Normalize results, admit cards, notifications and deadlines.</li>
-                <li>3. Filter low-value navigation artifacts and future-listing date errors.</li>
-                <li>4. Keep official source links as the action destination.</li>
-                <li>5. Publish clean, indexable exam timelines and archive pages.</li>
+              <ol className="mt-6 ml-5 list-decimal space-y-4 text-slate-300">
+                <li>Track official exam/recruitment authority updates.</li>
+                <li>Normalize results, admit cards, notifications and deadlines.</li>
+                <li>Filter low-value navigation artifacts and future-listing date errors.</li>
+                <li>Keep official source links as the action destination.</li>
+                <li>Publish clean, indexable exam timelines and archive pages.</li>
               </ol>
             </div>
           </div>
