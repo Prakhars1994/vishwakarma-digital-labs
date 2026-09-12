@@ -6,7 +6,7 @@ import { CONTACT, OWNER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/sit
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Web Development, AI & Mobile App Company | Vishwakarma Digital Labs",
+    default: "Vishwakarma Digital Labs | Web Development, AI & Mobile Apps",
     template: "%s | Vishwakarma Digital Labs",
   },
   description: SITE_DESCRIPTION,
@@ -75,6 +75,7 @@ const organizationSchema = {
   "@type": "Organization",
   "@id": `${SITE_URL}/#organization`,
   name: SITE_NAME,
+  alternateName: ["VDL", "Vishwakarma Digital Labs (VDL)"],
   url: SITE_URL,
   logo: `${SITE_URL}/icon.svg`,
   description: SITE_DESCRIPTION,
@@ -96,6 +97,7 @@ const websiteSchema = {
   "@id": `${SITE_URL}/#website`,
   url: SITE_URL,
   name: SITE_NAME,
+  alternateName: ["VDL", "Vishwakarma Digital Labs (VDL)"],
   description: SITE_DESCRIPTION,
   publisher: { "@id": `${SITE_URL}/#organization` },
   inLanguage: "en-IN",
