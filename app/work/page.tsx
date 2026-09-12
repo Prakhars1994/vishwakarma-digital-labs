@@ -28,14 +28,14 @@ export default function WorkPage() {
             <div>
               <div className="text-xs font-black uppercase tracking-[.2em] text-orange-300">Production case study</div>
               <h2 className="mt-4 text-4xl font-black">CurrentPulse AI</h2>
-              <p className="mt-5 text-lg leading-8 text-slate-300">Automated publishing, Current Affairs, ResultPulse exam monitoring, Supabase/PostgreSQL, multi-provider AI routing, Cloudflare delivery and GitHub Actions background workflows.</p>
-              <div className="mt-7 flex flex-wrap gap-2">{["Next.js","React","Supabase","PostgreSQL","Cloudflare","GitHub Actions","Multi-provider AI"].map((item)=><span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300">{item}</span>)}</div>
+              <p className="mt-5 text-lg leading-8 text-slate-300">Administrator-controlled Current Affairs and News publishing, ResultPulse official-source exam monitoring, Supabase/PostgreSQL, editorial and sitemap quality gates, Cloudflare delivery and validated GitHub Actions deployments.</p>
+              <div className="mt-7 flex flex-wrap gap-2">{["Next.js","React","Supabase","PostgreSQL","Cloudflare","GitHub Actions","Editorial quality gates"].map((item)=><span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300">{item}</span>)}</div>
               <div className="mt-8 flex flex-wrap gap-4"><Link href="/work/currentpulse-ai" className="rounded-xl bg-white px-6 py-3 font-bold text-slate-950">Read case study →</Link><a href={CURRENT_PULSE_URL} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 px-6 py-3 font-semibold">Open live product ↗</a><a href={CONTACT.github} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 px-6 py-3 font-semibold">GitHub ↗</a></div>
             </div>
             <div className="relative min-h-[330px] overflow-hidden rounded-2xl border border-white/10 bg-slate-950/80 p-5">
               <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-orange-500/15 blur-3xl" />
               <div className="relative border-b border-white/10 pb-4 text-[10px] font-black uppercase tracking-[.2em] text-slate-500">CurrentPulse / Production</div>
-              <div className="relative mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">{["Automated content workflows","ResultPulse official-update monitoring","AI provider fallbacks + quality gates","Search, SEO and structured publishing","Cloudflare public delivery","GitHub Actions background automation"].map((item)=><div key={item} className="rounded-xl border border-white/10 bg-white/[0.035] p-4 text-slate-200">✓ {item}</div>)}</div>
+              <div className="relative mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">{["Admin-controlled CA + News publishing","ResultPulse official-update monitoring","Editorial + sitemap quality gates","Search, SEO and structured publishing","Cloudflare public delivery","Validated GitHub Actions deployment"].map((item)=><div key={item} className="rounded-xl border border-white/10 bg-white/[0.035] p-4 text-slate-200">✓ {item}</div>)}</div>
             </div>
           </div>
 
