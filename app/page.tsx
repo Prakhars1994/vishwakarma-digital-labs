@@ -5,54 +5,21 @@ import QuoteForm from "@/components/QuoteForm";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { portfolioDemos } from "@/lib/portfolio";
-import { CONTACT, CURRENT_PULSE_URL, OWNER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { CONTACT, CURRENT_PULSE_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Vishwakarma Digital Labs | Web Development, AI & Mobile Apps",
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
-  openGraph: {
-    title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation",
-    description: SITE_DESCRIPTION,
-    url: SITE_URL,
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation",
-    description: SITE_DESCRIPTION,
-  },
+  openGraph: { title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation", description: SITE_DESCRIPTION, url: SITE_URL, type: "website" },
+  twitter: { card: "summary_large_image", title: "Vishwakarma Digital Labs — Web, Mobile, AI & Automation", description: SITE_DESCRIPTION },
 };
 
 const services = [
-  {
-    icon: "🌐",
-    title: "Website Development",
-    href: "/services/web-development",
-    description: "Fast, modern and conversion-focused websites, portals and e-commerce experiences.",
-    items: ["Business Websites", "E-commerce", "Landing Pages", "Portals"],
-  },
-  {
-    icon: "📱",
-    title: "Mobile App Development",
-    href: "/services/mobile-app-development",
-    description: "Customer-facing and internal mobile products built around clear business workflows.",
-    items: ["Android / iOS", "Booking", "Marketplaces", "Business Apps"],
-  },
-  {
-    icon: "🤖",
-    title: "AI Applications",
-    href: "/services/ai-development",
-    description: "AI agents, copilots and knowledge applications connected to useful business data and tools.",
-    items: ["AI Agents", "RAG", "LLM Integration", "Smart Assistants"],
-  },
-  {
-    icon: "⚡",
-    title: "Business Automation",
-    href: "/services/business-automation",
-    description: "Connect APIs, databases and applications to remove repetitive work and manual handoffs.",
-    items: ["Workflow Automation", "APIs", "Dashboards", "Notifications"],
-  },
+  { icon: "🌐", title: "Website Development", href: "/services/web-development", description: "Fast, modern and conversion-focused websites, portals and e-commerce experiences.", items: ["Business Websites", "E-commerce", "Landing Pages", "Portals"] },
+  { icon: "📱", title: "Mobile App Development", href: "/services/mobile-app-development", description: "Customer-facing and internal mobile products built around clear business workflows.", items: ["Android / iOS", "Booking", "Marketplaces", "Business Apps"] },
+  { icon: "🤖", title: "AI Applications", href: "/services/ai-development", description: "AI agents, copilots and knowledge applications connected to useful business data and tools.", items: ["AI Agents", "RAG", "LLM Integration", "Smart Assistants"] },
+  { icon: "⚡", title: "Business Automation", href: "/services/business-automation", description: "Connect APIs, databases and applications to remove repetitive work and manual handoffs.", items: ["Workflow Automation", "APIs", "Dashboards", "Notifications"] },
 ] as const;
 
 const engagementModes = [
@@ -62,95 +29,34 @@ const engagementModes = [
 ] as const;
 
 const reasons = [
-  ["Production-focused", "Solutions are built to be deployed and used — not left as prototypes."],
-  ["Mobile-first", "Responsive experiences across phones, tablets and desktop screens."],
-  ["Modern stack", "Next.js, React, Supabase, PostgreSQL, APIs, GitHub, Cloudflare and modern AI tooling."],
-  ["Direct communication", "Discuss requirements directly with the developer working on your product."],
-  ["End-to-end delivery", "Development, integrations, database, hosting, SSL and deployment can be handled."],
-  ["Business-oriented", "Features are selected around your real customer and operational needs."],
+  ["Production-focused", "Solutions are built to be deployed and used — not left as prototypes."], ["Mobile-first", "Responsive experiences across phones, tablets and desktop screens."], ["Modern stack", "Next.js, React, Supabase, PostgreSQL, APIs, GitHub, Cloudflare and modern AI tooling."], ["Direct communication", "Discuss requirements directly with the developer working on your product."], ["End-to-end delivery", "Development, integrations, database, hosting, SSL and deployment can be handled."], ["Business-oriented", "Features are selected around your real customer and operational needs."],
 ] as const;
 
 const faqItems = [
-  ["Can you handle design, development and deployment?", "Yes. A project can include UI implementation, application development, database/API integration, Cloudflare deployment, SSL and production setup depending on scope."],
-  ["Do I need to know the technical stack?", "No. Describe the business problem, users and features. The technical architecture can be proposed from there."],
-  ["Can you work on an existing website or app?", "Yes. Existing Next.js/React applications, responsive issues, integrations, feature additions and selected redesign work can be scoped separately."],
-  ["Can we start with a smaller MVP?", "Yes. When an idea is still being validated, starting with the smallest useful production version is usually the better path."],
-  ["How is pricing decided?", "Pricing depends on screens, workflows, integrations, backend complexity, design depth and timeline. The estimator provides a planning range; the final quote follows the scope."],
-  ["Do you provide post-launch support?", "Post-launch fixes, monitoring and ongoing development can be included as a defined support period or a separate engagement."],
+  ["Can you handle design, development and deployment?", "Yes. A project can include UI implementation, application development, database/API integration, Cloudflare deployment, SSL and production setup depending on scope."], ["Do I need to know the technical stack?", "No. Describe the business problem, users and features. The technical architecture can be proposed from there."], ["Can you work on an existing website or app?", "Yes. Existing Next.js/React applications, responsive issues, integrations, feature additions and selected redesign work can be scoped separately."], ["Can we start with a smaller MVP?", "Yes. When an idea is still being validated, starting with the smallest useful production version is usually the better path."], ["How is pricing decided?", "Pricing depends on screens, workflows, integrations, backend complexity, design depth and timeline. The estimator provides a planning range; the final quote follows the scope."], ["Do you provide post-launch support?", "Post-launch fixes, monitoring and ongoing development can be included as a defined support period or a separate engagement."],
 ] as const;
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map(([question, answer]) => ({
-    "@type": "Question",
-    name: question,
-    acceptedAnswer: { "@type": "Answer", text: answer },
-  })),
-};
-
-const servicesSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: `${SITE_NAME} services`,
-  itemListElement: services.map((service, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    url: `${SITE_URL}${service.href}`,
-    name: service.title,
-  })),
-};
-
+const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
+const servicesSchema = { "@context": "https://schema.org", "@type": "ItemList", name: `${SITE_NAME} services`, itemListElement: services.map((service, index) => ({ "@type": "ListItem", position: index + 1, url: `${SITE_URL}${service.href}`, name: service.title })) };
 const quoteUrl = `${CONTACT.whatsapp}?text=${encodeURIComponent("Hi Prakhar, I want to discuss a digital product with Vishwakarma Digital Labs.")}`;
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, servicesSchema]) }} />
-      <SiteHeader />
+  return <div className="min-h-screen bg-slate-950 text-white">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, servicesSchema]) }} /><SiteHeader />
+    <main id="main-content">
+      <section className="relative overflow-hidden"><div className="absolute left-1/2 top-0 h-[680px] w-[900px] -translate-x-1/2 rounded-full bg-orange-500/10 blur-[150px]"/><div className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 py-24 lg:grid-cols-2 lg:px-8 lg:py-32"><div><div className="mb-6 inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-400/10 px-4 py-2 text-sm text-orange-300"><span className="text-emerald-400">●</span> Taking new projects</div><h1 className="text-5xl font-black leading-[1.03] sm:text-6xl lg:text-7xl">We Build Digital Products That Grow Your Business</h1><p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">Production-ready websites, mobile apps, AI applications and automation — designed around real customers, operations and measurable business goals.</p><div className="mt-9 flex flex-wrap gap-4"><a href="#quote" className="rounded-xl bg-orange-500 px-6 py-3.5 font-black">Get a Free Quote</a><a href="#demos" className="rounded-xl border border-white/15 px-6 py-3.5 font-black">Explore Live Demos →</a></div></div><div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6"><div className="text-xs font-black uppercase tracking-[.22em] text-orange-300">Production Studio</div><div className="mt-6 grid gap-3 sm:grid-cols-2">{["Websites","Mobile Apps","AI Apps","Automation"].map(item=><div key={item} className="rounded-xl border border-white/10 bg-black/15 p-4 font-bold">{item}</div>)}</div><div className="mt-6 text-sm leading-7 text-slate-400">Next.js • React • Supabase • PostgreSQL • Cloudflare Workers • GitHub Actions • AI APIs</div></div></div></section>
 
-      <main id="main-content">
-        <section className="relative overflow-hidden">
-          <div className="absolute left-1/2 top-0 h-[680px] w-[900px] -translate-x-1/2 rounded-full bg-orange-500/10 blur-[150px]" />
-          <div className="absolute right-0 top-48 h-80 w-80 rounded-full bg-blue-600/10 blur-[100px]" />
-          <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 py-24 lg:grid-cols-2 lg:px-8 lg:py-32">
-            <div>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-400/10 px-4 py-2 text-sm text-orange-300">
-                <span className="text-emerald-400" aria-hidden="true">●</span> Taking new projects
-              </div>
-              <h1 className="text-5xl font-black leading-[1.03] sm:text-6xl lg:text-7xl">We Build Digital Products That Grow Your Business</h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">Production-ready websites, mobile apps, AI applications and automation — designed around real customers, operations and measurable business goals.</p>
-              <div className="mt-9 flex flex-wrap gap-4"><a href="#quote" className="rounded-xl bg-orange-500 px-6 py-3.5 font-black text-white">Get a Free Quote</a><Link href="/work" className="rounded-xl border border-white/15 px-6 py-3.5 font-black text-white">View All Samples →</Link></div>
-              <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-slate-400"><span>✓ Free initial consultation</span><span>✓ Fixed-scope options</span><span>✓ Production deployment</span></div>
-            </div>
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 shadow-2xl shadow-black/30">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4"><span className="text-xs font-black uppercase tracking-[.22em] text-orange-300">Production Studio</span><span className="text-xs text-slate-500">Built • Tested • Deployed</span></div>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">{["Websites","Mobile Apps","AI Apps","Automation","Production"].map((item)=><div key={item} className="rounded-xl border border-white/10 bg-black/15 p-4 font-bold text-slate-200">{item}</div>)}</div>
-              <div className="mt-6 rounded-xl border border-white/10 bg-slate-950/60 p-4 text-sm leading-7 text-slate-400">Next.js • React • Supabase • PostgreSQL • Cloudflare Workers • GitHub Actions • AI APIs</div>
-            </div>
-          </div>
-        </section>
+      <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8" id="services"><div className="max-w-3xl"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Services</div><h2 className="mt-3 text-4xl font-black">Build what your business actually needs.</h2></div><div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">{services.map(service=><Link key={service.href} href={service.href} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-orange-400/40"><div className="text-3xl">{service.icon}</div><h3 className="mt-5 text-xl font-black">{service.title}</h3><p className="mt-3 leading-7 text-slate-400">{service.description}</p><div className="mt-5 flex flex-wrap gap-2">{service.items.map(item=><span key={item} className="rounded-full border border-white/10 px-2.5 py-1 text-[11px] text-slate-400">{item}</span>)}</div></Link>)}</div></section>
 
-        <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8" id="services">
-          <div className="max-w-3xl"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Services</div><h2 className="mt-3 text-4xl font-black">Build what your business actually needs.</h2></div>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">{services.map((service)=><Link key={service.href} href={service.href} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-orange-400/40"><div className="text-3xl">{service.icon}</div><h3 className="mt-5 text-xl font-black">{service.title}</h3><p className="mt-3 leading-7 text-slate-400">{service.description}</p><div className="mt-5 flex flex-wrap gap-2">{service.items.map((item)=><span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-bold text-slate-500">{item}</span>)}</div></Link>)}</div>
-        </section>
+      <section className="border-y border-white/10 bg-white/[0.025]"><div className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="grid gap-10 lg:grid-cols-[.85fr_1.15fr]"><div><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Featured Production Case Study</div><h2 className="mt-3 text-4xl font-black">CurrentPulse AI</h2><p className="mt-5 text-lg leading-8 text-slate-300">A live publishing and exam-information platform with administrator-controlled Current Affairs and News publishing, Supabase/PostgreSQL, quality gates, search/SEO, Cloudflare delivery and official-source ResultPulse exam monitoring.</p><div className="mt-7 flex gap-4"><Link href="/work/currentpulse-ai" className="rounded-xl bg-white px-5 py-3 font-black text-slate-950">Read case study →</Link><a href={CURRENT_PULSE_URL} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 px-5 py-3 font-black">Open live product ↗</a></div></div><div className="grid gap-3 sm:grid-cols-2">{["Administrator-controlled CA/News publishing","ResultPulse official-source monitoring","Supabase/PostgreSQL data layer","SEO + quality gates","Cloudflare delivery","GitHub Actions automation"].map(item=><div key={item} className="rounded-xl border border-white/10 bg-slate-950/60 p-4 text-slate-300">✓ {item}</div>)}</div></div></div></section>
 
-        <section className="border-y border-white/10 bg-white/[0.025]">
-          <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="grid gap-10 lg:grid-cols-[.85fr_1.15fr]"><div><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Featured Production Case Study</div><h2 className="mt-3 text-4xl font-black">CurrentPulse AI</h2><p className="mt-5 text-lg leading-8 text-slate-300">A live publishing and exam-information platform with administrator-controlled Current Affairs and News publishing, Supabase/PostgreSQL, quality gates, search/SEO, Cloudflare delivery and official-source ResultPulse exam monitoring.</p><div className="mt-7 flex flex-wrap gap-4"><Link href="/work/currentpulse-ai" className="rounded-xl bg-white px-5 py-3 font-black text-slate-950">Read case study →</Link><a href={CURRENT_PULSE_URL} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 px-5 py-3 font-black">Open live product ↗</a></div></div><div className="grid gap-3 sm:grid-cols-2">{["Administrator-controlled CA/News publishing","ResultPulse official-source monitoring","Supabase/PostgreSQL data layer","SEO + quality gates","Cloudflare delivery","GitHub Actions automation"].map((item)=><div key={item} className="rounded-xl border border-white/10 bg-slate-950/60 p-4 text-slate-300">✓ {item}</div>)}</div></div></div>
-        </section>
+      <section id="demos" className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="flex flex-wrap items-end justify-between gap-6"><div><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Live portfolio playground</div><h2 className="mt-3 text-4xl font-black">See 10 different business products before you hire us.</h2><p className="mt-4 max-w-3xl leading-8 text-slate-400">Restaurant, clinic, real estate, ecommerce, AI, CRM, education, home services, logistics and lead-generation experiences. Each demo keeps its own visual identity, layout and interactions.</p></div><Link href="/work" className="rounded-xl border border-white/15 px-5 py-3 font-black">View full portfolio →</Link></div><div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{portfolioDemos.map(demo=><Link key={demo.href} href={demo.href} className={`group relative flex min-h-[350px] flex-col overflow-hidden border p-6 shadow-xl transition hover:-translate-y-2 ${demo.card}`}><div className={`absolute -right-10 -top-10 h-40 w-40 rounded-full blur-3xl ${demo.glow}`}/><div className="relative flex items-start justify-between"><div className={`text-[10px] font-black tracking-[.18em] ${demo.labelClass}`}>{demo.label}</div><div className="text-3xl">{demo.icon}</div></div><div className="relative mt-7 rounded-2xl border border-white/10 bg-black/15 p-4"><div className="grid grid-cols-4 gap-2">{[0,1,2,3].map(i=><div key={i} className={`h-12 rounded-lg ${i===0?"col-span-2 bg-white/15":"bg-white/[0.07]"}`}/>)}</div></div><h3 className="relative mt-6 text-2xl font-black">{demo.title}</h3><p className="relative mt-3 leading-7 text-white/70">{demo.text}</p><div className="relative mt-5 flex flex-wrap gap-2">{demo.tags.map(tag=><span key={tag} className="rounded-full border border-white/10 bg-white/[0.07] px-3 py-1 text-[11px] font-bold">{tag}</span>)}</div><div className={`relative mt-auto border px-4 py-3 text-sm font-black ${demo.button}`}>Open interactive demo →</div></Link>)}</div><p className="mt-6 text-sm text-slate-500">These are portfolio demo concepts, not claimed client engagements. They remain public for prospects to explore while demo-only URLs stay out of the search index.</p></section>
 
-        <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8" id="process"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">How we work</div><h2 className="mt-3 text-4xl font-black">Simple engagement, clear delivery.</h2><div className="mt-10 grid gap-5 md:grid-cols-3">{engagementModes.map(([number,title,text,fit])=><div key={number} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6"><div className="text-sm font-black text-orange-300">{number}</div><h3 className="mt-4 text-2xl font-black">{title}</h3><p className="mt-4 leading-7 text-slate-400">{text}</p><div className="mt-5 text-xs font-bold uppercase tracking-wide text-slate-500">{fit}</div></div>)}</div></section>
-
-        <section className="border-y border-white/10 bg-white/[0.025]"><div className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Why VDL</div><h2 className="mt-3 text-4xl font-black">Built for useful outcomes, not agency theatre.</h2><div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{reasons.map(([title,text])=><div key={title} className="rounded-2xl border border-white/10 bg-slate-950 p-6"><h3 className="text-xl font-black">{title}</h3><p className="mt-3 leading-7 text-slate-400">{text}</p></div>)}</div></div></section>
-
-        <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Project estimator</div><h2 className="mt-3 max-w-3xl text-4xl font-black">Get a realistic planning range before we talk.</h2><div className="mt-9"><ProjectEstimator /></div></section>
-
-        <section className="border-y border-white/10 bg-white/[0.025]"><div className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">FAQ</div><h2 className="mt-3 text-4xl font-black">Common questions before a project starts.</h2><div className="mt-10 grid gap-4 md:grid-cols-2">{faqItems.map(([question,answer])=><details key={question} className="rounded-2xl border border-white/10 bg-slate-950 p-5"><summary className="cursor-pointer font-black">{question}</summary><p className="mt-3 leading-7 text-slate-400">{answer}</p></details>)}</div></div></section>
-
-        <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8" id="quote"><div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr]"><div><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Start a project</div><h2 className="mt-3 text-4xl font-black">Tell us what you need to build.</h2><p className="mt-5 leading-8 text-slate-400">Send a rough requirement even if the architecture is not decided. The first step is to narrow the useful scope and identify the main technical risks.</p><a href={quoteUrl} target="_blank" rel="noreferrer" className="mt-7 inline-block rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-5 py-3 font-black text-emerald-300">Message on WhatsApp ↗</a></div><QuoteForm /></div></section>
-      </main>
-      <SiteFooter />
-    </div>
-  );
+      <section className="border-y border-white/10 bg-white/[0.025]"><div className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">How we work</div><h2 className="mt-3 text-4xl font-black">Simple engagement, clear delivery.</h2><div className="mt-10 grid gap-5 md:grid-cols-3">{engagementModes.map(([n,t,x,f])=><div key={n} className="rounded-3xl border border-white/10 bg-slate-950 p-6"><div className="text-orange-300">{n}</div><h3 className="mt-4 text-2xl font-black">{t}</h3><p className="mt-4 leading-7 text-slate-400">{x}</p><div className="mt-5 text-xs text-slate-500">{f}</div></div>)}</div></div></section>
+      <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Why VDL</div><h2 className="mt-3 text-4xl font-black">Built for useful outcomes.</h2><div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{reasons.map(([t,x])=><div key={t} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"><h3 className="text-xl font-black">{t}</h3><p className="mt-3 leading-7 text-slate-400">{x}</p></div>)}</div></section>
+      <section className="border-y border-white/10 bg-white/[0.025]"><div className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Project estimator</div><h2 className="mt-3 text-4xl font-black">Get a realistic planning range before we talk.</h2><div className="mt-9"><ProjectEstimator/></div></div></section>
+      <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">FAQ</div><h2 className="mt-3 text-4xl font-black">Common questions before a project starts.</h2><div className="mt-10 grid gap-4 md:grid-cols-2">{faqItems.map(([q,a])=><details key={q} className="rounded-2xl border border-white/10 p-5"><summary className="cursor-pointer font-black">{q}</summary><p className="mt-3 leading-7 text-slate-400">{a}</p></details>)}</div></section>
+      <section className="border-t border-white/10" id="quote"><div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[.8fr_1.2fr] lg:px-8"><div><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Start a project</div><h2 className="mt-3 text-4xl font-black">Tell us what you need to build.</h2><p className="mt-5 leading-8 text-slate-400">Send a rough requirement even if the architecture is not decided.</p><a href={quoteUrl} target="_blank" rel="noreferrer" className="mt-7 inline-block rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-5 py-3 font-black text-emerald-300">Message on WhatsApp ↗</a></div><QuoteForm/></div></section>
+    </main><SiteFooter/>
+  </div>;
 }
