@@ -7,9 +7,19 @@ import { CONTACT, CURRENT_PULSE_URL, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Work & Interactive Product Demos",
-  description: "Explore CurrentPulse AI production work and interactive web, AI, ecommerce, healthcare, CRM, real-estate, education and operations demos.",
+  description: "Explore CurrentPulse AI production work with administrator-controlled Current Affairs and News publishing, plus interactive web, AI, ecommerce, healthcare, CRM, real-estate, education and operations demos.",
   alternates: { canonical: "/work" },
-  openGraph: { title: "Work | Vishwakarma Digital Labs", description: "Production work and interactive product demos.", url: `${SITE_URL}/work`, type: "website" },
+  openGraph: {
+    title: "Work & CurrentPulse AI Case Study | Vishwakarma Digital Labs",
+    description: "CurrentPulse AI uses administrator-controlled Current Affairs and News publishing, ResultPulse official-source monitoring, Supabase/PostgreSQL, SEO quality gates and Cloudflare delivery.",
+    url: `${SITE_URL}/work`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work & CurrentPulse AI Case Study | Vishwakarma Digital Labs",
+    description: "CurrentPulse AI uses administrator-controlled Current Affairs and News publishing, ResultPulse official-source monitoring and production SEO quality gates.",
+  },
 };
 
 export default function WorkPage() {
