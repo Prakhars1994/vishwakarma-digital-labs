@@ -3,7 +3,7 @@ import MobileNav from "@/components/MobileNav";
 import { CONTACT, SITE_NAME } from "@/lib/site";
 
 const quoteUrl = `${CONTACT.whatsapp}?text=${encodeURIComponent(
-  "Hi Prakhar, I want to discuss a website, app, AI or automation project.",
+  "Hi Prakhar, I would like a free demo/concept for my business. My requirement is: ",
 )}`;
 
 export default function SiteHeader() {
@@ -33,7 +33,7 @@ export default function SiteHeader() {
             rel="noreferrer"
             className="rounded-full bg-white px-5 py-2.5 font-semibold text-slate-950 transition hover:bg-orange-400"
           >
-            Get Free Quote
+            Request Free Demo
           </a>
         </nav>
 
