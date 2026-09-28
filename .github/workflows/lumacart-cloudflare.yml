@@ -1,11 +1,17 @@
 name: LUMACART Cloudflare Deploy
+
 on:
   push:
-    branches: [vdl-ecommerce-marketplace]
-    paths: [".github/lumacart-deploy-trigger"]
+    branches:
+      - vdl-ecommerce-marketplace
+    paths:
+      - ".github/lumacart-deploy-trigger"
+  workflow_dispatch:
+
 concurrency:
   group: lumacart-cloudflare
   cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
