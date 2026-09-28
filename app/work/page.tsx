@@ -5,6 +5,12 @@ import SiteHeader from "@/components/SiteHeader";
 import { portfolioDemos } from "@/lib/portfolio";
 import { CONTACT, CURRENT_PULSE_URL, SITE_URL } from "@/lib/site";
 
+const publicReferences = [
+  ["Kavi Restaurant", "Restaurant website", "https://kavirestaurant.in"],
+  ["Aster Hospitals", "Healthcare web experience", "https://asterhospitals.in"],
+  ["United Web Soft", "Web / IT project", "https://unitedwebsoft.in"],
+] as const;
+
 export const metadata: Metadata = {
   title: "Work & Interactive Product Demos",
   description: "Explore CurrentPulse AI production work with administrator-controlled Current Affairs and News publishing, plus interactive web, AI, ecommerce, healthcare, CRM, real-estate, education and operations demos.",
@@ -48,6 +54,8 @@ export default function WorkPage() {
               <div className="relative mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">{["Admin-controlled CA + News publishing","ResultPulse official-update monitoring","Editorial + sitemap quality gates","Search, SEO and structured publishing","Cloudflare public delivery","Validated GitHub Actions deployment"].map((item)=><div key={item} className="rounded-xl border border-white/10 bg-white/[0.035] p-4 text-slate-200">✓ {item}</div>)}</div>
             </div>
           </div>
+
+          <div className="mt-16"><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Additional public references</div><h2 className="mt-3 text-3xl font-black">More web work you can inspect directly.</h2><div className="mt-7 grid gap-4 md:grid-cols-3">{publicReferences.map(([title,type,href])=><a key={title} href={href} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:-translate-y-1 hover:border-orange-400/40"><div className="text-xs font-black uppercase tracking-[.16em] text-orange-300">{type}</div><h3 className="mt-3 text-xl font-black">{title}</h3><div className="mt-5 text-sm font-bold text-slate-300">Open website ↗</div></a>)}</div><p className="mt-4 text-xs leading-6 text-slate-500">These links are presented as public work references. No unverified performance metrics or client outcomes are claimed.</p></div>
 
           <div className="mt-20 flex items-end justify-between gap-6"><div><div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Interactive concepts</div><h2 className="mt-3 text-4xl font-black">10 visibly different product demos</h2><p className="mt-4 max-w-3xl leading-8 text-slate-400">Restaurant, AI, lead generation, ecommerce, healthcare, real estate, edtech, CRM, home services and logistics — each with its own visual character and interaction focus.</p></div><div className="hidden text-sm text-slate-500 sm:block">Concepts, not claimed client engagements</div></div>
 
