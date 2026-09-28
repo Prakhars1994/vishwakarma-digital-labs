@@ -48,14 +48,17 @@ export default function EcommerceDemoClient() {
   const [checkout, setCheckout] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [orderId, setOrderId] = useState("");
+  const [sort, setSort] = useState("featured");
 
   const filtered = useMemo(() => {
-    return products.filter((p) => {
+    const matches = products.filter((p) => {
       const categoryMatch = category === "All" || p.cat === category;
-      const searchMatch = p.name.toLowerCase().includes(search.toLowerCase());
+      const q = search.trim().toLowerCase();
+      const searchMatch = !q || p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q);
       return categoryMatch && searchMatch;
     });
-  }, [category, search]);
+    return [...matches].sort((a,b) => sort === "price-low" ? a.price-b.price : sort === "price-high" ? b.price-a.price : sort === "rating" ? b.rating-a.rating : a.id-b.id);
+  }, [category, search, sort]);
 
   const cartCount = cart.reduce((sum, line) => sum + line.qty, 0);
   const subtotal = cart.reduce((sum, line) => {
@@ -105,7 +108,7 @@ export default function EcommerceDemoClient() {
       </section>
 
       <section id="shop" className="mx-auto max-w-7xl px-5 py-16"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><div className="text-xs font-black uppercase tracking-[.25em] text-[#ff2d8d]">Shop demo</div><h2 className="mt-2 text-4xl font-black">Trending now</h2></div><div className="flex flex-wrap gap-2">{categories.map(c => <button key={c} onClick={() => setCategory(c)} className={`rounded-full px-4 py-2 text-sm font-bold ${category===c ? "bg-black text-white" : "border border-black bg-white"}`}>{c}</button>)}</div></div>
-        <div className="mt-6 md:hidden"><input value={search} onChange={(e)=>setSearch(e.target.value)} className="w-full rounded-full border border-black bg-white px-5 py-3 outline-none" placeholder="Search products…" /></div>
+        <div className="mt-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between"><div className="md:hidden flex-1"><input value={search} onChange={(e)=>setSearch(e.target.value)} className="w-full rounded-full border border-black bg-white px-5 py-3 outline-none" placeholder="Search products…" /></div><div className="flex items-center gap-3"><span className="text-xs font-bold text-black/45">{filtered.length} products</span><select value={sort} onChange={(e)=>setSort(e.target.value)} className="rounded-full border border-black bg-white px-4 py-3 text-sm font-bold"><option value="featured">Featured</option><option value="price-low">Price: Low to high</option><option value="price-high">Price: High to low</option><option value="rating">Top rated</option></select></div></div>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{filtered.map(p => <article key={p.id} className="group rounded-none border border-black bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-[8px_8px_0_#000]"><div className="relative"><button onClick={()=>setWishlist(w=>w.includes(p.id)?w.filter(id=>id!==p.id):[...w,p.id])} className="absolute right-4 top-4 z-10 grid h-10 w-10 place-items-center rounded-full bg-white text-lg shadow">{wishlist.includes(p.id)?"♥":"♡"}</button>{p.badge&&<span className="absolute left-4 top-4 z-10 rounded-full bg-black px-3 py-1.5 text-[10px] font-black tracking-wider text-white">{p.badge}</span>}<button onClick={()=>openProduct(p)} className={`grid h-64 w-full place-items-center rounded-[1.5rem] bg-gradient-to-br ${p.tone} text-7xl transition group-hover:scale-[1.01]`}>{p.emoji}</button></div><div className="px-2 pb-2 pt-5"><div className="flex items-start justify-between gap-4"><div><div className="text-xs font-bold uppercase tracking-widest text-black/40">{p.cat}</div><button onClick={()=>openProduct(p)} className="mt-1 text-left text-xl font-black hover:text-[#ff2d8d]">{p.name}</button><div className="mt-1 text-xs font-bold text-black/45">★ {p.rating} ({p.reviews}) • {p.stock} left</div></div><div className="text-right"><div className="font-black">₹{p.price.toLocaleString("en-IN")}</div>{p.oldPrice&&<div className="text-xs text-black/35 line-through">₹{p.oldPrice.toLocaleString("en-IN")}</div>}</div></div><button onClick={()=>openProduct(p)} className="mt-4 w-full rounded-none bg-[#ff2d8d] py-3 text-sm font-black text-white">Choose options →</button></div></article>)}</div>
         {filtered.length===0&&<div className="mt-10 rounded-none border border-dashed border-black/15 bg-white p-12 text-center font-bold text-black/40">No products match your search.</div>}
       </section>
