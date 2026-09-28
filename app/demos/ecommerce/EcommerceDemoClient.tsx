@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";\nimport { ProductVisual } from "@/components/ecommerce/ProductVisual";
+import Link from "next/link";
+import { ProductVisual } from "@/components/ecommerce/ProductVisual";
 import { useMemo, useState } from "react";
 
 type Product = {
