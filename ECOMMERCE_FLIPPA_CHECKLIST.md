@@ -9,7 +9,7 @@
 - [x] Responsive Tailwind implementation
 - [x] SEO metadata
 - [x] Buyer/rebranding documentation
-- [ ] Replace emoji/demo visuals with properly licensed production imagery
+- [x] Replace catalogue/product emoji placeholders with original code-generated product artwork\n- [ ] Optional: replace original artwork with buyer-owned/licensed product photography for a photographic retail look
 - [ ] Expand product detail routing to the full catalogue
 - [ ] Run local production build and lint
 - [ ] Perform desktop/mobile visual QA
