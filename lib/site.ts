@@ -5,7 +5,7 @@ export const SITE_URL = (
 export const SITE_NAME = "Vishwakarma Digital Labs";
 
 export const SITE_DESCRIPTION =
-  "Vishwakarma Digital Labs builds fast websites, mobile apps, AI applications and business automation for startups, local businesses and growing teams in India and worldwide.";
+  "Vishwakarma Digital Labs builds conversion-focused websites, web and mobile products, AI solutions and business automation for companies in India, the UAE and worldwide.";
 
 export const CURRENT_PULSE_URL = "https://cp.vliab.workers.dev/";
 
