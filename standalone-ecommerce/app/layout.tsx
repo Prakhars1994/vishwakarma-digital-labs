@@ -1,0 +1,2 @@
+export const metadata = { title: "LUMACART — Modern Multi-Category Ecommerce Store", description: "A modern multi-category ecommerce storefront." };
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) { return children; }
