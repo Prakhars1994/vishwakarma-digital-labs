@@ -63,6 +63,8 @@ export default function FamilyVisaUaePreview(){
 
   <section className="fv-admin"><div><p className="eyebrow">CMS-ready foundation</p><h2>The client stays in control.</h2><p>Planned admin areas: Services • Categories • Pages • Fees • Calculator values • FAQs • Guides • Contact details • Languages • SEO • Site settings.</p></div><div className="admin-card"><span>Content Manager</span><div><b>Family Residence Visa</b><small>Heading · content · fees · FAQs · SEO</small></div><div><b>Golden Visa</b><small>Heading · content · fees · FAQs · SEO</small></div><button>Edit content →</button></div></section>
 
+  <section className="fv-about" id="about"><div><p className="eyebrow">About FamilyVisaUAE</p><h2>Built to make UAE service journeys easier to understand.</h2></div><p>The final website will combine clear service discovery, reusable information pages, multilingual access and direct enquiry paths. Business claims, credentials and regulatory statements will be added only from client-approved information.</p></section>
+
   <section className="fv-approval" id="contact"><p className="eyebrow">Part 1 • Client approval milestone</p><h2>Structure & design direction ready for review.</h2><p>This preview establishes the navigation, page hierarchy, multilingual approach, reusable service system and visual direction. Detailed content, live fees and calculator rules will be added only after approval.</p><div><span>Next: full development</span><strong>30% milestone • $90</strong></div></section>
   <footer><div className="fv-brand"><span className="fv-mark">FV</span><span>FamilyVisa<span>UAE</span></span></div><p>Structure preview • Developed by Vishwakarma Digital Labs</p></footer>
  </main>
