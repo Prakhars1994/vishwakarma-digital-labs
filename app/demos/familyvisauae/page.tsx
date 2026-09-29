@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./familyvisa.css";
+import PreviewNav from "./PreviewNav";
 
 export const metadata: Metadata = {
   title: "FamilyVisaUAE — Structure Preview",
@@ -20,13 +21,7 @@ const languages=["English","العربية","Русский","Deutsch","Español
 export default function FamilyVisaUaePreview(){
  return <main id="main-content" className="fv">
   <div className="fv-top"><span>FamilyVisaUAE • Client structure preview</span><span>UAE visa & document services</span></div>
-  <header className="fv-header">
-   <a className="fv-brand" href="#top" aria-label="FamilyVisaUAE home"><span className="fv-mark">FV</span><span>FamilyVisa<span>UAE</span></span></a>
-   <nav aria-label="Primary navigation"><a href="#services">Visas</a><a href="#services">Emirates ID</a><a href="#services">Business & PRO</a><a href="#services">Documents</a><a href="#calculators">Calculators</a><a href="#structure">Guides</a></nav>
-   <div className="fv-actions"><button className="fv-language" type="button">🌐 English ▾</button><a className="fv-wa" href="#contact" aria-label="WhatsApp">◉</a></div>
-  </header>
-
-  <section className="fv-hero" id="top">
+  <PreviewNav />\n\n  <section className="fv-hero" id="top">
    <div><p className="eyebrow">A clearer way through UAE residency</p><h1>Visa services built around <em>clarity, speed & confidence.</em></h1>
    <p className="lead">A premium multilingual structure for FamilyVisaUAE—designed to make complex services easy to discover, understand and enquire about.</p>
    <div className="fv-cta"><a className="primary" href="#services">Explore services →</a><a className="secondary" href="#calculators">Check calculators</a></div>
