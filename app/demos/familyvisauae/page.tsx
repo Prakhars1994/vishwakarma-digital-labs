@@ -21,7 +21,9 @@ const languages=["English","العربية","Русский","Deutsch","Español
 export default function FamilyVisaUaePreview(){
  return <main id="main-content" className="fv">
   <div className="fv-top"><span>FamilyVisaUAE • Client structure preview</span><span>UAE visa & document services</span></div>
-  <PreviewNav />\n\n  <section className="fv-hero" id="top">
+  <PreviewNav />
+
+  <section className="fv-hero" id="top">
    <div><p className="eyebrow">A clearer way through UAE residency</p><h1>Visa services built around <em>clarity, speed & confidence.</em></h1>
    <p className="lead">A premium multilingual structure for FamilyVisaUAE—designed to make complex services easy to discover, understand and enquire about.</p>
    <div className="fv-cta"><a className="primary" href="#services">Explore services →</a><a className="secondary" href="#calculators">Check calculators</a></div>
@@ -42,6 +44,19 @@ export default function FamilyVisaUaePreview(){
 
   <section className="fv-section" id="structure"><div className="section-head"><div><p className="eyebrow">Reusable service page</p><h2>A consistent journey on every route.</h2></div></div>
    <div className="journey">{["Service hero","Key benefits","Eligibility","Required documents","Process","Fees","Important notes","FAQs","Related services","WhatsApp CTA"].map((x,i)=><div key={x}><b>{String(i+1).padStart(2,"0")}</b><span>{x}</span></div>)}</div>
+  </section>
+
+  <section className="fv-service-preview">
+   <div className="preview-browser">
+    <div className="browser-bar"><span/><span/><span/><small>familyvisauae.com/visas/family-residence-visa</small></div>
+    <div className="preview-body">
+     <p className="preview-crumb">Home / Visas / Family Residence Visa</p>
+     <div className="preview-layout"><div><p className="eyebrow">Residence services</p><h2>Family Residence Visa</h2><p className="preview-lead">A clear service page that takes visitors from requirements to documents, process, fees and enquiry without confusion.</p><div className="preview-tags"><span>Eligibility</span><span>Documents</span><span>Process</span><span>Fees</span></div></div>
+      <aside><small>Quick enquiry</small><strong>Need help with this service?</strong><p>Contact flow will route to the client-approved destination.</p><button>WhatsApp enquiry →</button></aside></div>
+     <div className="preview-steps"><div><b>01</b><span>Check eligibility</span></div><div><b>02</b><span>Prepare documents</span></div><div><b>03</b><span>Submit & process</span></div></div>
+    </div>
+   </div>
+   <div className="preview-copy"><p className="eyebrow">Representative service page</p><h2>Designed once. Reused consistently.</h2><p>This production pattern will support the approved service routes while keeping navigation, content hierarchy, calls-to-action and mobile behaviour consistent.</p><ul><li>Dedicated SEO metadata per service</li><li>Client-approved fees and eligibility</li><li>Related services and FAQs</li><li>Calculator integration where relevant</li></ul></div>
   </section>
 
   <section className="fv-languages"><div><p className="eyebrow">Multilingual architecture</p><h2>Designed for an international UAE audience.</h2><p>Arabic and Urdu will support right-to-left layouts. Final translations remain subject to client supply or approval.</p></div><div className="lang-grid">{languages.map(x=><span key={x}>{x}</span>)}</div></section>
