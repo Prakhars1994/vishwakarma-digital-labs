@@ -1,0 +1,16 @@
+.fv-eligibility-grid button{
+  border:0;
+  background:transparent;
+  padding:0;
+  color:#8d6a27;
+  cursor:pointer;
+  font:inherit;
+  font-size:12px;
+  font-weight:850;
+}
+
+.fv-eligibility-grid button:hover,
+.fv-eligibility-grid button:focus-visible{
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
