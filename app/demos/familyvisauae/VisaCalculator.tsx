@@ -20,7 +20,7 @@ const contactSchema = z.object({
 });
 
 export default function VisaCalculator({ initialRoute = 0 }: { initialRoute?: number }) {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(initialRoute === 0 ? 1 : 2);
   const [selected, setSelected] = useState(initialRoute);
   const [person, setPerson] = useState("Spouse");
   const [insideUae, setInsideUae] = useState("yes");
@@ -103,7 +103,7 @@ export default function VisaCalculator({ initialRoute = 0 }: { initialRoute?: nu
     <h2 id="calculator-title">Check your route in a few clear steps.</h2>
     <p>Answer the basics first. We then show your route summary and the documents to prepare before our team confirms final eligibility and fees.</p>
     <div className="fv-calculator-progress"><span className={step >= 1 ? "active" : ""}>1 Route</span><span className={step >= 2 ? "active" : ""}>2 Details</span><span className={step >= 3 ? "active" : ""}>3 Review</span></div>
-    {step === 1 && <><div className="fv-calculator-options">{routes.map(([name, detail, price], index) => <button type="button" key={name} onClick={() => chooseRoute(index)} className={selected === index ? "is-selected" : ""} aria-pressed={selected === index}><strong>{name}</strong><span>{detail}</span><b>From AED {price.toLocaleString()}</b></button>)}</div><button className="primary" type="button" onClick={() => setStep(2)}>Continue to details →</button></>}
+    {step === 1 && <><div className="fv-family-choice-intro"><strong>Who are you bringing to the UAE?</strong><span>Choose a family member to start with the right questions.</span></div><div className="fv-family-member-grid">{[["Spouse","💍","Husband or wife","Marriage-based sponsorship"],["Child","🧸","Son or daughter","Dependent child sponsorship"],["Parent","🤝","Mother or father","Parent sponsorship review"],["Newborn","👶","New baby","UAE newborn residence steps"]].map(([name,icon,detail,hint]) => <button type="button" key={name} onClick={() => chooseFamilyMember(name as "Spouse" | "Child" | "Parent" | "Newborn")}><span className="fv-member-icon" aria-hidden="true">{icon}</span><strong>{name}</strong><span>{detail}</span><small>{hint}</small><b>Check this route →</b></button>)}</div><div className="fv-secondary-routes"><span>Looking for another residency route?</span><button type="button" onClick={() => { chooseRoute(1); setStep(2); }}>Golden Visa</button><button type="button" onClick={() => { chooseRoute(2); setStep(2); }}>Property Visa</button></div></>}
     {step === 2 && <><div className="fv-calculator-form">
       <label>{familyRoute ? "Who needs the visa?" : "Applicant profile"}<select value={person} onChange={(e) => setPerson(e.target.value)}>{familyRoute ? <><option>Spouse</option><option>Child</option><option>Parent</option><option>Other family member</option></> : selected === 1 ? <><option>Golden Visa applicant</option><option>Investor</option><option>Specialist professional</option></> : selected === 2 ? <><option>Property owner</option><option>Co-owner</option></> : <option>Newborn</option>}</select></label>
       <label>Are they currently in the UAE?<select value={insideUae} onChange={(e) => setInsideUae(e.target.value)}><option value="yes">Yes</option><option value="no">No</option></select></label>
