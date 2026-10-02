@@ -57,10 +57,10 @@ export default function FamilyVisaUaePreview() {
         <h1>Bring your family to the UAE, <em>with confidence.</em></h1>
         <p className="lead">Check the right visa route, understand estimated government fees, and let our team guide your application from documents to Emirates ID.</p>
         <div className="fv-cta"><a className="primary" href="#calculator">Calculate visa cost →</a><a className="secondary" href={whatsapp} target="_blank" rel="noreferrer">Chat on WhatsApp</a></div>
-        <div className="trust"><span>✓ Online guidance</span><span>✓ Clear fee separation</span><span>✓ Private consultancy</span></div>
+        <div className="trust"><span>✓ Online guidance</span><span>✓ Clear fee separation</span><span>✓ Private consultancy</span></div><div className="fv-hero-proof" aria-label="FamilyVisaUAE service highlights"><div><b>01</b><span><strong>Start with your family</strong><small>Spouse · Child · Parent · Newborn</small></span></div><div><b>02</b><span><strong>See the likely route</strong><small>Questions tailored to your situation</small></span></div><div><b>03</b><span><strong>Confirm with a consultant</strong><small>WhatsApp or direct call</small></span></div></div>
       </div>
       <aside className="fv-panel">
-        <span className="panel-label">Start here</span><h2>Who are you sponsoring?</h2>
+        <span className="panel-label">2-MINUTE ROUTE CHECK</span><h2>Who are you sponsoring?</h2><p className="fv-panel-kicker">Choose a family member. We’ll take you straight to the relevant calculator questions.</p>
         <SponsorQuickLinks />
         <p>Answer a few questions and request an exact route review on WhatsApp.</p>
       </aside>
