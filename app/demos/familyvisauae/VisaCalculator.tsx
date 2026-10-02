@@ -40,7 +40,7 @@ export default function VisaCalculator({ initialRoute = 0 }: { initialRoute?: nu
   useEffect(() => {
     const selectDependent = (event: Event) => {
       const person = (event as CustomEvent<string>).detail;
-      setSelected(0);
+      setSelected(person === "Newborn" ? 3 : 0);
       setPerson(person);
       setReadyDocuments([]);
       setCopyStatus("");
@@ -93,6 +93,13 @@ export default function VisaCalculator({ initialRoute = 0 }: { initialRoute?: nu
     setPerson(index === 0 ? "Spouse" : index === 1 ? "Golden Visa applicant" : index === 2 ? "Property owner" : "Newborn");
     setReadyDocuments([]);
     setCopyStatus("");
+  };
+  const chooseFamilyMember = (nextPerson: "Spouse" | "Child" | "Parent" | "Newborn") => {
+    setSelected(nextPerson === "Newborn" ? 3 : 0);
+    setPerson(nextPerson);
+    setReadyDocuments([]);
+    setCopyStatus("");
+    setStep(2);
   };
   const reviewRoute = async () => {
     if (await trigger("phone")) setStep(3);
