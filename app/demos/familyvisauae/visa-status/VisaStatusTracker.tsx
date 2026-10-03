@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import "../familyvisa.css";
 import "./status.css";
+import "./status-premium.css";
 import PreviewNav from "../PreviewNav";
 
 const statusSchema = z.object({
