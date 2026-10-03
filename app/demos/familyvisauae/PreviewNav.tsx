@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import "./floating-contact.css";
 import "./call-action.css";
+import "./preview-nav-refresh.css";
 
 const groups=[
  {label:"Visas",items:["Family Residence Visa","Golden Visa","Property Investor Visa","Newborn Visa","Domestic Worker Visa"]},
@@ -27,15 +28,15 @@ export default function PreviewNav(){
  useEffect(()=>{document.documentElement.lang=selectedLanguage[1];document.documentElement.dir=selectedLanguage[1]==="ar"||selectedLanguage[1]==="ur"?"rtl":"ltr";},[selectedLanguage]);
  useEffect(()=>{const close=()=>{setMenu(null);setLang(false)};window.addEventListener("scroll",close);return()=>window.removeEventListener("scroll",close)},[]);
  return <header className="fv-header">
-  <Link className="fv-brand" href="/demos/familyvisauae" aria-label="FamilyVisaUAE home"><span className="fv-mark">FV</span><span>FamilyVisa<span>UAE</span></span></Link>
+  <Link className="fv-brand" href="/demos/familyvisauae" aria-label="FamilyVisaUAE home"><span className="fv-mark" aria-hidden="true"><i/><i/></span><span className="fv-wordmark"><b>FamilyVisa</b><em>UAE</em></span></Link>
   <nav className="fv-desktop-nav" aria-label="Primary navigation">
-   {groups.map(g=><div className="nav-group" key={g.label}><button onClick={()=>setMenu(menu===g.label?null:g.label)} aria-expanded={menu===g.label}>{g.label}<span>⌄</span></button>
-    {menu===g.label&&<div className="mega-card"><small>{g.label}</small>{g.items.map(x=><Link key={x} href={`/demos/familyvisauae/${routeFor(x)}`} onClick={()=>setMenu(null)}>{x}<b>→</b></Link>)}<Link className="view-all" href={groupAction(g.label)?.href ?? "/demos/familyvisauae/guides"} onClick={()=>setMenu(null)}>{groupAction(g.label)?.label ?? `View all ${g.label}`} →</Link></div>}</div>)}
-   <Link href="/demos/familyvisauae/calculators">Calculators</Link><Link href="/demos/familyvisauae/guides">Guides</Link>
+   <div className="nav-group fv-service-menu"><button onClick={()=>setMenu(menu==="Services"?null:"Services")} aria-expanded={menu==="Services"}>Services <span>⌄</span></button>
+    {menu==="Services"&&<div className="mega-card fv-services-card"><small>Explore our services</small><div className="fv-service-columns">{groups.slice(0,4).map(group=><div key={group.label}><strong>{group.label}</strong>{group.items.slice(0,4).map(item=><Link key={item} href={`/demos/familyvisauae/${routeFor(item)}`} onClick={()=>setMenu(null)}>{item}<b>→</b></Link>)}</div>)}</div><Link className="view-all" href="/demos/familyvisauae/services" onClick={()=>setMenu(null)}>View all services →</Link></div>}</div>
+   <Link href="/demos/familyvisauae/calculators">Visa calculators</Link><Link href="/demos/familyvisauae/checklist">Document checker</Link><Link href="/demos/familyvisauae/guides">Guides</Link>
   </nav>
   <div className="fv-actions">
    <div className="lang-wrap"><button className="fv-language" onClick={()=>setLang(!lang)} aria-expanded={lang}>◎ {selectedLanguage[0]} <span>⌄</span></button>{lang&&<div className="lang-menu">{languages.map(([name,code])=><button key={code} onClick={()=>chooseLanguage(name,code)} dir={code==="ar"||code==="ur"?"rtl":"ltr"}>{name}<small>{code.toUpperCase()}</small></button>)}</div>}</div>
-   <a className="fv-call" href="tel:+971566556645" aria-label="Call FamilyVisaUAE on +971 56 655 6645"><span aria-hidden="true">☎</span><b>Call now</b></a>
+   <a className="fv-call" href="tel:+971566556645" aria-label="Call FamilyVisaUAE on +971 56 655 6645"><span aria-hidden="true">☎</span><b>Call</b></a>
    <a className="fv-wa" href="https://wa.me/971566556645?text=Hi%20FamilyVisaUAE%2C%20I%20would%20like%20help%20with%20a%20visa." target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.7 9.7 0 0 0-8.4 14.6L2.2 22l5.5-1.4A9.8 9.8 0 1 0 12 2Zm0 17.7c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.2.8.9-3.1-.2-.3A7.8 7.8 0 1 1 12 19.7Zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8.9-.1.2-.3.2-.5.1-1.4-.7-2.4-1.3-3.3-2.9-.2-.3.2-.3.7-1 .1-.2.1-.4 0-.5l-.7-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.6-.3Z"/></svg></a>
    <button className="mobile-toggle" onClick={()=>setMobile(!mobile)} aria-label="Toggle navigation" aria-expanded={mobile}><i/><i/><i/></button>
   </div>

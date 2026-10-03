@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./internal-page-theme.css";
 
 export const metadata: Metadata = {
   title: { absolute: "FamilyVisaUAE | UAE Visa & Document Support" },

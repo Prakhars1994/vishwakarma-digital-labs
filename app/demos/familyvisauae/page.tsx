@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import "./familyvisa.css";
 import "./calculator.css";
+import "./calculator-premium.css";
+import "./family-quiz.css";
 import "./calculator-flow.css";
 import "./calculator-journey.css";
 import "./journey-planner.css";
@@ -23,13 +25,18 @@ import "./team.css";
 import "./consultation.css";
 import "./golden.css";
 import "./eligibility-actions.css";
+import "./family-visual-story.css";
+import "./clarity-grid.css";
+import "./story-slideshow.css";
+import "./welcome-hero.css";
+import "./luxury-home.css";
 import PreviewNav from "./PreviewNav";
-import ThemePicker from "./ThemePicker";
 import VisaCalculator from "./VisaCalculator";
 import ServiceExperience from "./ServiceExperience";
 import JourneyPlanner from "./JourneyPlanner";
 import RouteExplorer from "./RouteExplorer";
-import SponsorQuickLinks from "./SponsorQuickLinks";
+import FamilyStorySlideshow from "./FamilyStorySlideshow";
+import WelcomeHero from "./WelcomeHero";
 
 export const metadata: Metadata = {
   title: { absolute: "FamilyVisaUAE | UAE Family Visa Calculator" },
@@ -49,29 +56,39 @@ export default function FamilyVisaUaePreview() {
   return <main id="main-content" className="fv" data-theme="family">
     <div className="fv-top"><span>FamilyVisaUAE</span><span>UAE visa & document services</span></div>
     <PreviewNav />
-    <ThemePicker />
-
-    <section className="fv-hero fv-family-hero" id="top" style={{ backgroundImage: "linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.93) 44%, rgba(255,255,255,.12) 100%), url('/familyvisauae-hero.png')" }}>
-      <div>
-        <p className="eyebrow">UAE FAMILY VISA SUPPORT</p>
-        <h1>Bring your family to the UAE, <em>with confidence.</em></h1>
-        <p className="lead">Check the right visa route, understand estimated government fees, and let our team guide your application from documents to Emirates ID.</p>
-        <div className="fv-cta"><a className="primary" href="#calculator">Calculate visa cost →</a><a className="secondary" href={whatsapp} target="_blank" rel="noreferrer">Chat on WhatsApp</a></div>
-        <div className="trust"><span>✓ Online guidance</span><span>✓ Clear fee separation</span><span>✓ Private consultancy</span></div>
-      </div>
-      <aside className="fv-panel">
-        <span className="panel-label">Start here</span><h2>Who are you sponsoring?</h2>
-        <SponsorQuickLinks />
-        <p>Answer a few questions and request an exact route review on WhatsApp.</p>
-      </aside>
-    </section>
+    <WelcomeHero />
 
     <VisaCalculator />
+    <section className="fv-clarity-grid" aria-labelledby="clarity-grid-title">
+      <div className="fv-clarity-intro"><p className="eyebrow">A CLEARER START</p><h2 id="clarity-grid-title">What your first route check gives you.</h2><p>A useful first answer should help you decide what to do next—not add more uncertainty.</p></div>
+      <article><span>01</span><h3>Route signal</h3><p>Start with the dependent, current UAE status and the key route factors that matter.</p><b>Practical, not generic</b></article>
+      <article><span>02</span><h3>Document focus</h3><p>See the starting documents to prepare before you spend time gathering everything.</p><b>Prepared before contact</b></article>
+      <article><span>03</span><h3>Fee clarity</h3><p>Understand the planning estimate and the difference between authority charges and support.</p><b>No hidden bundle</b></article>
+      <article className="fv-clarity-action"><span>READY WHEN YOU ARE</span><h3>Get the exact case review.</h3><p>Our team confirms the final route, documentation and current fee position for your circumstances.</p><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp our team <i>→</i></a></article>
+    </section>
     <JourneyPlanner />
     <RouteExplorer />
     <section className="fv-quick-tools"><div><p className="eyebrow">USEFUL TOOLS</p><h2>Get the right answer faster.</h2><p>Start with the tool that matches your situation, then ask our team to confirm your next step.</p></div><div><Link href="/demos/familyvisauae/checklist"><b>Document Checker</b><span>Build a practical starting checklist →</span></Link><Link href="/demos/familyvisauae/fees"><b>Fee Transparency</b><span>Understand official charges and support →</span></Link><Link href="/demos/familyvisauae/visa-status"><b>Visa Status</b><span>Understand your application’s next step →</span></Link></div></section>
     <ServiceExperience />
-    <section className="fv-online"><div><p className="eyebrow">100% ONLINE SUPPORT</p><h2>Everything handled <em>100% online.</em></h2><p>You do not need to navigate the process alone. We guide the document preparation, application steps and required appointments through a clear online journey.</p><div className="fv-online-points"><span>✓ Route and document review</span><span>✓ WhatsApp updates</span><span>✓ Medical and Emirates ID guidance</span></div><a className="primary" href="https://wa.me/971566556645?text=Hi%20FamilyVisaUAE%2C%20I%20would%20like%20help%20with%20my%20family%20visa." target="_blank" rel="noreferrer">Talk to our team →</a></div><Image src="/familyvisauae-documents.png" alt="Family reviewing UAE visa documents in Dubai" width={1536} height={1024}/></section>
+    <section className="fv-visual-story" aria-labelledby="visual-story-title">
+      <div className="fv-visual-story-media">
+        <Image src="/familyvisauae-family-balcony-v2.png" alt="Family planning their UAE life together in Dubai" width={1792} height={1024} sizes="(max-width: 820px) 100vw, 56vw" />
+        <div className="fv-visual-story-badge"><b>One clear route</b><span>From first check to the next step</span></div>
+      </div>
+      <div className="fv-visual-story-copy">
+        <p className="eyebrow">DESIGNED AROUND REAL FAMILY DECISIONS</p>
+        <h2 id="visual-story-title">Start with the question that matters: <em>who are you bringing to the UAE?</em></h2>
+        <p>Our route check turns a complex process into a clear conversation. Start with your family member, answer a few practical questions and see what to prepare before you speak to our team.</p>
+        <div className="fv-visual-story-steps">
+          <article><b>01</b><div><strong>Choose the family route</strong><span>Spouse, child, parent or newborn.</span></div></article>
+          <article><b>02</b><div><strong>See your preparation list</strong><span>Documents, status and supporting information.</span></div></article>
+          <article><b>03</b><div><strong>Confirm the exact case</strong><span>Continue with a private WhatsApp consultation.</span></div></article>
+        </div>
+        <a className="primary" href="#calculator">Start the family visa check →</a>
+      </div>
+    </section>
+    <section className="fv-online"><div><p className="eyebrow">100% ONLINE SUPPORT</p><h2>Everything handled <em>100% online.</em></h2><p>You do not need to navigate the process alone. We guide the document preparation, application steps and required appointments through a clear online journey.</p><div className="fv-online-points"><span>✓ Route and document review</span><span>✓ WhatsApp updates</span><span>✓ Medical and Emirates ID guidance</span></div><a className="primary" href="https://wa.me/971566556645?text=Hi%20FamilyVisaUAE%2C%20I%20would%20like%20help%20with%20my%20family%20visa." target="_blank" rel="noreferrer">Talk to our team →</a></div><Image src="/familyvisauae-document-review-v2.png" alt="Visa consultant reviewing a family document checklist in Dubai" width={1792} height={1024} sizes="(max-width: 800px) 100vw, 50vw"/></section>
+    <FamilyStorySlideshow />
     <section className="fv-consultation">
       <div className="fv-consultation-copy"><p className="eyebrow">PERSONAL ROUTE REVIEW</p><h2>One conversation can make the process <em>feel much clearer.</em></h2><p>Share your family’s situation privately with our team. We will help you understand the likely route, the documents to prepare and what should happen next.</p><div className="fv-consultation-points"><span><b>01</b> Private first review</span><span><b>02</b> Simple document guidance</span><span><b>03</b> WhatsApp follow-up</span></div><a className="primary" href={whatsapp} target="_blank" rel="noreferrer">Start a WhatsApp consultation →</a></div>
       <div className="fv-consultation-image"><Image src="/familyvisauae-consultation-v1.png" alt="Family meeting a UAE visa consultant in a Dubai office" width={1792} height={1024} priority={false}/><span>Clear guidance, before you begin.</span></div>
