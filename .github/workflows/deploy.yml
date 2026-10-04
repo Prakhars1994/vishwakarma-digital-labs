@@ -70,7 +70,7 @@ jobs:
         run: |
           set -euo pipefail
           base="https://vdl.vliab.workers.dev"
-          for path in / /work /work/currentpulse-ai /contact /demos/familyvisauae /familyvisauae-hero.png /familyvisauae-consultation-v1.png /familyvisauae-document-review-v1.png /familyvisauae-team.png /familyvisauae-reception-v1.png /robots.txt /sitemap.xml; do
+          for path in / /work /work/currentpulse-ai /contact /demos/barraid /demos/familyvisauae /familyvisauae-hero.png /familyvisauae-consultation-v1.png /familyvisauae-document-review-v1.png /familyvisauae-team.png /familyvisauae-reception-v1.png /robots.txt /sitemap.xml; do
             echo "Checking ${base}${path}"
             curl --silent --show-error --fail --location --retry 3 --retry-delay 2 --max-time 30 "${base}${path}" >/dev/null
           done
