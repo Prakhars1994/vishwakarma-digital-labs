@@ -32,7 +32,7 @@ export default function PreviewNav(){
   <nav className="fv-desktop-nav" aria-label="Primary navigation">
    <div className="nav-group fv-service-menu"><button onClick={()=>setMenu(menu==="Services"?null:"Services")} aria-expanded={menu==="Services"}>Services <span>⌄</span></button>
     {menu==="Services"&&<div className="mega-card fv-services-card"><small>Explore our services</small><div className="fv-service-columns">{groups.slice(0,4).map(group=><div key={group.label}><strong>{group.label}</strong>{group.items.slice(0,4).map(item=><Link key={item} href={`/demos/familyvisauae/${routeFor(item)}`} onClick={()=>setMenu(null)}>{item}<b>→</b></Link>)}</div>)}</div><Link className="view-all" href="/demos/familyvisauae/services" onClick={()=>setMenu(null)}>View all services →</Link></div>}</div>
-   <Link href="/demos/familyvisauae/calculators">Visa calculators</Link><Link href="/demos/familyvisauae/checklist">Document checker</Link><Link href="/demos/familyvisauae/guides">Guides</Link>
+   <Link href="/demos/familyvisauae/calculators">Visa calculators</Link><Link href="/demos/familyvisauae/fees">Fees</Link><Link href="/demos/familyvisauae/guides">Guides</Link><Link href="/demos/familyvisauae/contact">Contact</Link>
   </nav>
   <div className="fv-actions">
    <div className="lang-wrap"><button className="fv-language" onClick={()=>setLang(!lang)} aria-expanded={lang}>◎ {selectedLanguage[0]} <span>⌄</span></button>{lang&&<div className="lang-menu">{languages.map(([name,code])=><button key={code} onClick={()=>chooseLanguage(name,code)} dir={code==="ar"||code==="ur"?"rtl":"ltr"}>{name}<small>{code.toUpperCase()}</small></button>)}</div>}</div>
