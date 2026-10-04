@@ -1,0 +1,27 @@
+name: BarRaid OpenNext Artifact
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/barraid-artifact.yml"
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_PUBLIC_SITE_URL: https://vdl.vliab.workers.dev
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --prefer-offline --no-audit --no-fund
+      - run: npx opennextjs-cloudflare build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vdl-opennext
+          path: .open-next
+          include-hidden-files: true
+          retention-days: 1
