@@ -25,7 +25,7 @@ export default function BarRaidPage(){
     itemListElement:products.map(([name,price,category],i)=>({
       "@type":"ListItem",position:i+1,item:{
         "@type":"Product",name,category,
-        offers:{"@type":"Offer",priceCurrency:"INR",price,availability:"https://schema.org/InStock"}
+        offers:{"@type":"Offer",priceCurrency:"INR",price}
       }
     }))
   };
