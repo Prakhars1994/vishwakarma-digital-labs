@@ -7,6 +7,7 @@ export const metadata = demoMetadata(
   "Shop BarRaid beer towers, liquor dispensers and novelty barware, with retail checkout and bulk WhatsApp enquiries."
 );
 
+const faq=[["Can I order a single piece?","Yes. Products shown with retail pricing can be added to the cart individually."],["Do you handle bulk orders?","Yes. Use the WhatsApp bulk enquiry for MOQ, availability and quantity pricing."],["Are the product visuals final?","Not yet. Final approved BarRaid packshots will replace the concept visuals before production launch."],["Is payment live on this preview?","No. The checkout demonstrates the intended flow; live gateway credentials are connected for production."]];
 const products=[
   ["3L Draft Beer Tower",3599,"Beer Towers"],
   ["Double Gas Pump Liquor Dispenser",1999,"Liquor Dispensers"],
@@ -28,5 +29,6 @@ export default function BarRaidPage(){
       }
     }))
   };
-  return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(data)}}/><BarRaidDemoClient/></>;
+  const faqData={"@context":"https://schema.org","@type":"FAQPage",mainEntity:faq.map(([name,text])=>({"@type":"Question",name,acceptedAnswer:{"@type":"Answer",text}}))};
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(data)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqData)}}/><BarRaidDemoClient/></>;
 }
