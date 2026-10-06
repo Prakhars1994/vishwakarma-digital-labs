@@ -13,6 +13,30 @@ export type PortfolioDemo = {
 
 export const portfolioDemos: PortfolioDemo[] = [
   {
+    label: "PREMIUM MATRIMONIAL",
+    icon: "💍",
+    title: "SafalBandhan New",
+    text: "Luxury matrimonial redesign concept with curated profiles, match discovery, trust, privacy and family-first conversion journeys.",
+    tags: ["Matrimonial", "Profiles", "Matchmaking", "Premium UX"],
+    href: "/demos/safalbandhan-new",
+    card: "border-rose-300/20 bg-gradient-to-br from-[#6f1934] via-[#431526] to-[#b68a4a] rounded-[2.5rem]",
+    glow: "bg-rose-300/20",
+    labelClass: "text-rose-200",
+    button: "border-rose-200/25 bg-rose-200/10 text-rose-100 group-hover:bg-rose-200 group-hover:text-[#431526]",
+  },
+  {
+    label: "B2B ECOMMERCE PREVIEW",
+    icon: "🍸",
+    title: "BarRaid B2B Barware",
+    text: "Dark trade catalogue concept with product discovery, B2B use cases and a WhatsApp-first quote journey.",
+    tags: ["B2B", "Catalogue", "WhatsApp RFQ"],
+    href: "/demos/barraid",
+    card: "border-lime-300/20 bg-gradient-to-br from-[#142217] via-[#101a18] to-[#152328] rounded-[2.5rem_2.5rem_1rem_1rem]",
+    glow: "bg-lime-300/20",
+    labelClass: "text-lime-300",
+    button: "border-lime-300/25 bg-lime-300/10 text-lime-200 group-hover:bg-lime-300 group-hover:text-black",
+  },
+  {
     label: "LIVE RESTAURANT WEBSITE",
     icon: "🍽️",
     title: "Saffron Table",
