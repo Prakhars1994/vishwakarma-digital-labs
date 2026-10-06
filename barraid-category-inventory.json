@@ -1,0 +1,403 @@
+{
+  "categories": [
+    {
+      "url": "https://www.barraid.com/Beer-Glass",
+      "name": "Beer Glass",
+      "key": "/Beer-Glass",
+      "pages": 1,
+      "productIds": [
+        219,
+        224
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://www.barraid.com/Beer-Glass-650ml-and-1Litre",
+      "name": "Designer Beer Boot Glass - 500 ML TO 1 Litre",
+      "key": "/Beer-Glass-650ml-and-1Litre",
+      "pages": 1,
+      "productIds": [
+        220,
+        221,
+        222,
+        223
+      ],
+      "count": 4
+    },
+    {
+      "url": "https://www.barraid.com/Electroplated-Beer-Boot-Glass-750ml",
+      "name": "Electroplated Beer Boot Glass - 750 ML",
+      "key": "/Electroplated-Beer-Boot-Glass-750ml",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=97",
+      "name": "Whiskey glasses set of 6",
+      "key": "97",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/BEER-TOWER-WITH-LED-LIGHTS",
+      "name": "BEER TOWER/DISPENSER 3000 ML",
+      "key": "/BEER-TOWER-WITH-LED-LIGHTS",
+      "pages": 2,
+      "productIds": [
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234
+      ],
+      "count": 10
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=83",
+      "name": "BEER TOWER WITH LED LIGHT",
+      "key": "83",
+      "pages": 4,
+      "productIds": [
+        106,
+        113,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218
+      ],
+      "count": 33
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=92",
+      "name": "ELITE BEER TOWER",
+      "key": "92",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=91",
+      "name": "FOOTBALL BEER TOWER",
+      "key": "91",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=95",
+      "name": "Whiskey glasses set of 6",
+      "key": "95",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=84",
+      "name": "Chrome Plated Double Gas Pump 1800 ML Capacity",
+      "key": "84",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=90",
+      "name": "ELITE BEER TOWER",
+      "key": "90",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=89",
+      "name": "FOOTBALL BEER TOWER",
+      "key": "89",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=78",
+      "name": "Gifts",
+      "key": "78",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=81",
+      "name": "Anniversary Gifts",
+      "key": "81",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/BirthDay-Gifts",
+      "name": "BirthDay Gifts",
+      "key": "/BirthDay-Gifts",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/GroomsMen-Gift",
+      "name": "GroomsMen Gift",
+      "key": "/GroomsMen-Gift",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/GLASS LIQUOR DECANTER 1000 ML",
+      "name": "GLASS LIQUOR DECANTER 1000 ML",
+      "key": "/GLASS%20LIQUOR%20DECANTER%201000%20ML",
+      "pages": 1,
+      "productIds": [
+        189,
+        197,
+        198,
+        199,
+        206,
+        207,
+        208,
+        214,
+        216,
+        230,
+        231,
+        232,
+        233,
+        234,
+        237
+      ],
+      "count": 15
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=94",
+      "name": "GLASS LIQUOR DECANTER 1000 ML",
+      "key": "94",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/Liquor-Dispenser",
+      "name": "Liquor Dispenser",
+      "key": "/Liquor-Dispenser",
+      "pages": 2,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/Bonny-Boy-Liquor-Dispenser",
+      "name": "Bonny Boy Liquor Dispenser 500 ML Capacity",
+      "key": "/Bonny-Boy-Liquor-Dispenser",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=85",
+      "name": "Chrome Plated Double Gas Pump 1800 ML Capacity",
+      "key": "85",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=86",
+      "name": "Double gas pump liquor dispenser",
+      "key": "86",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=87",
+      "name": "Globe Liquor Dispenser",
+      "key": "87",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/Santa-Claus-Liquor-Dispenser",
+      "name": "Santa Clause Liquor Dispenser 500 ML Capacity",
+      "key": "/Santa-Claus-Liquor-Dispenser",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/Singapore-Lion-Liquor-Dispenser",
+      "name": "Singapore Lion Liquor Dispenser 500 ML Capacity",
+      "key": "/Singapore-Lion-Liquor-Dispenser",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=88",
+      "name": "Single Gas Pump Liquor Lispenser",
+      "key": "88",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=96",
+      "name": "Whiskey glasses set of 6",
+      "key": "96",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/Beer-Glass/Beer-Glass-650ml-and-1Litre",
+      "name": "Designer Beer Boot Glass - 500 ML TO 1 Litre",
+      "key": "/Beer-Glass/Beer-Glass-650ml-and-1Litre",
+      "pages": 1,
+      "productIds": [
+        220,
+        221,
+        222,
+        223
+      ],
+      "count": 4
+    },
+    {
+      "url": "https://www.barraid.com/Beer-Glass/Electroplated-Beer-Boot-Glass-750ml",
+      "name": "Electroplated Beer Boot Glass - 750 ML",
+      "key": "/Beer-Glass/Electroplated-Beer-Boot-Glass-750ml",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=78_80",
+      "name": "BirthDay Gifts",
+      "key": "80",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=78_79",
+      "name": "GroomsMen Gift",
+      "key": "79",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/Liquor-Dispenser/Bonny-Boy-Liquor-Dispenser",
+      "name": "Bonny Boy Liquor Dispenser 500 ML Capacity",
+      "key": "/Liquor-Dispenser/Bonny-Boy-Liquor-Dispenser",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/Liquor-Dispenser/Santa-Claus-Liquor-Dispenser",
+      "name": "Santa Clause Liquor Dispenser 500 ML Capacity",
+      "key": "/Liquor-Dispenser/Santa-Claus-Liquor-Dispenser",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    },
+    {
+      "url": "https://www.barraid.com/Liquor-Dispenser/Singapore-Lion-Liquor-Dispenser",
+      "name": "Singapore Lion Liquor Dispenser 500 ML Capacity",
+      "key": "/Liquor-Dispenser/Singapore-Lion-Liquor-Dispenser",
+      "pages": 1,
+      "productIds": [],
+      "count": 0
+    }
+  ],
+  "originalProductIds": [
+    106,
+    113,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    237
+  ],
+  "count": 50
+}

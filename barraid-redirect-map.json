@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-06",
-  "count": 54,
+  "count": 120,
   "redirects": [
     {
       "from": "https://www.barraid.com/Beer-Glass/beer-boot-glass-blue",
@@ -271,6 +271,336 @@
       "from": "https://www.barraid.com/terms",
       "to": "/demos/barraid/terms",
       "type": "page"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=50",
+      "to": "/demos/barraid/product/barraid-blue-beer-boot-glass-650-ml-capacity-50",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=52",
+      "to": "/demos/barraid/product/barraid-designer-dragon-boot-glass-52",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=53",
+      "to": "/demos/barraid/product/barraid-green-beer-boot-glass-1-litre-capacity-53",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=54",
+      "to": "/demos/barraid/product/barraid-designer-beer-boot-mug-for-party-pub-bar-gift-for-love-ones-beer-glass-with-750ml--54",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=57",
+      "to": "/demos/barraid/product/bonny-boy-liquor-beer-dispenser-57",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=58",
+      "to": "/demos/barraid/product/barraid-gas-pump-liquor-wine-dispenser-58",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=61",
+      "to": "/demos/barraid/product/barraid-designer-beer-boot-mug-61",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=64",
+      "to": "/demos/barraid/product/bonny-boy-square-golden-liquor-dispenser-500-ml-capacity-64",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=65",
+      "to": "/demos/barraid/product/barraid-singapore-lion-liquor-dispenser-white-round-shape-with-black-jar-500-ml-capacity-65",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=66",
+      "to": "/demos/barraid/product/barraid-double-gas-pump-liquor-dispenser-silver-chrome-1500-ml-capacity-66",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=72",
+      "to": "/demos/barraid/product/barraid-singapore-lion-liquor-dispenser-red-round-shape-with-white-jar-500-ml-capacity-72",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=73",
+      "to": "/demos/barraid/product/barraid-santa-clause-round-beer-liquor-dispenser-capacity-500-ml-for-christmas-gift-73",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=76",
+      "to": "/demos/barraid/product/bonny-boy-silver-squrae-black-liquor-dispeser-500-ml-capacity-76",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=77",
+      "to": "/demos/barraid/product/barraid-santa-clause-square-beer-liquor-dispenser-capacity-500-ml-for-christmas-gift-77",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=84",
+      "to": "/demos/barraid/product/barraid-singapore-lion-liquor-dispenser-silver-round-shape-with-black-jar-500-ml-capacity-84",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=102",
+      "to": "/demos/barraid/product/barraid-double-gas-pump-liquor-dispenser-black-chrome-plated-1500-ml-capacity-102",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=104",
+      "to": "/demos/barraid/product/barraid-double-gas-pump-liquor-dispenser-capacity-900-ml-104",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=106",
+      "to": "/demos/barraid/product/silver-large-capacity-world-cup-beer-tower-dispenser-decanter-for-beer-whisky-wine-with-sparkling-mu-106",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=113",
+      "to": "/demos/barraid/product/large-capacity-world-cup-beer-tower-dispenser-decanter-for-beer-whisky-wine-with-sparkling-multi-col-113",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=188",
+      "to": "/demos/barraid/product/barraid-european-candle-design-beer-liquor-tower-dispenser-decanter-3000-ml-capacity-with-led-light--188",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=189",
+      "to": "/demos/barraid/product/barraid-hoegaarden-3l-beer-tower-dispenser-decanter-in-red-white-blue-green-colours-blue-189",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=190",
+      "to": "/demos/barraid/product/barraid-hoegaarden-3l-beer-tower-dispenser-decanter-in-red-white-blue-green-colours-green-190",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=191",
+      "to": "/demos/barraid/product/barraid-european-candle-design-beer-liquor-tower-dispenser-decanter-3000-ml-capacity-with-led-light--191",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=192",
+      "to": "/demos/barraid/product/barraid-hoegaarden-3l-beer-tower-dispenser-decanter-in-red-white-blue-green-colours-red-192",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=193",
+      "to": "/demos/barraid/product/barraid-hoegaarden-3l-beer-tower-dispenser-decanter-in-red-white-blue-green-colours-white-193",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=194",
+      "to": "/demos/barraid/product/barraid-large-3000-ml-3-l-capacity-world-cup-tower-dispenser-decanter-for-beer-whisky-wine-with-spar-194",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=195",
+      "to": "/demos/barraid/product/barraid-large-3000-ml-3-l-capacity-world-cup-tower-dispenser-decanter-for-beer-whisky-wine-with-spar-195",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=201",
+      "to": "/demos/barraid/product/barraid-beer-tower-3000-ml-capacity-multicolour-led-lights-green-201",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=202",
+      "to": "/demos/barraid/product/barraid-beer-tower-3000-ml-capacity-multicolour-led-lights-red-202",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=203",
+      "to": "/demos/barraid/product/barraid-beer-tower-3000-ml-capacity-multicolour-led-lights-yellow-203",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=204",
+      "to": "/demos/barraid/product/barraid-beer-tower-3000-ml-capacity-multicolour-led-lights-dark-blue-204",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=205",
+      "to": "/demos/barraid/product/barraid-beer-tower-3000-ml-capacity-multicolour-led-lights-golden-205",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=211",
+      "to": "/demos/barraid/product/barraid-custom-tall-table-beer-liquor-dispenser-decanter-for-beer-whisky-wine-capacity-for-party-hom-211",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=213",
+      "to": "/demos/barraid/product/barraid-custom-tall-table-beer-liquor-dispenser-decanter-for-beer-whisky-wine-capacity-for-party-hom-213",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=214",
+      "to": "/demos/barraid/product/barraid-elite-tower-dispenser-decanter-for-beer-whisky-wine-capacity-for-party-home-bars-pubs-3000-m-214",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=215",
+      "to": "/demos/barraid/product/barraid-elite-tower-dispenser-decanter-for-beer-whisky-wine-capacity-for-party-home-bars-pubs-3000-m-215",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=216",
+      "to": "/demos/barraid/product/barraid-elite-tower-dispenser-decanter-for-beer-whisky-wine-capacity-for-party-home-bars-pubs-3000-m-216",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=217",
+      "to": "/demos/barraid/product/barraid-elite-tower-dispenser-decanter-for-beer-whisky-wine-capacity-for-party-home-bars-pubs-3000-m-217",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=219",
+      "to": "/demos/barraid/product/barraid-world-cup-trophy-shaped-beer-glass-450-ml-capacity-1-glass-crystal-clear-219",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=220",
+      "to": "/demos/barraid/product/barraid-boot-shaped-beer-glass-clear-novelty-drinking-glasses-1-piece-550ml-220",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=221",
+      "to": "/demos/barraid/product/barraid-glass-beer-boot-580-ml-capacity-traditional-das-boot-style-drinking-glass-221",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=222",
+      "to": "/demos/barraid/product/barraid-boot-beer-plastic-glass-with-handle-550-ml-clear-glass-western-style-mug-plastic-222",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=223",
+      "to": "/demos/barraid/product/barraid-boot-shaped-cocktail-glass-300-ml-clear-glass-with-decorative-design-223",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=224",
+      "to": "/demos/barraid/product/barraid-creative-finger-glass-beer-decanter-with-stopper-novelty-wine-bottle-224",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=225",
+      "to": "/demos/barraid/product/barraid-beer-tower-beverage-dispenser-3-litre-tabletop-draft-drink-dispenser-blue-225",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=227",
+      "to": "/demos/barraid/product/barraid-beer-tower-beverage-dispenser-3-litre-tabletop-draft-drink-dispenser-green-227",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=228",
+      "to": "/demos/barraid/product/barraid-beer-tower-beverage-dispenser-3-litre-tabletop-draft-drink-dispenser-golden-228",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=229",
+      "to": "/demos/barraid/product/barraid-beer-tower-beverage-dispenser-3-litre-tabletop-draft-drink-dispenser-red-229",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=230",
+      "to": "/demos/barraid/product/barraid-beer-tower-beverage-dispenser-3-litre-tabletop-draft-drink-dispenser-silver-230",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=231",
+      "to": "/demos/barraid/product/barraid-beer-tower-beverage-dispenser-3-litre-capacity-tabletop-drink-dispenser-with-dual--231",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=232",
+      "to": "/demos/barraid/product/barraid-beer-tower-beverage-dispenser-3-litre-capacity-tabletop-drink-dispenser-with-dual--232",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=233",
+      "to": "/demos/barraid/product/barraid-beer-tower-beverage-dispenser-3-litre-capacity-tabletop-drink-dispenser-with-dual--233",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=234",
+      "to": "/demos/barraid/product/barraid-beer-tower-beverage-dispenser-3-litre-capacity-tabletop-drink-dispenser-with-dual--234",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/product&product_id=237",
+      "to": "/demos/barraid/product/barraid-crystal-whiskey-glasses-set-of-6-rocks-glass-heavy-base-300-ml-237",
+      "type": "product-id"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/information&information_id=4",
+      "to": "/demos/barraid/about",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/contact",
+      "to": "/demos/barraid/contact",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/information&information_id=6",
+      "to": "/demos/barraid/shipping",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/information&information_id=13",
+      "to": "/demos/barraid/returns",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/information&information_id=11",
+      "to": "/demos/barraid/returns",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/information&information_id=3",
+      "to": "/demos/barraid/privacy",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/information&information_id=5",
+      "to": "/demos/barraid/terms",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/information&information_id=10",
+      "to": "/demos/barraid/faq",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/information&information_id=12",
+      "to": "/demos/barraid/about",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=product/special",
+      "to": "/demos/barraid/shop",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=information/sitemap",
+      "to": "/demos/barraid/shop",
+      "type": "information"
+    },
+    {
+      "from": "https://www.barraid.com/index.php?route=account/return/add",
+      "to": "/demos/barraid/returns",
+      "type": "information"
     }
   ]
 }

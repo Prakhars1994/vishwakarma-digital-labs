@@ -4,7 +4,7 @@ import {products as catalogue,categories} from "./catalog";
 
 type P={id:number;slug:string;name:string;cat:string;price:number;old?:number;badge?:string;desc:string;image:string;code?:string;availability?:string};
 type Line={id:number;qty:number};
-const ps:P[]=catalogue.map(p=>({id:p.id,slug:p.slug,name:p.name,cat:p.category,price:p.price,old:p.oldPrice,desc:p.description,image:p.image,code:p.code,availability:p.availability,badge:p.category==="Beer Towers"?"BEER TOWER":p.category==="Beer Glassware"?"GLASSWARE":"DISPENSER"}));
+const ps:P[]=catalogue.map(p=>({id:p.id,slug:p.slug,name:p.name,cat:p.category,price:p.price ?? 0,old:p.oldPrice ?? undefined,desc:p.description,image:p.image,code:p.code,availability:p.availability,badge:p.category==="Beer Towers"?"BEER TOWER":p.category==="Beer Glassware"?"GLASSWARE":"DISPENSER"}));
 const cats=["All",...categories];
 const wa="919868107595";
 function Visual({p}:{p:P}){return <div className="relative grid h-80 place-items-center overflow-hidden bg-white p-4 sm:h-96">

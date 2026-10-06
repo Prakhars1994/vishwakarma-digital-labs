@@ -1,0 +1,418 @@
+{
+  "generatedAt": "2026-10-06T13:19:22.898Z",
+  "categoryUrls": 42,
+  "totalProductLinkOccurrences": 206,
+  "uniqueProductIds": 49,
+  "productIds": [
+    106,
+    113,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    237
+  ],
+  "pages": [
+    {
+      "url": "https://www.barraid.com/Beer-Glass",
+      "page": 1,
+      "ids": [
+        224,
+        219
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/Beer-Glass-650ml-and-1Litre",
+      "page": 1,
+      "ids": [
+        222,
+        220,
+        223,
+        221
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=97",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/BEER-TOWER-WITH-LED-LIGHTS",
+      "page": 1,
+      "ids": [
+        234,
+        232,
+        231,
+        233,
+        225,
+        228,
+        227,
+        229,
+        230
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?page=2&path=97&route=extension/module/oclayerednavigation/category",
+      "page": 2,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=83",
+      "page": 1,
+      "ids": [
+        208,
+        206,
+        207,
+        197,
+        198,
+        199,
+        200,
+        204,
+        205
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?page=2&path=83&route=extension/module/oclayerednavigation/category",
+      "page": 2,
+      "ids": [
+        201,
+        202,
+        203,
+        210,
+        211,
+        212,
+        213,
+        214,
+        216
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?page=3&path=83&route=extension/module/oclayerednavigation/category",
+      "page": 3,
+      "ids": [
+        217,
+        218,
+        215,
+        188,
+        191,
+        189,
+        190,
+        192,
+        193
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?page=4&path=83&route=extension/module/oclayerednavigation/category",
+      "page": 4,
+      "ids": [
+        194,
+        195,
+        196,
+        209,
+        113,
+        106
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=92",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=91",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=95",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=84",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=90",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=89",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=78",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=81",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/GLASS LIQUOR DECANTER 1000 ML",
+      "page": 1,
+      "ids": [
+        208,
+        206,
+        207,
+        197,
+        198,
+        199,
+        223,
+        231,
+        219,
+        225,
+        230,
+        237,
+        234,
+        233,
+        232
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=94",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/Liquor-Dispenser",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?page=2&path=97&route=extension/module/oclayerednavigation/category",
+      "page": 2,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=85",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=86",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=87",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=88",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=96",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/Beer-Glass/Beer-Glass-650ml-and-1Litre",
+      "page": 1,
+      "ids": [
+        222,
+        220,
+        223,
+        221
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/Beer-Glass/Electroplated-Beer-Boot-Glass-750ml",
+      "error": "Error: 500 https://www.barraid.com/Beer-Glass/Electroplated-Beer-Boot-Glass-750ml"
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=59_97",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=82_83",
+      "page": 1,
+      "ids": [
+        208,
+        206,
+        207,
+        197,
+        198,
+        199,
+        200,
+        204,
+        205
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?page=2&path=83&route=extension/module/oclayerednavigation/category",
+      "page": 2,
+      "ids": [
+        201,
+        202,
+        203,
+        210,
+        211,
+        212,
+        213,
+        214,
+        216
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?page=3&path=83&route=extension/module/oclayerednavigation/category",
+      "page": 3,
+      "ids": [
+        217,
+        218,
+        215,
+        188,
+        191,
+        189,
+        190,
+        192,
+        193
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?page=4&path=83&route=extension/module/oclayerednavigation/category",
+      "page": 4,
+      "ids": [
+        194,
+        195,
+        196,
+        209,
+        113,
+        106
+      ]
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=82_92",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=82_91",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=82_95",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=78_81",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=78_80",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=78_79",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=93_94",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/Liquor-Dispenser/Bonny-Boy-Liquor-Dispenser",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=61_85",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=61_86",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=61_87",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/Liquor-Dispenser/Santa-Claus-Liquor-Dispenser",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/Liquor-Dispenser/Singapore-Lion-Liquor-Dispenser",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.com/index.php?route=product/category&path=61_88",
+      "page": 1,
+      "ids": []
+    },
+    {
+      "url": "https://www.barraid.comindex.php?route=product/category&path=79",
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "url": "https://www.barraid.comindex.php?route=product/category&path=80",
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "url": "https://www.barraid.comindex.php?route=product/category&path=81",
+      "error": "TypeError: fetch failed"
+    }
+  ]
+}
