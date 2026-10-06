@@ -1,0 +1,1 @@
+import BarRaidLegal from "../BarRaidLegal"; export default function Page(){return <BarRaidLegal kind="terms"/>}
