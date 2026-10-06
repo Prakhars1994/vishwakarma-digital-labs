@@ -1,4 +1,5 @@
 ﻿import type { NextConfig } from "next";
+import { barRaidLegacyRedirects } from "./barraid-redirects";
 
 const csp = [
   "default-src 'self'",
@@ -20,6 +21,7 @@ const nextConfig: NextConfig = {
   output: "standalone",
   reactStrictMode: true,
   poweredByHeader: false,
+  async redirects() { return [...barRaidLegacyRedirects]; },
   async headers() {
     return [
       {
