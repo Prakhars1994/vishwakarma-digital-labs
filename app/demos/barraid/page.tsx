@@ -7,14 +7,15 @@ export const metadata = demoMetadata(
   "Shop BarRaid beer towers, liquor dispensers and novelty barware, with retail checkout and bulk WhatsApp enquiries."
 );
 
-const faq=[["Can I order a single piece?","In this preview, retail-priced products can be added individually. Final availability is confirmed for launch."],["Do you handle bulk orders?","Use the WhatsApp bulk enquiry to discuss quantity pricing, availability and order requirements."],["Are the product visuals final?","Not yet. Final approved BarRaid packshots will replace the concept visuals before production launch."],["Is payment live on this preview?","No. The checkout demonstrates the intended flow; live gateway credentials are connected for production."]];
+const faq=[["Can I order a single piece?","Retail-priced products can be added individually, subject to current availability."],["Do you handle bulk orders?","Use the WhatsApp bulk enquiry to discuss quantity pricing, availability and order requirements."],["How can I confirm a product before ordering?","Contact BarRaid for current product imagery, availability and order details before finalizing your purchase."],["Is online payment live?","No. The current checkout records an order request; BarRaid confirms the available payment method and fulfilment details before the order is finalized."]];
 const products=[
-  ["3L Draft Beer Tower",3599,"Beer Towers"],
-  ["Double Gas Pump Liquor Dispenser",1999,"Liquor Dispensers"],
+  ["Tripod Beer / Liquor Tower 3L",3599,"Beer Towers"],
+  ["Double Gas Pump Liquor Dispenser 900 ML",1999,"Liquor Dispensers"],
   ["Green Beer Boot Glass",599,"Novelty Glassware"],
-  ["Santa Claus Round Dispenser",1599,"Liquor Dispensers"],
-  ["Amazing Cup LED Dispenser",3599,"Beer Towers"],
-  ["Blue Beer Boot Glass",599,"Novelty Glassware"]
+  ["3L Sparkling Light Draft Beer Tower",3599,"Beer Towers"],
+  ["Elite Tower 3L - Wooden Pattern",3599,"Beer Towers"],
+  ["Dual-Tap Beer Tower 3L - Silver",3599,"Beer Towers"],
+  ["Tabletop Draft Drink Dispenser 3L",3599,"Beer Towers"]
 ];
 
 export default function BarRaidPage(){
