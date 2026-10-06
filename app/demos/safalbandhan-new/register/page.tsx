@@ -1,0 +1,1 @@
+import "../safalbandhan.css";import AuthForm from "../AuthForm";export default function Page(){return <main className="authPage"><AuthForm mode="register"/></main>}

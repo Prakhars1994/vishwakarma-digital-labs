@@ -10,13 +10,14 @@ const csp = [
   "font-src 'self' data:",
   "style-src 'self' 'unsafe-inline'",
   "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://static.cloudflareinsights.com",
-  "connect-src 'self' https://challenges.cloudflare.com https://cloudflareinsights.com",
+  "connect-src 'self' https://challenges.cloudflare.com https://cloudflareinsights.com https://*.supabase.co wss://*.supabase.co",
   "frame-src https://challenges.cloudflare.com",
   "worker-src 'self' blob:",
   "upgrade-insecure-requests",
 ].join("; ");
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   reactStrictMode: true,
   poweredByHeader: false,
   async headers() {
