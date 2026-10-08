@@ -52,3 +52,12 @@ Local content inspection confirmed:
 ## Next required fix
 
 Adjust the Ubuntu packaging configuration/build so OpenNext emits portable paths (or otherwise produces a supported path-free artifact without manually wrapping or fabricating the handler), then rerun the build-only workflow. Deploy only after that check passes.
+
+## Follow-up investigation — 2026-10-08
+
+- Installed OpenNext version: `1.20.2`.
+- Latest npm release checked: `1.20.9`.
+- Attempted supported package-only upgrade: rejected by npm dependency resolution because OpenNext `1.20.9` requires Wrangler `^4.125.0`, while this project pins Wrangler `4.120.0`.
+- No `--force` or `--legacy-peer-deps` override was used.
+- No package files, customer-facing source, or production deployment were changed by this attempt.
+- Current blocker remains: a supported, path-free OpenNext build configuration or a coordinated OpenNext/Wrangler upgrade must be selected and tested before deployment.
