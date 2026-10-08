@@ -1,0 +1,2 @@
+﻿import LegacyDestination from "../../_components/LegacyDestination";
+export default function Page(){return <LegacyDestination eyebrow="UAE VISA GUIDE" title="Emirates Id Renewal Guide" description="A practical FamilyVisaUAE guide covering the key documents, route checks and application considerations for this topic." points={["Understand the applicable UAE route","Check current eligibility and documents","Separate government requirements from professional support","Prepare the application carefully","Confirm current requirements before submission"]}/>;}

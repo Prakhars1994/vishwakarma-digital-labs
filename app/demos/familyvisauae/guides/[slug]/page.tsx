@@ -1,16 +1,26 @@
+﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import "../../familyvisa.css";
 import PreviewNav from "../../PreviewNav";
+import WhatsAppIconLink from "../../WhatsAppIconLink";
+import { guideArticles } from "../guide-data";
 
-const articles: Record<string, { title: string; intro: string; points: string[] }> = {
-  "family-visa-application": { title: "New family visa: a practical process guide", intro: "A new family residence journey normally starts with the right route and documents. The final sequence depends on the applicant’s current location, route and official requirements.", points: ["Confirm who is being sponsored and where they are currently located.", "Prepare clear identity, relationship and route-supporting documents.", "Review the authority process and any status or entry requirement.", "Complete medical, Emirates ID or other formalities where applicable.", "Keep receipts and confirmed updates together until the residence journey is complete."] },
-  "family-visa-documents": { title: "Family visa documents: where to start", intro: "A simple pre-checklist helps you avoid delays before a family residence application begins.", points: ["Confirm each passport has sufficient validity.", "Prepare clear passport and Emirates ID copies.", "Identify the correct attested marriage or birth certificate.", "Keep salary and accommodation evidence ready where applicable."] },
-  "family-visa-cost": { title: "Family visa costs: understanding your estimate", intro: "A useful estimate separates authority charges from private professional support and is confirmed only after the route and documents are reviewed.", points: ["Start with the dependent type and current UAE location.", "Review the planning estimate in the calculator.", "Check which charges are paid to the relevant authority.", "Request a clear professional-support quote before confirming work."] },
-  "family-visa-renewal": { title: "Family visa renewal: a practical preparation guide", intro: "Preparing early gives you time to review passport validity, current residence records and any medical or Emirates ID steps that may apply.", points: ["Check your family member’s residence and Emirates ID expiry dates.", "Gather current passport, Emirates ID and residence copies.", "Confirm whether medical fitness or biometrics may be required.", "Ask for a route-specific document and timing review before submission."] },
-  "golden-visa-guide": { title: "Golden Visa: preparing for a route review", intro: "Golden Visa pathways can differ by property, professional, investor and specialist circumstances, so evidence should be reviewed before any estimate is treated as final.", points: ["Identify the route you believe may apply to your situation.", "Prepare current passport and UAE status information.", "Collect relevant property, company, professional or financial evidence.", "Use the calculator and ask for a document-specific confirmation."] },
-  "family-visa-inside-outside-uae": { title: "Inside or outside the UAE: why it matters", intro: "A dependent’s current location can change the application sequence and the charges involved.", points: ["Tell the team whether the person is currently in the UAE.", "Keep a copy of their current visa or entry status.", "Ask whether a status-change step may apply.", "Confirm the expected timeline before you begin."] },
-  "emirates-id-medical": { title: "Medical fitness and Emirates ID steps", intro: "Medical and Emirates ID steps are commonly part of UAE residence journeys for eligible applicants.", points: ["Check whether the applicant needs a medical fitness test.", "Prepare the booking documents in advance.", "Confirm biometrics requirements for the applicant.", "Keep application receipts and status information accessible."] },
-  "document-attestation-guide": { title: "Document attestation: a practical guide", intro: "The right attestation path depends on where a document was issued and how it will be used in the UAE.", points: ["Start with the original issuing country.", "Confirm whether translation is required.", "Do not alter or laminate original documents.", "Ask for the correct authority sequence before submission."] },
-};
-export function generateStaticParams() { return Object.keys(articles).map((slug) => ({ slug })); }
-export default async function GuideArticle({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const article = articles[slug] ?? articles["family-visa-documents"]; const message = encodeURIComponent(`Hi FamilyVisaUAE, I read the guide “${article.title}” and need help with my case.`); return <main className="fv"><div className="fv-top"><span>FamilyVisaUAE</span><span>UAE visa guides</span></div><PreviewNav /><section className="fv-section"><p className="eyebrow">PRACTICAL GUIDE</p><h1>{article.title}</h1><p className="lead">{article.intro}</p><div className="journey">{article.points.map((point, index) => <div key={point}><b>0{index + 1}</b><span>{point}</span></div>)}</div><div className="fv-cta" style={{ marginTop: 40 }}><a className="primary" href={`https://wa.me/971566556645?text=${message}`} target="_blank" rel="noreferrer">Ask about my case →</a><Link className="secondary" href="/demos/familyvisauae/guides">View all guides</Link></div></section></main>; }
+export const dynamicParams = false;
+export function generateStaticParams() { return Object.keys(guideArticles).map((slug) => ({ slug })); }
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const guide = guideArticles[slug];
+  if (!guide) notFound();
+  return { title: { absolute: `${guide.title} | FamilyVisaUAE` }, description: guide.intro, alternates: { canonical: `/demos/familyvisauae/guides/${slug}` }, openGraph: { title: guide.title, description: guide.intro } };
+}
+
+export default async function GuideArticle({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const guide = guideArticles[slug];
+  if (!guide) notFound();
+  const message = encodeURIComponent(`Hi FamilyVisaUAE, I read the guide â€œ${guide.title}â€ and need help with my case.`);
+  return <main className="fv"><div className="fv-top"><span>FamilyVisaUAE</span><span>UAE visa guides</span></div><PreviewNav /><section className="fv-section"><p className="eyebrow">{guide.category.toUpperCase()} GUIDE</p><h1>{guide.title}</h1><p className="lead">{guide.intro}</p><div className="journey">{guide.points.map((point, index) => <div key={point}><b>{String(index + 1).padStart(2, "0")}</b><span>{point}</span></div>)}</div><div className="fv-cta" style={{ marginTop: 40 }}><WhatsAppIconLink href={`https://wa.me/9718003627?text=${message}`} label={`Ask about ${guide.title} on WhatsApp`} /><Link className="secondary" href="/demos/familyvisauae/guides">View all guides</Link></div></section></main>;
+}
+

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./internal-page-theme.css";
+import "./premium-refresh.css";
 
 export const metadata: Metadata = {
   title: { absolute: "FamilyVisaUAE | UAE Visa & Document Support" },
@@ -9,13 +10,13 @@ export const metadata: Metadata = {
     siteName: "FamilyVisaUAE",
     title: "FamilyVisaUAE | UAE Visa & Document Support",
     description: "UAE visa, Emirates ID and document-support guidance with clear fee separation.",
-    images: [{ url: "/familyvisauae-hero.png", width: 1536, height: 1024, alt: "FamilyVisaUAE visa and document support" }],
+    images: [{ url: "/familyvisauae-family-balcony-v2.png", width: 1672, height: 941, alt: "FamilyVisaUAE visa and document support in Dubai" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "FamilyVisaUAE | UAE Visa & Document Support",
     description: "UAE visa, Emirates ID and document-support guidance with clear fee separation.",
-    images: ["/familyvisauae-hero.png"],
+    images: ["/familyvisauae-family-balcony-v2.png"],
   },
 };
 

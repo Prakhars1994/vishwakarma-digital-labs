@@ -20,13 +20,18 @@ const featuredThemes = ["family", "heritage", "emerald", "plum"];
 export default function ThemePicker() {
   const [selected, setSelected] = useState("family");
   const [showMore, setShowMore] = useState(false);
-  const [autoRotate, setAutoRotate] = useState(true);
+  const [autoRotate, setAutoRotate] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!media.matches) setAutoRotate(true);
+  }, []);
 
   useEffect(() => {
     const alternates = ["heritage", "emerald", "royal", "plum", "ocean", "sunset", "midnight", "rose", "slate"];
     let alternateIndex = 0;
     let showFamily = true;
-    if (!autoRotate) return;
+    if (!autoRotate || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const interval = window.setInterval(() => {
       const nextTheme = showFamily ? alternates[alternateIndex] : "family";

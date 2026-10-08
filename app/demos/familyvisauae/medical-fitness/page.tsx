@@ -1,0 +1,2 @@
+﻿import LegacyDestination from "../_components/LegacyDestination";
+export default function Page(){return <LegacyDestination title="Medical Fitness" description="FamilyVisaUAE guidance for this UAE service route, including document preparation, application planning and the next relevant authority step." points={["Confirm your route and eligibility","Prepare the required supporting documents","Review the application before submission","Complete the relevant authority steps","Track the application through completion"]}/>;}

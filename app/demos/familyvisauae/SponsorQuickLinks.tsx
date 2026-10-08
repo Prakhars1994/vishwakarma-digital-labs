@@ -10,7 +10,8 @@ const options = [
 export default function SponsorQuickLinks() {
   const choose = (person: string) => {
     window.dispatchEvent(new CustomEvent("familyvisa:select-dependent", { detail: person }));
-    document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.getElementById("calculator")?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
   };
 
   return <div className="quick">

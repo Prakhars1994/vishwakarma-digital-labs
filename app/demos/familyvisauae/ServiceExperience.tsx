@@ -14,7 +14,8 @@ const steps = ["Check your route and eligibility", "Share your documents securel
 export default function ServiceExperience() {
   const chooseDependent = (person: string) => {
     window.dispatchEvent(new CustomEvent("familyvisa:select-dependent", { detail: person }));
-    document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.getElementById("calculator")?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
   };
 
   return <>

@@ -1,4 +1,5 @@
 ﻿import type { NextConfig } from "next";
+import { legacyRouteMap, referenceLanguages } from "./app/demos/familyvisauae/migration-map";
 
 const csp = [
   "default-src 'self'",
@@ -20,6 +21,17 @@ const nextConfig: NextConfig = {
   output: "standalone",
   reactStrictMode: true,
   poweredByHeader: false,
+  async redirects() {
+    const base = "/demos/familyvisauae";
+    const directLegacyFixes: { source: string; destination: string; permanent: boolean }[] = [];
+    const english = Object.entries(legacyRouteMap)
+      .filter(([oldPath, newPath]) => oldPath && oldPath !== newPath)
+      .map(([oldPath, newPath]) => ({ source: `${base}/${oldPath}`, destination: `${base}/${newPath}`, permanent: true }));
+    const localized = referenceLanguages.flatMap((lang) => Object.entries(legacyRouteMap)
+      .filter(([oldPath]) => oldPath)
+      .map(([oldPath, newPath]) => ({ source: `${base}/${lang}/${oldPath}`, destination: `${base}/${newPath}`, permanent: true })));
+    return [...directLegacyFixes, ...english, ...localized];
+  },
   async headers() {
     return [
       {
