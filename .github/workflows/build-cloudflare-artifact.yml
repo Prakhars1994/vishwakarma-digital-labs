@@ -28,7 +28,10 @@ jobs:
           test -f .open-next/worker.js
           test -f .open-next/server-functions/default/handler.mjs
           test -d .open-next/assets
-          ! grep -R "/home/runner/work/" .open-next
+          if grep -R -a -q "/home/runner/work/" .open-next; then
+            echo "CI-only path detected in OpenNext artifact"
+            exit 1
+          fi
           grep -R -F "Family / Dependent Visa" .open-next
           grep -R -F "AED 1,103" .open-next
           grep -R -F "AED 3,864" .open-next
