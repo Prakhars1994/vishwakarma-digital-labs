@@ -60,6 +60,15 @@ jobs:
             test "$status" = "200"
           done
           kill $(cat preview.pid) || true
+      - name: Upload preview diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-diagnostics
+          path: |
+            preview.log
+            homepage.body
+          if-no-files-found: warn
       - name: Archive package
         run: tar -czf opennext-package.tgz .open-next wrangler.jsonc
       - uses: actions/upload-artifact@v4
