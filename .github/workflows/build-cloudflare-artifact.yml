@@ -44,7 +44,7 @@ jobs:
           grep -R -F "AED 1,029" .open-next
       - name: Runtime smoke test
         run: |
-          (npx wrangler dev --local --port 8787 --config wrangler.jsonc > preview.log 2>&1 & echo $! > preview.pid)
+          (npx opennextjs-cloudflare preview --port 8787 --config wrangler.jsonc > preview.log 2>&1 & echo $! > preview.pid)
           for i in $(seq 1 30); do
             status=$(curl -sS -L -o homepage.body -w "%{http_code}" http://127.0.0.1:8787/demos/familyvisauae/ || true)
             if [ "$status" != "000" ]; then echo "homepage_status=$status"; break; fi
