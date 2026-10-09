@@ -46,7 +46,7 @@ jobs:
         run: |
           (npx wrangler dev --local --port 8787 --config wrangler.jsonc > preview.log 2>&1 & echo $! > preview.pid)
           for i in $(seq 1 30); do
-            status=$(curl -sS -o homepage.body -w "%{http_code}" http://127.0.0.1:8787/demos/familyvisauae/ || true)
+            status=$(curl -sS -L -o homepage.body -w "%{http_code}" http://127.0.0.1:8787/demos/familyvisauae/ || true)
             if [ "$status" != "000" ]; then echo "homepage_status=$status"; break; fi
             sleep 2
           done
@@ -55,7 +55,7 @@ jobs:
           echo "--- homepage response ---"
           cat homepage.body || true
           for path in /demos/familyvisauae/ /demos/familyvisauae/calculators/family /demos/familyvisauae/services /demos/familyvisauae/fees /demos/familyvisauae/pro-services /demos/familyvisauae/amer-centres-near-me /demos/familyvisauae/contact /demos/familyvisauae/guides /demos/familyvisauae/checklist; do
-            status=$(curl -sS -o /dev/null -w "%{http_code}" "http://127.0.0.1:8787$path" || true)
+            status=$(curl -sS -L -o /dev/null -w "%{http_code}" "http://127.0.0.1:8787$path" || true)
             echo "$status $path"
             test "$status" = "200"
           done
