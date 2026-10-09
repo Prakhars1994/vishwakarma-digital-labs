@@ -50,6 +50,17 @@ jobs:
             if [ "$status" != "000" ]; then echo "homepage_status=$status"; break; fi
             sleep 2
           done
+          declare -A route_bodies=(
+            [homepage]="/demos/familyvisauae"
+            [services]="/demos/familyvisauae/services"
+            [family-calculator]="/demos/familyvisauae/calculators/family"
+          )
+          for name in "${!route_bodies[@]}"; do
+            path="${route_bodies[$name]}"
+            status=$(curl -sS -L -o "${name}.body" -w "%{http_code}" "http://127.0.0.1:8787${path}" || true)
+            echo "${status} ${path} -> ${name}.body"
+            test "$status" = "200"
+          done
           echo "--- preview.log ---"
           cat preview.log
           echo "--- homepage response ---"
@@ -68,6 +79,8 @@ jobs:
           path: |
             preview.log
             homepage.body
+            services.body
+            family-calculator.body
           if-no-files-found: warn
       - name: Archive package
         run: tar -czf opennext-package.tgz .open-next wrangler.jsonc
