@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   title: `Web, Mobile, AI & Automation Services | ${SITE_NAME}`,
   description: "Explore web development, mobile app development, AI applications and business automation services from Vishwakarma Digital Labs.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Web, Mobile, AI & Automation Services | Vishwakarma Digital Labs",
+    description: "Explore business websites, mobile apps, AI applications and workflow automation built by Vishwakarma Digital Labs.",
+    url: `${SITE_URL}/services`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web, Mobile, AI & Automation Services | Vishwakarma Digital Labs",
+    description: "Explore web development, mobile applications, AI solutions and business automation services from Vishwakarma Digital Labs.",
+  },
 };
 
 export default function ServicesPage() {
