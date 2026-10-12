@@ -12,6 +12,8 @@ export default function QuoteForm() {
   const [service, setService] = useState("Website Development");
   const [budget, setBudget] = useState("Not sure yet");
   const [timeline, setTimeline] = useState("As soon as possible");
+  const [businessType, setBusinessType] = useState("");
+  const [existingWebsite, setExistingWebsite] = useState("");
   const [details, setDetails] = useState("");
   const [status, setStatus] = useState("");
 
@@ -36,6 +38,8 @@ export default function QuoteForm() {
       `Service: ${service}`,
       `Budget: ${budget}`,
       `Timeline: ${timeline}`,
+      `Business type: ${businessType || "Not specified"}`,
+      `Existing website: ${existingWebsite || "None / not specified"}`,
       `Project details: ${details}`,
     ].join("\n");
 
@@ -49,6 +53,8 @@ export default function QuoteForm() {
         service,
         budget,
         timeline,
+        businessType,
+        existingWebsite,
         details,
         source: "website-quote-form",
         website,
@@ -156,6 +162,11 @@ export default function QuoteForm() {
               <option>Just exploring</option>
             </select>
           </label>
+        </div>
+
+        <div className="mt-5 grid gap-5 sm:grid-cols-2">
+          <label className="block"><span className="mb-2 block text-sm font-medium text-slate-300">Business / industry</span><input value={businessType} onChange={(event) => setBusinessType(event.target.value)} maxLength={120} placeholder="Restaurant, healthcare, SaaS..." className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none placeholder:text-slate-600 focus:border-orange-400/60" /></label>
+          <label className="block"><span className="mb-2 block text-sm font-medium text-slate-300">Existing website (optional)</span><input value={existingWebsite} onChange={(event) => setExistingWebsite(event.target.value)} maxLength={300} placeholder="https://yourwebsite.com" inputMode="url" className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none placeholder:text-slate-600 focus:border-orange-400/60" /></label>
         </div>
 
         <label className="mt-5 block">
