@@ -18,11 +18,13 @@ export function demoMetadata(path: string, title: string, description: string): 
       url: canonical,
       type: "website",
       siteName: "Vishwakarma Digital Labs",
+      images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Vishwakarma Digital Labs — interactive portfolio concept" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: ["/opengraph-image"],
     },
   };
 }
