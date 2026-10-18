@@ -31,7 +31,7 @@ export default function CartView() {
       <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <ul className="grid gap-4">
           {rows.map(({ line, p }) => (
-            <li key={p.id} className="grid gap-5 rounded-2xl border border-white/10 bg-[#15181e] p-4 sm:grid-cols-[9rem_1fr_auto] sm:p-5">
+            <li key={p.id} className="grid items-center gap-5 rounded-2xl border border-white/10 bg-[#15181e] p-4 sm:grid-cols-[9rem_1fr_auto] sm:p-5">
               <Link href={`${BASE}/product/${p.slug}`} className="block">
                 <ProductImage product={p} sizes="h-36" />
               </Link>
