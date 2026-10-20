@@ -109,6 +109,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <a className="skip-link" href="#main-content">Skip to main content</a>
         {children}
+        <a
+          href="https://wa.me/918446000784?text=Hi%20VDL%2C%20I%20want%20a%20free%20demo"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat with VDL on WhatsApp"
+          className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-950/50 transition hover:bg-red-700"
+          style={{ marginRight: "env(safe-area-inset-right, 0px)", marginBottom: "env(safe-area-inset-bottom, 0px)" }}
+        >
+          <span aria-hidden="true">●</span> WhatsApp us · Free demo
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([personSchema, organizationSchema, websiteSchema]) }}

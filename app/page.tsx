@@ -217,15 +217,24 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="estimator" className="relative overflow-hidden border-y-4 border-blue-950 bg-[#eaf0ff] text-blue-950">
+        <section id="estimator" className="relative overflow-hidden border-y-4 border-blue-950 bg-[#f4f7f5] text-blue-950">
           <div className="absolute -left-20 top-16 h-56 w-56 rounded-full border-[30px] border-cyan-300/35" aria-hidden="true" />
-          <div className="absolute -right-20 bottom-10 h-72 w-72 rotate-12 bg-[#d8ff3e]/25" aria-hidden="true" />
+          <div className="absolute -right-20 bottom-10 h-72 w-72 rotate-12 bg-[#d62828]/25" aria-hidden="true" />
           <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8"><div className="mb-12 max-w-4xl"><div className="font-mono text-sm font-black uppercase tracking-[0.25em] text-blue-600">Interactive Project Estimator</div><h2 className="mt-4 text-4xl font-black sm:text-6xl">Build a scope. See a planning range. Then talk.</h2><p className="mt-5 text-lg leading-8 text-blue-800">Choose India or international pricing explicitly. The two bands reflect different commercial markets rather than pretending to be a currency conversion.</p></div><ProjectEstimator /></div>
         </section>
 
         <section id="process" className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
           <div className="max-w-3xl"><div className="font-semibold uppercase tracking-[0.25em] text-orange-400">Our Process</div><h2 className="mt-4 text-4xl font-black sm:text-5xl">Simple process. Clear communication.</h2></div>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{[["01","Discuss","Tell us about your business, idea, requirements and goals."],["02","Plan","Define features, scope, technology, milestones and delivery path."],["03","Build","Implementation, integrations, testing and refinement for real users."],["04","Launch","Cloudflare/hosting setup, SSL, production checks and handoff."]].map(([n,t,x])=><article key={n} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"><div className="text-4xl font-black text-orange-500/35">{n}</div><h3 className="mt-6 text-xl font-bold">{t}</h3><p className="mt-3 leading-7 text-slate-400">{x}</p></article>)}</div>
+        </section>
+
+        <section id="reach" className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+          <div className="max-w-3xl"><div className="font-semibold uppercase tracking-[0.25em] text-emerald-400">Reach</div><h2 className="mt-4 text-4xl font-black sm:text-5xl">Remote delivery for clients anywhere.</h2><p className="mt-5 text-lg leading-8 text-slate-400">We build websites, apps and AI automation for businesses across time zones, with regular updates and a named project lead.</p></div>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            <div className="rounded-2xl border border-white/10 border-t-2 border-t-emerald-600 bg-white/[0.03] p-6"><h3 className="text-lg font-bold">Based in</h3><p className="mt-3 text-slate-400">New Delhi, India</p><h3 className="mt-6 text-lg font-bold">Past clients in</h3><p className="mt-3 text-slate-400">USA, UK, Germany</p></div>
+            <div className="rounded-2xl border border-white/10 border-t-2 border-t-emerald-600 bg-white/[0.03] p-6"><h3 className="text-lg font-bold">Markets we&apos;re open to</h3><p className="mt-3 leading-7 text-slate-400">UAE, United Kingdom, United States, Canada, Germany, Australia, Singapore, Saudi Arabia, Netherlands.</p></div>
+            <div className="rounded-2xl border border-white/10 border-t-2 border-t-emerald-600 bg-white/[0.03] p-6"><h3 className="text-lg font-bold">Talk to us</h3><a href="https://wa.me/918446000784" className="mt-3 block font-bold tabular-nums text-white hover:text-red-400">+91 84460 00784</a></div>
+          </div>
         </section>
 
         <section id="about" className="border-y border-white/10 bg-white/[0.025]">

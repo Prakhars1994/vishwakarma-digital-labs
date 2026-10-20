@@ -8,30 +8,30 @@ const whatsapp = "https://wa.me/918446000784?text=Hi%20Prakhar%2C%20I%20want%20t
 
 const themes = {
   "web-development": {
-    page: "bg-[#fffaf0] text-[#10213d]",
-    header: "border-[#10213d]/15 bg-[#fffaf0]/95",
+    page: "bg-[#fffaf0] text-[#030a07]",
+    header: "border-[#030a07]/15 bg-[#fffaf0]/95",
     badge: "bg-[#1d4ed8] text-white rounded-none",
-    secondary: "text-[#5b6880] hover:text-[#10213d]",
-    cta: "bg-[#ff6b35] text-white hover:bg-[#e95120] rounded-none shadow-[5px_5px_0_#10213d]",
-    hero: "bg-[#fff3d6] border-b-2 border-[#10213d]",
+    secondary: "text-[#5b6880] hover:text-[#030a07]",
+    cta: "bg-[#ff6b35] text-white hover:bg-[#e95120] rounded-none shadow-[5px_5px_0_#030a07]",
+    hero: "bg-[#fff3d6] border-b-2 border-[#030a07]",
     eyebrow: "text-[#1d4ed8]",
     body: "text-[#52617b]",
     sectionEyebrow: "text-[#1d4ed8]",
-    card: "border-2 border-[#10213d] bg-white rounded-none shadow-[6px_6px_0_#dbeafe]",
+    card: "border-2 border-[#030a07] bg-white rounded-none shadow-[6px_6px_0_#dbeafe]",
     cardText: "text-[#44536b]",
     check: "text-[#ff6b35]",
-    chip: "border-2 border-[#10213d] bg-[#dbeafe] text-[#10213d] rounded-none",
-    panel: "border-2 border-[#10213d] bg-[#d8ff3e] rounded-none",
-    panelTitle: "text-[#10213d]",
-    processWrap: "border-y-2 border-[#10213d] bg-[#1d4ed8] text-white",
+    chip: "border-2 border-[#030a07] bg-[#dbeafe] text-[#030a07] rounded-none",
+    panel: "border-2 border-[#030a07] bg-[#d62828] rounded-none",
+    panelTitle: "text-[#030a07]",
+    processWrap: "border-y-2 border-[#030a07] bg-[#1d4ed8] text-white",
     processCard: "border-2 border-white/50 bg-transparent rounded-none",
-    processNumber: "text-[#d8ff3e]",
-    demoCard: "border-2 border-[#10213d] bg-white rounded-none hover:bg-[#fff3d6]",
+    processNumber: "text-[#d62828]",
+    demoCard: "border-2 border-[#030a07] bg-white rounded-none hover:bg-[#fff3d6]",
     demoMeta: "text-[#1d4ed8]",
     demoAction: "text-[#ff6b35]",
-    final: "border-2 border-[#10213d] bg-[#10213d] text-white rounded-none shadow-[10px_10px_0_#ff6b35]",
+    final: "border-2 border-[#030a07] bg-[#030a07] text-white rounded-none shadow-[10px_10px_0_#ff6b35]",
     finalText: "text-blue-100",
-    finalButton: "bg-[#d8ff3e] text-[#10213d] rounded-none hover:bg-white",
+    finalButton: "bg-[#d62828] text-[#030a07] rounded-none hover:bg-white",
   },
   "ai-development": {
     page: "bg-[#050816] text-white",
@@ -171,11 +171,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 function HeroVisual({ slug }: { slug: ServiceSlug }) {
   if (slug === "web-development") {
     return (
-      <div className="relative border-2 border-[#10213d] bg-white p-4 shadow-[12px_12px_0_#1d4ed8]">
-        <div className="flex items-center justify-between border-b-2 border-[#10213d] pb-3 font-mono text-[10px] font-black uppercase tracking-wider"><span>Browser / Production</span><span>● Live</span></div>
+      <div className="relative border-2 border-[#030a07] bg-white p-4 shadow-[12px_12px_0_#1d4ed8]">
+        <div className="flex items-center justify-between border-b-2 border-[#030a07] pb-3 font-mono text-[10px] font-black uppercase tracking-wider"><span>Browser / Production</span><span>● Live</span></div>
         <div className="mt-4 grid grid-cols-[0.8fr_1.2fr] gap-3">
-          <div className="min-h-64 bg-[#10213d] p-5 text-white"><div className="text-xs text-[#d8ff3e]">01 / Strategy</div><div className="mt-8 text-3xl font-black">Clear message.<br/>Fast pages.<br/>Real leads.</div></div>
-          <div className="grid gap-3"><div className="h-24 bg-[#dbeafe]"/><div className="grid grid-cols-2 gap-3"><div className="h-32 bg-[#ff6b35]"/><div className="h-32 bg-[#d8ff3e]"/></div><div className="h-16 border-2 border-[#10213d] bg-white"/></div>
+          <div className="min-h-64 bg-[#030a07] p-5 text-white"><div className="text-xs text-[#d62828]">01 / Strategy</div><div className="mt-8 text-3xl font-black">Clear message.<br/>Fast pages.<br/>Real leads.</div></div>
+          <div className="grid gap-3"><div className="h-24 bg-[#dbeafe]"/><div className="grid grid-cols-2 gap-3"><div className="h-32 bg-[#ff6b35]"/><div className="h-32 bg-[#d62828]"/></div><div className="h-16 border-2 border-[#030a07] bg-white"/></div>
         </div>
       </div>
     );
@@ -273,7 +273,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className={`mt-7 text-sm font-black uppercase tracking-[0.24em] ${theme.eyebrow}`}>{service.eyebrow}</div>
             <h1 className={`mt-5 text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl ${typedSlug === "web-development" ? "font-serif" : typedSlug === "ai-development" || typedSlug === "business-automation" ? "font-mono" : ""}`}>{service.title}</h1>
             <p className={`mt-7 max-w-3xl text-lg leading-8 sm:text-xl ${theme.body}`}>{service.description}</p>
-            <div className="mt-9 flex flex-wrap gap-4"><a href={whatsapp} target="_blank" rel="noreferrer" className={`px-7 py-4 font-black transition ${theme.cta}`}>Discuss your project →</a><Link href="/#estimator" className={`border px-7 py-4 font-bold ${typedSlug === "web-development" ? "border-[#10213d] bg-white rounded-none" : typedSlug === "ai-development" ? "border-cyan-300/20 bg-white/5 rounded-xl" : typedSlug === "mobile-app-development" ? "border-fuchsia-900/15 bg-white/60 rounded-full" : "border-[#b7f34a]/30 bg-black/10 rounded-none"}`}>Estimate budget</Link></div>
+            <div className="mt-9 flex flex-wrap gap-4"><a href={whatsapp} target="_blank" rel="noreferrer" className={`px-7 py-4 font-black transition ${theme.cta}`}>Discuss your project →</a><Link href="/#estimator" className={`border px-7 py-4 font-bold ${typedSlug === "web-development" ? "border-[#030a07] bg-white rounded-none" : typedSlug === "ai-development" ? "border-cyan-300/20 bg-white/5 rounded-xl" : typedSlug === "mobile-app-development" ? "border-fuchsia-900/15 bg-white/60 rounded-full" : "border-[#b7f34a]/30 bg-black/10 rounded-none"}`}>Estimate budget</Link></div>
           </div>
           <HeroVisual slug={typedSlug} />
         </div>

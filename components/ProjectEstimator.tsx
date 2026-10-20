@@ -90,7 +90,7 @@ export default function ProjectEstimator() {
               <div className="font-mono text-xs font-black uppercase tracking-[0.24em] text-blue-600">Scope builder / 01</div>
               <h3 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Configure your build</h3>
             </div>
-            <div className="border-2 border-blue-950 bg-[#d8ff3e] px-4 py-2 font-mono text-sm font-black">LIVE ESTIMATE</div>
+            <div className="border-2 border-blue-950 bg-[#d62828] px-4 py-2 font-mono text-sm font-black">LIVE ESTIMATE</div>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2">
@@ -154,7 +154,7 @@ export default function ProjectEstimator() {
                     aria-pressed={active}
                     onClick={() => toggleFeature(item.id)}
                     className={`flex items-center justify-between border-2 px-4 py-3 text-left text-sm font-bold transition ${
-                      active ? "border-blue-950 bg-[#d8ff3e]" : "border-blue-200 bg-white hover:border-blue-950"
+                      active ? "border-blue-950 bg-[#d62828]" : "border-blue-200 bg-white hover:border-blue-950"
                     }`}
                   >
                     <span>{item.label}</span>
@@ -168,7 +168,7 @@ export default function ProjectEstimator() {
 
         <div className="relative flex min-h-[520px] flex-col justify-between overflow-hidden bg-blue-950 p-7 text-white sm:p-9 lg:p-10">
           <div className="absolute -right-16 top-8 h-40 w-40 rounded-full border-[24px] border-cyan-400/20" />
-          <div className="absolute -bottom-20 -left-20 h-64 w-64 rotate-12 bg-[#d8ff3e]/10" />
+          <div className="absolute -bottom-20 -left-20 h-64 w-64 rotate-12 bg-[#d62828]/10" />
 
           <div className="relative">
             <div className="flex items-center justify-between gap-4">
@@ -195,7 +195,7 @@ export default function ProjectEstimator() {
             </p>
           </div>
 
-          <a href={`https://wa.me/918446000784?text=${whatsappMessage}`} target="_blank" rel="noreferrer" className="relative mt-8 flex items-center justify-between border-2 border-[#d8ff3e] bg-[#d8ff3e] px-5 py-4 font-black text-blue-950 transition hover:bg-white">
+          <a href={`https://wa.me/918446000784?text=${whatsappMessage}`} target="_blank" rel="noreferrer" className="relative mt-8 flex items-center justify-between border-2 border-[#d62828] bg-[#d62828] px-5 py-4 font-black text-blue-950 transition hover:bg-white">
             <span>Send scope on WhatsApp</span><span className="text-xl">↗</span>
           </a>
         </div>
