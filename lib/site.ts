@@ -1,5 +1,5 @@
 export const SITE_URL = (
-  process.env.SITE_URL || "https://vdl.vliab.workers.dev"
+  process.env.SITE_URL || "https://vdldigital.com"
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Vishwakarma Digital Labs";
