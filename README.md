@@ -54,7 +54,7 @@ Open `http://localhost:3000`.
 Copy `.env.example` to `.env.local` and configure only the services you use.
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://vdl.vliab.workers.dev
+SITE_URL=https://vdldigital.com
 
 SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=
@@ -65,7 +65,7 @@ TURNSTILE_SECRET_KEY=
 NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN=
 ```
 
-`NEXT_PUBLIC_SITE_URL` controls canonical URLs, schema, sitemap and robots. Replace the workers.dev value with the permanent branded custom domain after it is connected in Cloudflare.
+`SITE_URL` controls canonical URLs, schema, sitemap, robots, Open Graph, Twitter cards, and internal absolute links. Production should use `https://vdldigital.com`; the source fallback keeps the workers.dev deployment functional for verification and rollback.
 
 Never expose `SUPABASE_SERVICE_ROLE_KEY` or `TURNSTILE_SECRET_KEY` in browser code or prefix them with `NEXT_PUBLIC_`.
 
@@ -119,3 +119,4 @@ For a preview:
 ```bash
 npm run preview
 ```
+
