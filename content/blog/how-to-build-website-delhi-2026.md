@@ -577,7 +577,7 @@ The key is to:
 
 Remember, your website is a living, breathing asset that requires attention and optimization. The businesses that succeed online are those that treat their websites as essential business tools rather than set-it-and-forget-it projects.
 
-Don't let your competitors get ahead. Start building your professional web presence today. If you need expert guidance on building a website for your Delhi business, [visit Vishwakarma Digital Labs](https://vdl.vliab.workers.dev) or call us at **+91 84460 00784**.
+Don't let your competitors get ahead. Start building your professional web presence today. If you need expert guidance on building a website for your Delhi business, [visit Vishwakarma Digital Labs](https://vdldigital.com) or call us at **+91 84460 00784**.
 
 ---
 
@@ -585,4 +585,5 @@ Don't let your competitors get ahead. Start building your professional web prese
 
 Vishwakarma Digital Labs (VDL) is a leading digital agency in New Delhi, specializing in website development, mobile app development, and AI automation solutions. We help Delhi businesses establish and grow their online presence with professional, high-converting websites built on modern technology stacks. Whether you need an e-commerce platform, corporate website, or custom application, our experienced team delivers results.
 
-Contact us today at **+91 84460 00784** or visit [vdl.vliab.workers.dev](https://vdl.vliab.workers.dev) to discuss your project.
+Contact us today at **+91 84460 00784** or visit [vdldigital.com](https://vdldigital.com) to discuss your project.
+
