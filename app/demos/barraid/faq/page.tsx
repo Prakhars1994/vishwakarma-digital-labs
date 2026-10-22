@@ -1,1 +1,5 @@
-import BarRaidLegal from "../BarRaidLegal"; export default function Page(){return <BarRaidLegal kind="faq"/>}
+import BarRaidLegal from "../BarRaidLegal";
+
+export default function Page() {
+  return <BarRaidLegal kind="faq" />;
+}
