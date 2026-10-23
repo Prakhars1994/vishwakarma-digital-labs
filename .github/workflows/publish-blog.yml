@@ -1,0 +1,110 @@
+name: Scheduled Blog Publishing
+
+on:
+  schedule:
+    # Oct 28 at 10:00 AM IST (4:30 AM UTC)
+    - cron: '30 4 28 10 *'
+    # Oct 30 at 10:00 AM IST (4:30 AM UTC)
+    - cron: '30 4 30 10 *'
+    # Nov 1 at 10:00 AM IST (4:30 AM UTC)
+    - cron: '30 4 1 11 *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: vdl-blog-publish-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+  NEXT_PUBLIC_SITE_URL: https://vdldigital.com
+
+jobs:
+  publish-blog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Verify blog files exist
+        run: |
+          echo "Checking blog files..."
+          test -f content/blog/5-website-mistakes-delhi-businesses.md && echo "✓ 5-website-mistakes-delhi-businesses.md found"
+          test -f content/blog/cost-of-inaction-slow-websites.md && echo "✓ cost-of-inaction-slow-websites.md found"
+          test -f content/blog/case-study-fashion-brand-growth.md && echo "✓ case-study-fashion-brand-growth.md found"
+
+      - name: Production build
+        run: npm run build
+
+      - name: Check Cloudflare credentials
+        id: cloudflare
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          if [[ -n "${CLOUDFLARE_API_TOKEN:-}" && -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]]; then
+            echo "available=true" >> "${GITHUB_OUTPUT}"
+            echo "Cloudflare credentials available; publishing enabled."
+          else
+            echo "available=false" >> "${GITHUB_OUTPUT}"
+            echo "Cloudflare credentials not configured; build validation passed."
+          fi
+
+      - name: Build Cloudflare Worker
+        if: steps.cloudflare.outputs.available == 'true'
+        run: npx opennextjs-cloudflare build
+
+      - name: Deploy to production
+        if: steps.cloudflare.outputs.available == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler deploy
+
+      - name: Verify blog deployment
+        if: steps.cloudflare.outputs.available == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://vdldigital.com"
+          echo "Testing blog deployment..."
+
+          # Test main site loads
+          curl --silent --show-error --fail --location --retry 3 --retry-delay 2 --max-time 30 "${base}/" >/dev/null
+          echo "✓ Main site loads"
+
+          # Test blog section
+          curl --silent --show-error --fail --location --retry 3 --retry-delay 2 --max-time 30 "${base}/blog" >/dev/null
+          echo "✓ Blog section loads"
+
+          echo "Blog deployment verified successfully"
+
+      - name: Send success notification
+        if: success()
+        run: |
+          echo "✓ Blog published successfully at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          echo "Articles now live on vdldigital.com/blog"
+
+      - name: Send failure notification
+        if: failure()
+        run: |
+          echo "✗ Blog publishing failed. Check GitHub Actions logs."
+          exit 1

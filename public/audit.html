@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get a free website audit from Vishwakarma Digital Labs. Discover how much money your website is losing and how to fix it.">
+    <meta name="keywords" content="website audit, free audit, SEO audit, website analysis, Delhi web design">
+    <title>Free Website Audit | Vishwakarma Digital Labs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #C41E3A 0%, #1B5E20 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .benefits-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.95em;
+            margin: 5px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 60px 40px;
+        }
+
+        .benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .benefit-icon {
+            font-size: 2em;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .benefit-text h3 {
+            color: #C41E3A;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .benefit-text p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .form-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        input, textarea, select {
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #C41E3A;
+            box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #C41E3A 0%, #1B5E20 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        .guarantee {
+            background: #f0f8ff;
+            border-left: 4px solid #C41E3A;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .guarantee h4 {
+            color: #C41E3A;
+            margin-bottom: 8px;
+        }
+
+        .guarantee p {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .stats {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #C41E3A;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 40px 25px;
+            }
+
+            .header {
+                padding: 40px 25px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info {
+            background: #fff9f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #ffe6cc;
+        }
+
+        .contact-info p {
+            color: #333;
+            margin: 8px 0;
+        }
+
+        .contact-info strong {
+            color: #C41E3A;
+        }
+
+        .form-info {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Free Website Audit</h1>
+            <p>Discover How Much Money Your Website is Losing</p>
+            <div>
+                <span class="benefits-badge">💰 Zero Cost</span>
+                <span class="benefits-badge">📊 Detailed Analysis</span>
+                <span class="benefits-badge">✅ Actionable Plan</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="benefits">
+                <h2 style="color: #333; margin-bottom: 10px;">What You'll Get</h2>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">📊</div>
+                    <div class="benefit-text">
+                        <h3>Performance Analysis</h3>
+                        <p>Load time, mobile optimization, bounce rate, conversion metrics</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">💡</div>
+                    <div class="benefit-text">
+                        <h3>Problem Identification</h3>
+                        <p>Exact issues costing you money and losing conversions</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-text">
+                        <h3>Revenue Impact</h3>
+                        <p>Calculate how much monthly revenue you're losing</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-text">
+                        <h3>Custom Action Plan</h3>
+                        <p>Step-by-step roadmap to fix issues and grow revenue</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏱️</div>
+                    <div class="benefit-text">
+                        <h3>ROI Timeline</h3>
+                        <p>When you'll see results and how much you'll earn</p>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-value">10x</div>
+                        <div class="stat-label">Average Traffic Growth</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3.2x</div>
+                        <div class="stat-label">Revenue Increase</div>
+                    </div>
+                </div>
+
+                <div class="guarantee">
+                    <h4>✓ 100% Confidential</h4>
+                    <p>Your audit is private. We won't share it or spam you.</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-info">
+                    <strong>⏱️ Takes 2 minutes</strong> — We'll send you a detailed audit within 24 hours
+                </div>
+
+                <form id="auditForm">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (WhatsApp) *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">Your Website URL *</label>
+                        <input type="url" id="website" name="website" required placeholder="https://yourwebsite.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="business">Business Type *</label>
+                        <select id="business" name="business" required>
+                            <option value="">Select your business type</option>
+                            <option value="e-commerce">E-commerce Store</option>
+                            <option value="saas">SaaS / Software</option>
+                            <option value="services">Services (Consulting, Coaching)</option>
+                            <option value="local">Local Business (Salon, Restaurant)</option>
+                            <option value="agency">Agency / Digital</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">What's your biggest challenge with your website? (Optional)</label>
+                        <textarea id="message" name="message" placeholder="e.g., Not getting enough visitors, visitors not converting, website is slow..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Get My Free Audit</button>
+
+                    <a href="https://wa.me/918446000784?text=Hi%20Prakhar,%20I'd%20like%20a%20free%20website%20audit.%20My%20website%20is:%20" class="whatsapp-btn">
+                        💬 WhatsApp Me Instead
+                    </a>
+                </form>
+
+                <div class="contact-info">
+                    <p><strong>📞 Phone:</strong> +91 84460 00784</p>
+                    <p><strong>📧 Email:</strong> prakhars389@gmail.com</p>
+                    <p><strong>🌐 Website:</strong> vdldigital.com</p>
+                    <p style="margin-top: 15px; font-size: 0.9em; color: #999;">Response time: Usually within 2-4 hours</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('auditForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                website: document.getElementById('website').value,
+                business: document.getElementById('business').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
+
+            try {
+                // Send to Formspree
+                const response = await fetch('https://formspree.io/f/xyzab123', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert('✓ Thank you! We\'ll send you a detailed audit within 24 hours. Check your email and WhatsApp.');
+                    document.getElementById('auditForm').reset();
+                } else {
+                    alert('Error submitting form. Please try WhatsApp instead: wa.me/918446000784');
+                }
+            } catch (error) {
+                alert('Unable to submit form. Please contact via WhatsApp: wa.me/918446000784');
+            }
+        });
+    </script>
+</body>
+</html>
