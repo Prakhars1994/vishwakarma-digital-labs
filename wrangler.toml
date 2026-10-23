@@ -1,0 +1,22 @@
+name = "vishwakarma-digital-labs"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = "vdldigital.com/*"
+zone_id = ""
+
+[env.production]
+name = "vishwakarma-digital-labs-prod"
+route = "vdldigital.com/*"
+zone_id = ""
+
+[build]
+command = "npm run build"
+cwd = "."
+watch_paths = ["src/**/*.ts", "src/**/*.tsx"]
+
+[build.upload]
+format = "service-worker"
+
+[triggers.crons]
+crons = []
