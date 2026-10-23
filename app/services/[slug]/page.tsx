@@ -111,6 +111,32 @@ const themes = {
     finalText: "text-emerald-100/65",
     finalButton: "bg-[#b7f34a] text-[#0b241d] rounded-none hover:bg-white",
   },
+  "email-automation": {
+    page: "bg-[#1a1a2e] text-white",
+    header: "border-red-400/20 bg-[#1a1a2e]/95",
+    badge: "bg-gradient-to-br from-red-600 to-green-600 text-white rounded-lg",
+    secondary: "text-red-100/60 hover:text-red-100",
+    cta: "bg-gradient-to-r from-red-600 to-red-700 text-white hover:from-red-700 hover:to-red-800 rounded-lg shadow-lg",
+    hero: "bg-gradient-to-br from-red-900/30 to-green-900/20 border-b border-red-400/20",
+    eyebrow: "text-red-400",
+    body: "text-slate-300",
+    sectionEyebrow: "text-red-400",
+    card: "border border-red-400/20 bg-red-900/10 rounded-xl",
+    cardText: "text-slate-300",
+    check: "text-green-400",
+    chip: "border border-red-400/30 bg-red-400/5 text-red-200 rounded-lg",
+    panel: "border border-red-400/20 bg-red-900/15 rounded-xl",
+    panelTitle: "text-red-200",
+    processWrap: "border-y border-red-400/20 bg-red-900/10",
+    processCard: "border border-red-400/20 bg-red-900/5 rounded-lg",
+    processNumber: "text-red-400",
+    demoCard: "border border-red-400/20 bg-red-900/10 rounded-xl hover:border-red-400/50",
+    demoMeta: "text-red-400/70",
+    demoAction: "text-red-400",
+    final: "border border-red-400/30 bg-gradient-to-r from-red-900/20 to-green-900/20 rounded-2xl",
+    finalText: "text-slate-200",
+    finalButton: "bg-green-600 text-white rounded-lg hover:bg-green-700",
+  },
 } as const;
 
 export function generateStaticParams() {
@@ -137,6 +163,11 @@ const seoBySlug: Record<ServiceSlug, { title: string; description: string }> = {
     title: "Business Automation Services | APIs, Workflows & AI",
     description:
       "Automate repetitive business workflows, lead routing, reporting and operations with APIs, databases, webhooks and AI-assisted processing.",
+  },
+  "email-automation": {
+    title: "Email Marketing Automation | AI Lead Generation & CRM Sync",
+    description:
+      "AI-powered email marketing system with intelligent lead discovery, automatic lead scoring, CRM integration, and personalized campaigns. Built for agencies and SaaS companies.",
   },
 };
 
@@ -204,6 +235,20 @@ function HeroVisual({ slug }: { slug: ServiceSlug }) {
           <div className="mt-5 rounded-[2rem] bg-gradient-to-br from-[#f43f8d] to-[#8b5cf6] p-5 text-white"><div className="text-xs">Good morning</div><div className="mt-2 text-2xl font-black">Your day,<br/>organized.</div></div>
           <div className="mt-4 grid grid-cols-2 gap-3"><div className="h-24 rounded-3xl bg-[#ffe4f0]"/><div className="h-24 rounded-3xl bg-[#e9dcff]"/></div>
           <div className="mt-3 h-20 rounded-3xl bg-[#dff8ff]"/>
+        </div>
+      </div>
+    );
+  }
+
+  if (slug === "email-automation") {
+    return (
+      <div className="border border-red-400/30 bg-red-900/10 p-6 rounded-xl">
+        <div className="flex items-center justify-between border-b border-red-400/30 pb-4 text-[11px] uppercase tracking-[0.2em] text-red-400 font-mono"><span>email-system.live</span><span>🟢 ACTIVE</span></div>
+        <div className="mt-6 space-y-3">
+          <div className="grid grid-cols-3 gap-2 text-center text-sm"><div className="border border-green-400/30 bg-green-400/5 p-3 rounded-lg"><div className="text-2xl font-black text-green-400">2,458</div><div className="text-xs text-slate-400 mt-1">Leads Found</div></div><div className="border border-blue-400/30 bg-blue-400/5 p-3 rounded-lg"><div className="text-2xl font-black text-blue-400">98%</div><div className="text-xs text-slate-400 mt-1">Valid Data</div></div><div className="border border-purple-400/30 bg-purple-400/5 p-3 rounded-lg"><div className="text-2xl font-black text-purple-400">842</div><div className="text-xs text-slate-400 mt-1">Opened Emails</div></div></div>
+          <div className="mt-4 space-y-2 font-mono text-xs text-slate-300">
+            {["✓ Hunter.io lead discovery", "✓ Data validation (India-optimized)", "✓ Lead scoring (5-factor)", "✓ CRM sync (HubSpot/Salesforce)", "✓ AI personalization", "✓ Real-time tracking"].map(item=><div key={item} className="flex items-center gap-2"><span className="text-green-400">{item.split(" ")[0]}</span><span>{item.slice(2)}</span></div>)}
+          </div>
         </div>
       </div>
     );

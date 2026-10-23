@@ -43,6 +43,17 @@ export const serviceData = {
     process: ["Workflow audit", "Automation map", "Integration plan", "Build", "Failure-path testing", "Production handoff"],
     demos: [{ label: "Lead platform", href: "/demos/service-business" }, { label: "Logistics", href: "/demos/logistics" }, { label: "CRM", href: "/demos/crm" }],
   },
+  "email-automation": {
+    eyebrow: "Email Marketing Automation",
+    icon: "📧",
+    title: "AI-powered lead discovery and personalized email campaigns at scale.",
+    description: "Complete email marketing system with intelligent lead discovery, data validation, CRM sync, and AI-personalized campaigns. Auto-score leads, track engagement, and measure ROI across all touchpoints.",
+    gradient: "from-red-500/25 via-green-500/10 to-slate-950",
+    deliverables: ["Lead discovery from company domains", "Email and phone validation (India-optimized)", "Automatic lead scoring (5-factor algorithm)", "CRM sync with duplicate detection", "AI-powered email personalization", "Real-time open/click tracking", "Performance analytics dashboard"],
+    bestFor: ["Email marketing agencies", "B2B SaaS companies", "Sales teams", "Lead generation services", "eCommerce businesses", "Service businesses"],
+    process: ["Lead research setup", "Data validation & cleaning", "CRM integration", "Email workflow configuration", "Personalization & testing", "Launch & optimization"],
+    demos: [{ label: "Interactive demo", href: "/services/email-automation/demo" }, { label: "Video showcase", href: "/services/email-automation/videos" }, { label: "Pricing & features", href: "/services/email-automation#pricing" }],
+  },
 } as const;
 
 export type ServiceSlug = keyof typeof serviceData;
