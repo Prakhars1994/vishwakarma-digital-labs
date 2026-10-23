@@ -1,14 +1,17 @@
 name = "vishwakarma-digital-labs"
 type = "javascript"
-account_id = ""
+account_id = "your-cloudflare-account-id"
 workers_dev = true
-route = "vdldigital.com/*"
-zone_id = ""
+main = ".open-next/server/index.js"
+compatibility_date = "2024-10-20"
+routes = [
+  { pattern = "vdldigital.com/*", zone_name = "vdldigital.com" }
+]
 
 [env.production]
 name = "vishwakarma-digital-labs-prod"
 route = "vdldigital.com/*"
-zone_id = ""
+vars = { ENVIRONMENT = "production", SITE_URL = "https://vdldigital.com" }
 
 [build]
 command = "npm run build"
