@@ -49,7 +49,8 @@ export const products:BarRaidProduct[]=[
     "oldPrice": 4999,
     "image": "/barraid/products/113/primary.jpeg",
     "gallery": [
-      "/barraid/products/113/gallery-1.jpeg"
+      "/barraid/products/113/gallery-1.jpeg",
+      "/barraid/products/113.jpg"
     ],
     "code": "WCBDG",
     "availability": "In Stock",
@@ -85,10 +86,8 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/189/primary.png",
+    "image": "/barraid/products/189/gallery-2.png",
     "gallery": [
-      "/barraid/products/189/gallery-1.png",
-      "/barraid/products/189/gallery-2.png",
       "/barraid/products/189/gallery-3.png"
     ],
     "code": "FJB-01",
@@ -323,9 +322,8 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/211/primary.png",
+    "image": "/barraid/products/211/gallery-1.png",
     "gallery": [
-      "/barraid/products/211/gallery-1.png",
       "/barraid/products/211/gallery-2.png",
       "/barraid/products/211/gallery-3.png",
       "/barraid/products/211/gallery-4.png"
@@ -344,9 +342,8 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/213/primary.png",
+    "image": "/barraid/products/213/gallery-1.png",
     "gallery": [
-      "/barraid/products/213/gallery-1.png",
       "/barraid/products/213/gallery-2.png",
       "/barraid/products/213/gallery-3.png",
       "/barraid/products/213/gallery-4.png"
@@ -365,9 +362,8 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/214/primary.png",
+    "image": "/barraid/products/214/gallery-1.png",
     "gallery": [
-      "/barraid/products/214/gallery-1.png",
       "/barraid/products/214/gallery-2.png",
       "/barraid/products/214/gallery-3.png",
       "/barraid/products/214/gallery-4.png"
@@ -386,9 +382,8 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/215/primary.png",
+    "image": "/barraid/products/215/gallery-1.png",
     "gallery": [
-      "/barraid/products/215/gallery-1.png",
       "/barraid/products/215/gallery-2.png",
       "/barraid/products/215/gallery-3.png"
     ],
@@ -406,9 +401,8 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/216/primary.png",
+    "image": "/barraid/products/216/gallery-1.png",
     "gallery": [
-      "/barraid/products/216/gallery-1.png",
       "/barraid/products/216/gallery-2.png",
       "/barraid/products/216/gallery-3.png",
       "/barraid/products/216/gallery-4.png"
@@ -427,9 +421,8 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/217/primary.png",
+    "image": "/barraid/products/217/gallery-1.png",
     "gallery": [
-      "/barraid/products/217/gallery-1.png",
       "/barraid/products/217/gallery-2.png",
       "/barraid/products/217/gallery-3.png",
       "/barraid/products/217/gallery-4.png"
@@ -448,12 +441,11 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Glassware",
     "price": 599,
     "oldPrice": 799,
-    "image": "/barraid/products/50.png",
+    "image": "",
     "code": "BBG_BLUE",
     "availability": "In Stock",
     "description": "Increase the overall drinking experience and is strongly recommended by experts around the globe. Drinking with friends:- Let your un-expecting beer buddy try to figure out the secret on his own. It'll make for a great laugh and he won't forget how to do it the next time. The Solution: How to Drink From a Beer Boot:- The trick to avoiding is to release the bubble slowly. Start drinking from the beer boot with the toe pointed directly away from you. As the bubble moves down the glass, gradually rotate the boot 90 degrees in either direction so that by the time the bubble reaches the toe, the toe is pointing to the right or left. This lessens the pressure, ensuring a smooth drinking experience. Key Features:- • Enjoy your Beer in the most comfortable and stylish 100% Lead-Free,not contain any harmful chemicals Beer Glasses. • Has an elegant look in a wine cabinet and adds to any table's aesthetics with its contemporary design. • These beer glasses are made of thicker glass, particularly on the base. This reinforcement is designed to prevent it from shattering when the drinker slams the glass onto the bar after downing the drink. • The sturdy, solid design of these shot glasses makes them reliable and less likely to break, than the traditional shot glasses. • Now you can fully enjoy your drinks with your family and friends while impressing them with these stylish and modern beer glasses. Perfect suitable for Kitchen, Cafes, Hotel, Restaurant, Bar and Everyday Home Use. The right glass can easily transform your beer drinking experience for the better. Don't believe us? Take the Barraid Beer Glass for a spin and see for yourself!",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=50",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=50"
   },
   {
     "id": 224,
@@ -463,14 +455,14 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Glassware",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/224.png",
+    "image": "/barraid/products/224/gallery-1.png",
     "code": "MFBD",
     "availability": "2-3 Days",
     "description": "Add a touch of sophistication to your beer-drinking experience with this uniquely designed glass decanter. Crafted in the shape of a hand gesture, this striking vessel is perfect for serving and aerating your favourite brew. The clear glass construction allows you to appreciate the rich colours and clarity of your beer while the innovative design makes for an eye-catching centrepiece at any gathering. The decanter comes with a matching glass stopper to preserve freshness and prevent spills. Its generous capacity is ideal for sharing, and the ergonomic design ensures comfortable pouring. The wide base provides stability, while the smooth finish allows for easy cleaning. This conversation-starting decanter makes an excellent gift for beer enthusiasts and adds a distinctive flair to your home bar collection. Perfect for special occasions or everyday use, this decanter elevates the simple act of serving beer into an artful presentation.",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=224",
     "gallery": [
-      "/barraid/products/224/gallery-1.png",
-      "/barraid/products/224/gallery-2.png"
+      "/barraid/products/224/gallery-2.png",
+      "/barraid/products/224.jpg"
     ]
   },
   {
@@ -481,12 +473,11 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Glassware",
     "price": 599,
     "oldPrice": 1299,
-    "image": "/barraid/products/54.png",
+    "image": "",
     "code": "BBG-GL",
     "availability": "Out Of Stock",
     "description": "Increase the overall drinking experience and is strongly recommended by experts around the globe. Drinking with friends:- Let your un-expecting beer buddy try to figure out the secret on his own. It'll make for a great laugh and he won't forget how to do it the next time. The Solution: How to Drink From a Beer Boot:- The trick to avoiding is to release the bubble slowly. Start drinking from the beer boot with the toe pointed directly away from you. As the bubble moves down the glass, gradually rotate the boot 90 degrees in either direction so that by the time the bubble reaches the toe, the toe is pointing to the right or left. This lessens the pressure, ensuring a smooth drinking experience. Key Features:- -Enjoy your Beer in the most comfortable and stylish 100% Lead-Free,not contain any harmful chemicals Beer Glasses. -Has an elegant look in a wine cabinet and adds to any table's aesthetics with its contemporary design. -These beer glasses are made of thicker glass, particularly on the base. This reinforcement is designed to prevent it from shattering when the drinker slams the glass onto the bar after downing the drink. -The sturdy, solid design of these shot glasses makes them reliable and less likely to break, than the traditional shot glasses. - Now you can fully enjoy your drinks with your family and friends while impressing them with these stylish and modern beer glasses. Perfect suitable for Kitchen, Cafes, Hotel, Restaurant, Bar and Everyday Home Use. The right glass can easily transform your beer drinking experience for the better. Don't believe us? Take the Barraid Beer Glass for a spin and see for yourself!",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=54",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=54"
   },
   {
     "id": 61,
@@ -496,12 +487,11 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Glassware",
     "price": 599,
     "oldPrice": 1299,
-    "image": "/barraid/products/61.png",
+    "image": "",
     "code": "BBG-SL",
     "availability": "Out Of Stock",
     "description": "Increase the overall drinking experience and is strongly recommended by experts around the globe. Drinking with friends:- Let your un-expecting beer buddy try to figure out the secret on his own. It'll make for a great laugh and he won't forget how to do it the next time. The Solution: How to Drink From a Beer Boot:- The trick to avoiding is to release the bubble slowly. Start drinking from the beer boot with the toe pointed directly away from you. As the bubble moves down the glass, gradually rotate the boot 90 degrees in either direction so that by the time the bubble reaches the toe, the toe is pointing to the right or left. This lessens the pressure, ensuring a smooth drinking experience. Key Features:- -Enjoy your Beer in the most comfortable and stylish 100% Lead-Free,not contain any harmful chemicals Beer Glasses. -Has an elegant look in a wine cabinet and adds to any table's aesthetics with its contemporary design. -These beer glasses are made of thicker glass, particularly on the base. This reinforcement is designed to prevent it from shattering when the drinker slams the glass onto the bar after downing the drink. -The sturdy, solid design of these shot glasses makes them reliable and less likely to break, than the traditional shot glasses. - Now you can fully enjoy your drinks with your family and friends while impressing them with these stylish and modern beer glasses. Perfect suitable for Kitchen, Cafes, Hotel, Restaurant, Bar and Everyday Home Use. The right glass can easily transform your beer drinking experience for the better. Don't believe us? Take the Barraid Beer Glass for a spin and see for yourself!",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=61",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=61"
   },
   {
     "id": 52,
@@ -511,12 +501,11 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Glassware",
     "price": 599,
     "oldPrice": 799,
-    "image": "/barraid/products/52.png",
+    "image": "",
     "code": "BBG-DR",
     "availability": "In Stock",
     "description": "Increase the overall drinking experience and is strongly recommended by experts around the globe. Drinking with friends:- Let your un-expecting beer buddy try to figure out the secret on his own. It'll make for a great laugh and he won't forget how to do it the next time. The Solution: How to Drink From a Beer Boot:- The trick to avoiding is to release the bubble slowly. Start drinking from the beer boot with the toe pointed directly away from you. As the bubble moves down the glass, gradually rotate the boot 90 degrees in either direction so that by the time the bubble reaches the toe, the toe is pointing to the right or left. This lessens the pressure, ensuring a smooth drinking experience. Key Features:- -Enjoy your Beer in the most comfortable and stylish 100% Lead-Free,not contain any harmful chemicals Beer Glasses. -Has an elegant look in a wine cabinet and adds to any table's aesthetics with its contemporary design. -These beer glasses are made of thicker glass, particularly on the base. This reinforcement is designed to prevent it from shattering when the drinker slams the glass onto the bar after downing the drink. -The sturdy, solid design of these shot glasses makes them reliable and less likely to break, than the traditional shot glasses. - Now you can fully enjoy your drinks with your family and friends while impressing them with these stylish and modern beer glasses. Perfect suitable for Kitchen, Cafes, Hotel, Restaurant, Bar and Everyday Home Use. The right glass can easily transform your beer drinking experience for the better. Don't believe us? Take the Barraid Beer Glass for a spin and see for yourself!",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=52",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=52"
   },
   {
     "id": 53,
@@ -526,13 +515,12 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Glassware",
     "price": 599,
     "oldPrice": 1399,
-    "image": "/barraid/products/53.png",
+    "image": "",
     "code": "BBG_GREEN",
     "availability": "Out Of Stock",
     "description": "Strong, Sturdy, High quality and Stylish glass.Extremely Durable and Reusable Glass BARRAID is the leading manufacturer of glassware. SIZE: 5\"x 4\"x 8\" inches. Capacity: 1 Litre Perfect Gift for Beer Lovers.This will be the best gift for Weddings, Birthday, Anniversary and any official events. PERFECT PARTY ITEM - Prepare to have a super fun gathering, party, or dinner. These beer glasses will be a huge addition to the event. Add fun to drinking from BARRAID Boot glass.This giant glass will add fun to the party. CARE & CLEANING - After each use, rinse thoroughly with warm water And allow to air dry, the glass is dishwasher safe.",
     "capacity": "1 Litre",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=53",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=53"
   },
   {
     "id": 219,
@@ -542,15 +530,15 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/219.png",
+    "image": "/barraid/products/219/gallery-1.png",
     "code": "WCBG",
     "availability": "2-3 Days",
     "description": "Elevate your beer-drinking experience with these stunning World Cup-inspired beer glasses. Each glass boasts a unique sculptured design that captures the spirit of football's greatest tournament. With a generous 450ml capacity, these crystal-clear glasses feature a distinctive twisted pattern that not only looks spectacular but also provides an ergonomic grip. Perfect for serving lagers, ales, or any favourite brew, these glasses showcase your beverage with style while maintaining the perfect head. The wide mouth design helps release the beer's aroma, while the sturdy base ensures stability. Whether you're hosting match-day gatherings or simply enjoying a quiet pint, these glasses add a touch of sophistication to any drinking occasion. Their durable construction makes them suitable for regular use, while their eye-catching design makes them conversation starters at parties. Hand washing is recommended to maintain their brilliant clarity and preserve their distinctive appearance.",
     "capacity": "450 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=219",
     "gallery": [
-      "/barraid/products/219/gallery-1.png",
-      "/barraid/products/219/gallery-2.png"
+      "/barraid/products/219/gallery-2.png",
+      "/barraid/products/219.jpg"
     ]
   },
   {
@@ -561,14 +549,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 399,
     "oldPrice": 1599,
-    "image": "/barraid/products/222.png",
+    "image": "/barraid/products/222/gallery-1.png",
     "code": "BBG550",
     "availability": "In Stock",
     "description": "Add a touch of Western flair to your drinking experience with this uniquely designed boot-shaped beer glass. Standing 16.8 cm tall and 12.7 cm wide, this novelty glass mug features intricate cowboy boot detailing with decorative stitching patterns etched into the crystal-clear glass. The sturdy handle provides a comfortable grip, while the wide opening allows for easy sipping. Perfect for serving your favourite lager, ale, or any cold beverage, this conversation starter holds a generous volume and makes an ideal gift for beer enthusiasts or Western decor lovers. The thick glass construction ensures durability for regular use, while the distinctive boot shape adds a playful element to your barware collection. Hand washing is recommended to maintain its pristine clarity and preserve the detailed design elements.",
     "capacity": "550 ML",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=222",
     "gallery": [
-      "/barraid/products/222/gallery-1.png",
       "/barraid/products/222/gallery-2.png"
     ]
   },
@@ -580,13 +567,12 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 799,
     "oldPrice": 1599,
-    "image": "/barraid/products/220.png",
+    "image": "",
     "code": "BBG550",
     "availability": "In Stock",
     "description": "Add a playful twist to your drinking experience with these uniquely designed boot-shaped beer glasses. Standing approximately 20 cm tall, these novelty glasses feature intricate boot detailing that transforms an ordinary beverage into a conversation starter. Each glass boasts a generous capacity perfect for your favourite lager or ale. The transparent crystal-clear design allows you to appreciate your beverage's colour and clarity, while the sturdy base ensures stability. The glasses' distinctive shape includes textured details reminiscent of traditional German drinking boots, making them ideal for themed parties, special occasions, or as a distinctive addition to your barware collection. The glasses are crafted with attention to detail, featuring a slightly tapered top that helps maintain your beer's head and capture its aroma. These distinctive vessels make excellent gifts for beer enthusiasts or collectors of unique glassware. Hand washing is recommended to preserve the glass's clarity and detailed design features.",
     "capacity": "550ml",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=220",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=220"
   },
   {
     "id": 223,
@@ -596,14 +582,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 499,
     "oldPrice": 4999,
-    "image": "/barraid/products/223.png",
+    "image": "/barraid/products/223/gallery-1.png",
     "code": "BBG300",
     "availability": "In Stock",
     "description": "Add a whimsical touch to your drinking experience with this delightfully quirky boot-shaped beer glass. Perfect for serving your favourite beverages in style, this unique glass features a distinctive boot design that holds approximately 300 ml of liquid. The crystal-clear glass construction allows you to showcase the colour and clarity of your drinks while the wide opening accommodates garnishes like citrus slices and fresh herbs. The sturdy base provides excellent stability, whilst the thick glass walls help maintain your drink's temperature. Ideal for serving beer, cocktails, or creative mocktails, this conversation-starting glass is sure to be the highlight of your next gathering. The glass is dishwasher safe for easy cleaning, though hand washing is recommended to maintain its pristine appearance. A brilliant addition to any home bar or restaurant collection, this boot-shaped glass transforms ordinary drinks into memorable experiences.",
     "capacity": "300 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=223",
     "gallery": [
-      "/barraid/products/223/gallery-1.png",
       "/barraid/products/223/gallery-2.png"
     ]
   },
@@ -615,14 +600,14 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 799,
     "oldPrice": 1599,
-    "image": "/barraid/products/221.png",
+    "image": "/barraid/products/221/gallery-1.jpg",
     "code": "BBG580",
     "availability": "In Stock",
     "description": "Increase the overall drinking experience and is strongly recommended by experts around the globe. Drinking with friends:- Let your un-expecting beer buddy try to figure out the secret on his own. It'll make for a great laugh and he won't forget how to do it the next time. The Solution: How to Drink From a Beer Boot:- The trick to avoiding is to release the bubble slowly. Start drinking from the beer boot with the toe pointed directly away from you. As the bubble moves down the glass, gradually rotate the boot 90 degrees in either direction so that by the time the bubble reaches the toe, the toe is pointing to the right or left. This lessens the pressure, ensuring a smooth drinking experience. Key Features:- Enjoy your Beer in the most comfortable and stylish 100% Lead-Free,not contain any harmful chemicals Beer Glasses. Has an elegant look in a wine cabinet and adds to any table's aesthetics with its contemporary design. These beer glasses are made of thicker glass, particularly on the base. This reinforcement is designed to prevent it from shattering when the drinker slams the glass onto the bar after downing the drink. The sturdy, solid design of these shot glasses makes them reliable and less likely to break, than the traditional shot glasses. Now you can fully enjoy your drinks with your family and friends while impressing them with these stylish and modern beer glasses. Perfect suitable for Kitchen, Cafes, Hotel, Restaurant, Bar and Everyday Home Use. The right glass can easily transform your beer drinking experience for the better. Don't believe us? Take the Barraid Beer Glass for a spin and see for yourself!",
     "capacity": "580 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=221",
     "gallery": [
-      "/barraid/products/221/gallery-1.jpg"
+      "/barraid/products/221.jpg"
     ]
   },
   {
@@ -633,13 +618,12 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/234.png",
+    "image": "/barraid/products/234.jpg",
     "code": "SD398",
     "availability": "Out Of Stock",
     "description": "Elevate your entertaining experience with this sleek and stylish beverage dispenser, perfect for serving cold drinks at parties, gatherings, or casual get-togethers. The tall, transparent tower design showcases your beverages beautifully while keeping them fresh and readily accessible. Featuring dual taps for convenient dispensing, this 3-litre capacity dispenser allows multiple guests to serve themselves simultaneously. The sturdy base provides excellent stability, while the removable lid makes refilling and cleaning a breeze. Ideal for serving beer, cocktails, juices, or any cold beverage of your choice, this dispenser combines practicality with contemporary aesthetics. The high-quality construction ensures durability, whilst the clear vessel lets you monitor beverage levels easily. Perfect for home bars, outdoor events, or special occasions, this dispenser adds a touch of sophistication to your beverage service setup.",
     "capacity": "3 Litre",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=234",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=234"
   },
   {
     "id": 232,
@@ -649,13 +633,12 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/232.png",
+    "image": "/barraid/products/232.jpg",
     "code": "SD398",
     "availability": "Out Of Stock",
     "description": "Elevate your entertaining experience with this sleek and stylish beverage dispenser, perfect for serving cold drinks at parties, gatherings, or casual get-togethers. The tall, transparent tower design showcases your beverages beautifully while keeping them fresh and readily accessible. Featuring dual taps for convenient dispensing, this 3-litre capacity dispenser allows multiple guests to serve themselves simultaneously. The sturdy base provides excellent stability, while the removable lid makes refilling and cleaning a breeze. Ideal for serving beer, cocktails, juices, or any cold beverage of your choice, this dispenser combines practicality with contemporary aesthetics. The high-quality construction ensures durability, whilst the clear vessel lets you monitor beverage levels easily. Perfect for home bars, outdoor events, or special occasions, this dispenser adds a touch of sophistication to your beverage service setup.",
     "capacity": "3 Litre",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=232",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=232"
   },
   {
     "id": 231,
@@ -665,13 +648,12 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/231.png",
+    "image": "/barraid/products/231.jpg",
     "code": "SD398",
     "availability": "Out Of Stock",
     "description": "Elevate your entertaining experience with this sleek and stylish beverage dispenser, perfect for serving cold drinks at parties, gatherings, or casual get-togethers. The tall, transparent tower design showcases your beverages beautifully while keeping them fresh and readily accessible. Featuring dual taps for convenient dispensing, this 3-litre capacity dispenser allows multiple guests to serve themselves simultaneously. The sturdy base provides excellent stability, while the removable lid makes refilling and cleaning a breeze. Ideal for serving beer, cocktails, juices, or any cold beverage of your choice, this dispenser combines practicality with contemporary aesthetics. The high-quality construction ensures durability, whilst the clear vessel lets you monitor beverage levels easily. Perfect for home bars, outdoor events, or special occasions, this dispenser adds a touch of sophistication to your beverage service setup.",
     "capacity": "3 Litre",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=231",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=231"
   },
   {
     "id": 233,
@@ -681,13 +663,12 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/233.png",
+    "image": "/barraid/products/233.jpg",
     "code": "SD398",
     "availability": "2-3 Days",
     "description": "Elevate your entertaining experience with this sleek and stylish beverage dispenser, perfect for serving cold drinks at parties, gatherings, or casual get-togethers. The tall, transparent tower design showcases your beverages beautifully while keeping them fresh and readily accessible. Featuring dual taps for convenient dispensing, this 3-litre capacity dispenser allows multiple guests to serve themselves simultaneously. The sturdy base provides excellent stability, while the removable lid makes refilling and cleaning a breeze. Ideal for serving beer, cocktails, juices, or any cold beverage of your choice, this dispenser combines practicality with contemporary aesthetics. The high-quality construction ensures durability, whilst the clear vessel lets you monitor beverage levels easily. Perfect for home bars, outdoor events, or special occasions, this dispenser adds a touch of sophistication to your beverage service setup.",
     "capacity": "3 Litre",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=233",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=233"
   },
   {
     "id": 225,
@@ -697,15 +678,15 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/225.png",
+    "image": "/barraid/products/225/gallery-1.jpg",
     "code": "SD198",
     "availability": "2-3 Days",
     "description": "Elevate your parties and gatherings with this sleek 3-litre beverage dispenser, featuring a striking green base and transparent cylinder design. The tall, slender tower configuration adds a modern touch to any setting while maximising your counter or table space. The durable construction includes a precise dispensing tap that provides smooth, controlled pouring without drips or spills. Perfect for serving cold drinks, juices, or cocktails, this dispenser keeps beverages readily accessible for your guests. The wide-mouth top allows for easy filling and cleaning, while the clear container lets you monitor beverage levels at a glance. The stable base ensures secure placement, making it ideal for both indoor and outdoor entertaining. Whether hosting a casual get-together or a formal event, this practical dispenser combines style with functionality to keep your beverages flowing and your guests refreshed.",
     "capacity": "3 Litre",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=225",
     "gallery": [
-      "/barraid/products/225/gallery-1.jpg",
-      "/barraid/products/225/gallery-2.jpg"
+      "/barraid/products/225/gallery-2.jpg",
+      "/barraid/products/225.jpg"
     ]
   },
   {
@@ -716,14 +697,14 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/228.png",
+    "image": "/barraid/products/228/gallery-1.jpg",
     "code": "SD198",
     "availability": "2-3 Days",
     "description": "Elevate your parties and gatherings with this sleek 3-litre beverage dispenser, featuring a striking green base and transparent cylinder design. The tall, slender tower configuration adds a modern touch to any setting while maximising your counter or table space. The durable construction includes a precise dispensing tap that provides smooth, controlled pouring without drips or spills. Perfect for serving cold drinks, juices, or cocktails, this dispenser keeps beverages readily accessible for your guests. The wide-mouth top allows for easy filling and cleaning, while the clear container lets you monitor beverage levels at a glance. The stable base ensures secure placement, making it ideal for both indoor and outdoor entertaining. Whether hosting a casual get-together or a formal event, this practical dispenser combines style with functionality to keep your beverages flowing and your guests refreshed.",
     "capacity": "3 Litre",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=228",
     "gallery": [
-      "/barraid/products/228/gallery-1.jpg"
+      "/barraid/products/228.jpg"
     ]
   },
   {
@@ -734,15 +715,15 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/227.png",
+    "image": "/barraid/products/227/gallery-1.jpg",
     "code": "SD198",
     "availability": "2-3 Days",
     "description": "Elevate your parties and gatherings with this sleek 3-litre beverage dispenser, featuring a striking green base and transparent cylinder design. The tall, slender tower configuration adds a modern touch to any setting while maximising your counter or table space. The durable construction includes a precise dispensing tap that provides smooth, controlled pouring without drips or spills. Perfect for serving cold drinks, juices, or cocktails, this dispenser keeps beverages readily accessible for your guests. The wide-mouth top allows for easy filling and cleaning, while the clear container lets you monitor beverage levels at a glance. The stable base ensures secure placement, making it ideal for both indoor and outdoor entertaining. Whether hosting a casual get-together or a formal event, this practical dispenser combines style with functionality to keep your beverages flowing and your guests refreshed.",
     "capacity": "3 Litre",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=227",
     "gallery": [
-      "/barraid/products/227/gallery-1.jpg",
-      "/barraid/products/227/gallery-2.jpg"
+      "/barraid/products/227/gallery-2.jpg",
+      "/barraid/products/227.jpg"
     ]
   },
   {
@@ -753,14 +734,14 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/229.png",
+    "image": "/barraid/products/229/gallery-1.jpg",
     "code": "SD198",
     "availability": "2-3 Days",
     "description": "Elevate your parties and gatherings with this sleek 3-litre beverage dispenser, featuring a striking green base and transparent cylinder design. The tall, slender tower configuration adds a modern touch to any setting while maximising your counter or table space. The durable construction includes a precise dispensing tap that provides smooth, controlled pouring without drips or spills. Perfect for serving cold drinks, juices, or cocktails, this dispenser keeps beverages readily accessible for your guests. The wide-mouth top allows for easy filling and cleaning, while the clear container lets you monitor beverage levels at a glance. The stable base ensures secure placement, making it ideal for both indoor and outdoor entertaining. Whether hosting a casual get-together or a formal event, this practical dispenser combines style with functionality to keep your beverages flowing and your guests refreshed.",
     "capacity": "3 Litre",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=229",
     "gallery": [
-      "/barraid/products/229/gallery-1.jpg"
+      "/barraid/products/229.jpg"
     ]
   },
   {
@@ -771,14 +752,14 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/230.png",
+    "image": "/barraid/products/230/gallery-1.jpg",
     "code": "SD198",
     "availability": "2-3 Days",
     "description": "Elevate your parties and gatherings with this sleek 3-litre beverage dispenser, featuring a striking green base and transparent cylinder design. The tall, slender tower configuration adds a modern touch to any setting while maximising your counter or table space. The durable construction includes a precise dispensing tap that provides smooth, controlled pouring without drips or spills. Perfect for serving cold drinks, juices, or cocktails, this dispenser keeps beverages readily accessible for your guests. The wide-mouth top allows for easy filling and cleaning, while the clear container lets you monitor beverage levels at a glance. The stable base ensures secure placement, making it ideal for both indoor and outdoor entertaining. Whether hosting a casual get-together or a formal event, this practical dispenser combines style with functionality to keep your beverages flowing and your guests refreshed.",
     "capacity": "3 Litre",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=230",
     "gallery": [
-      "/barraid/products/230/gallery-1.jpg"
+      "/barraid/products/230.jpg"
     ]
   },
   {
@@ -789,12 +770,11 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1999,
     "oldPrice": 2799,
-    "image": "/barraid/products/104.png",
+    "image": "",
     "code": "DGPLD",
     "availability": "Out Of Stock",
     "description": "",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=104",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=104"
   },
   {
     "id": 76,
@@ -804,12 +784,11 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1999,
     "oldPrice": 1999,
-    "image": "/barraid/products/76.png",
+    "image": "",
     "code": "BBSQS",
     "availability": "Out Of Stock",
     "description": "Bonny Boy Liquor Dispenser Pouring Liquor From Its Bottle Every Time You Make A Drink, Is So Old Fashioned And Boring As Well. So Buy This Bonny-Boy Liquor-Dispenser To Make Your Drink Serving Experience Fun And More Enjoyable. This Funny Yet Cute Liquor Dispenser Takes Its Inspiration . Just Fill Its Bottom Container With Your Favorite Drink And It Will Be Ready To Serve It By A Single Push Button Operation. Place It In Your Home Bar Or Kitchen Top For Cocktail Parties. Your Guests Are Going To Love It. This Easy To Use Leisure Liquor Dispenser Runs On 2 Aa Batteries.. In Stock And Ready To Ship. Features Modeled After Famous Manneken Pis Sculpture In Brussels Push Button Operation Unique Gift Idea Uses 2 Aa Batteries (Not Included) Specs Dimensions: 3 1/2\"W X 12 1/2\"H X 3 1/2\"D Capacity: 16 Oz",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=76",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=76"
   },
   {
     "id": 73,
@@ -819,12 +798,11 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1599,
     "oldPrice": 2199,
-    "image": "/barraid/products/73.png",
+    "image": "",
     "code": "SCR",
     "availability": "In Stock",
     "description": "Push Button Operation Perfect Gift for Beer Lovers Easy to Use Leisure Liquor Dispenser Runs on 2 AA Batteries Great for Parties, Outdoors, and Around the Home Capacity: 16 oz",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=73",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=73"
   },
   {
     "id": 58,
@@ -834,13 +812,12 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1799,
     "oldPrice": 1599,
-    "image": "/barraid/products/58.png",
+    "image": "/barraid/products/58.jpg",
     "code": "RCPDGPLD",
     "availability": "Out Of Stock",
     "description": "Red Chrome Plated ABS Plastic Body and Two 17\" Gas Hoses Wine Dispenser Tarnish Resistant and Durable See Through Reservoir. Features Dual Chambers that Hold Nearly 750 ML Each Size 19\"x7\"x6\"",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=58",
-    "capacity": "750 ML",
-    "gallery": []
+    "capacity": "750 ML"
   },
   {
     "id": 102,
@@ -849,13 +826,12 @@ export const products:BarRaidProduct[]=[
     "name": "Barraid Double Gas Pump Liquor Dispenser Black Chrome Plated 1500 Ml Capacity",
     "category": "Liquor Dispensers",
     "price": 0,
-    "image": "/barraid/products/102.png",
+    "image": "",
     "code": "BCPDGPLD",
     "availability": "Out Of Stock",
     "description": "This new charming retro liquor dispenser is sure to be an instant conversation starter! Featuring a unique design that looks like an old-fashioned gas pump, the Gas Pump Liquor Dispenser has a red chrome plated body that is tarnish resistant and a durable, see-through plastic reservoir with measurements for you to monitor drink levels at all times. Pump up to 750 ml each with two your different favourite drink and fire the Wild West style pistol at will. A fantastic item for parties and celebrations, you can set your own \"fuel\" prices today and let your guests pour away!. This Dual chambered gas pump liquor dispenser measures 19\"x7\"x6\". Arrives gift packaged. Each side holds 750 ML Liquor and has two 17\" gas hoses.",
     "capacity": "750 ml",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=102",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=102"
   },
   {
     "id": 72,
@@ -865,12 +841,11 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1599,
     "oldPrice": 2999,
-    "image": "/barraid/products/72.png",
+    "image": "",
     "code": "SLRRW",
     "availability": "In Stock",
     "description": "Push Button Operation Liquor Decanter Easy to Use Leisure Liquor Dispenser Runs on 2 AA Batteries Its Great Fun/Unique item for Liquor Lovers..! Capacity: 16 oz",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=72",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=72"
   },
   {
     "id": 66,
@@ -880,13 +855,12 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1599,
     "oldPrice": 3999,
-    "image": "/barraid/products/66.png",
+    "image": "",
     "code": "SCPDGPLD",
     "availability": "Out Of Stock",
     "description": "Uses: Liquor dispenser can suitable for red wine ,beer, and widely used in bars, hotels, teahouses, KTV, family and soon. Material : Chrome-plated ABS/Metal/rubber/plastic Capacity: 1500ML Size: 19\"cm x 7\"cm x 6\"cm, Faucet long 55cm CUSTOMER FEEDBACK: We at 'BARRAID' are working hard to make and present the best product.We are looking to have good and genuine feedback that might help others",
     "capacity": "1500ML",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=66",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=66"
   },
   {
     "id": 77,
@@ -896,12 +870,11 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1599,
     "oldPrice": 2299,
-    "image": "/barraid/products/77.png",
+    "image": "",
     "code": "SCSQ",
     "availability": "Out Of Stock",
     "description": "Liquor dispenser Beer Dispenser Decanter Liquor Decanter Wine Decanter",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=77",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=77"
   },
   {
     "id": 84,
@@ -911,12 +884,11 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1599,
     "oldPrice": 2999,
-    "image": "/barraid/products/84.png",
+    "image": "",
     "code": "SLSRB",
     "availability": "In Stock",
     "description": "Push Button Operation Liquor Decanter Easy to Use Leisure Liquor Dispenser Runs on 2 AA Batteries Its Great Fun/Unique item for Liquor Lovers..! Capacity: 16 oz Barraid Singapore Lion Silver Liquor Dispenser - Pouring liquor from its bottle every time you make a drink, is so old fashioned and boring as well. So buy this Barraid Singapore Lion Silver Liquor Dispenser to make your drink serving experience fun and more enjoyable. Just fill its bottom container with your favorite drink and it will be ready to serve it by a single push button operation. Place it in your home bar or kitchen top for cocktail parties. Your guests are going to love it. This easy to use leisure liquor dispenser runs on 2 AA batteries .. • In stock and ready to ship. Features • Push button operation • Unique gift idea • Uses 2 AA Batteries (not included) Specs • Dimensions: 3 1/2\"W x 12 1/2\"H x 3 1/2\"D • Capacity: 16 oz",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=84",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=84"
   },
   {
     "id": 57,
@@ -926,12 +898,11 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1599,
     "oldPrice": 1999,
-    "image": "/barraid/products/57.png",
+    "image": "",
     "code": "BBSQB",
     "availability": "In Stock",
     "description": "Bonny Boy Liquor Dispenser Pouring Liquor From Its Bottle Every Time You Make A Drink, Is So Old Fashioned And Boring As Well. So Buy This Bonny-Boy Liquor-Dispenser To Make Your Drink Serving Experience Fun And More Enjoyable. This Funny Yet Cute Liquor Dispenser Takes Its Inspiration . Just Fill Its Bottom Container With Your Favorite Drink And It Will Be Ready To Serve It By A Single Push Button Operation. Place It In Your Home Bar Or Kitchen Top For Cocktail Parties. Your Guests Are Going To Love It. This Easy To Use Leisure Liquor Dispenser Runs On 2 Aa Batteries.. In Stock And Ready To Ship. Features Modeled After Famous Manneken Pis Sculpture In Brussels Push Button Operation Unique Gift Idea Uses 2 Aa Batteries (Not Included) Specs Dimensions: 3 1/2\"W X 12 1/2\"H X 3 1/2\"D Capacity: 16 Oz",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=57",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=57"
   },
   {
     "id": 64,
@@ -941,12 +912,11 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1599,
     "oldPrice": 1999,
-    "image": "/barraid/products/64.png",
+    "image": "",
     "code": "BBSQG",
     "availability": "In Stock",
     "description": "Bar accessories Liquor dispenser Decanter Great for Parties, Outdoors, and Around the Home Capacity: 16 oz",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=64",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=64"
   },
   {
     "id": 65,
@@ -956,12 +926,11 @@ export const products:BarRaidProduct[]=[
     "category": "Liquor Dispensers",
     "price": 1599,
     "oldPrice": 1599,
-    "image": "/barraid/products/65.png",
+    "image": "",
     "code": "SLWRB",
     "availability": "In Stock",
     "description": "Push Button Operation Liquor Decanter Easy to Use Leisure Liquor Dispenser Runs on 2 AA Batteries Its Great Fun/Unique item for Liquor Lovers..! Capacity: 16 oz",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=65",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=65"
   },
   {
     "id": 196,
@@ -971,13 +940,12 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/196.png",
+    "image": "/barraid/products/196.jpg",
     "code": "WBTC-1",
     "availability": "In Stock",
     "description": "Elevate your party or home bar experience with this striking 3000ml (3L) capacity World Cup Tower Dispenser from BARRAID. Crafted with a sleek and stylish design, this decanter comes in four vibrant colours - blue, red, golden, and yellow. The transparent glass globe allows you to showcase your favourite beverages, be it beer, whisky, wine, or any other drink. With its wide base and tapered top, it ensures a steady pour every time. The built-in sparkling LED lights add a festive touch, creating an inviting ambiance. Perfect for gatherings, parties, or simply enjoying a drink at home, this dispenser is sure to impress your guests. Its large capacity makes it ideal for serving multiple people without frequent refills. Elevate your hosting game with this eye-catching and functional World Cup Tower Dispenser.",
     "capacity": "3000 ml",
-    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=196",
-    "gallery": []
+    "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=196"
   },
   {
     "id": 197,
@@ -987,14 +955,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/197.png",
+    "image": "/barraid/products/197/gallery-1.png",
     "code": "CBT-798",
     "availability": "In Stock",
     "description": "The BARRAID Amazing Cup Dispenser is designed to take your beverage-serving experience to the next level. With a large 3000 ml capacity, this dispenser is perfect for social events, ensuring you and your guests can enjoy drinks without the hassle of frequent refills. This multifunctional dispenser accommodates a wide variety of drinks, including beer, whisky, wine, and cocktails, adding versatility to your hosting capabilities. Adding to the visual appeal, the dispenser is equipped with multi-colored LED lights that create a sparkling, party-ready ambiance. The stunning golden finish brings elegance to any setting, while the ice tube feature ensures your drinks stay cold without getting diluted. With its easy-to-use design and spill-free pouring mechanism, this dispenser is convenient for both serving and cleaning. The BARRAID Amazing Cup Dispenser makes an impressive gift for friends, family, and colleagues who love to host gatherings or simply enjoy a quality drink. Whether for a holiday, housewarming, or any special occasion, this dispenser is a unique, functional, and stylish choice for any bar enthusiast",
     "capacity": "3000 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=197",
     "gallery": [
-      "/barraid/products/197/gallery-1.png",
       "/barraid/products/197/gallery-2.png"
     ]
   },
@@ -1006,14 +973,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3699,
     "oldPrice": 4999,
-    "image": "/barraid/products/198.png",
+    "image": "/barraid/products/198/gallery-1.png",
     "code": "CBT-798",
     "availability": "In Stock",
     "description": "The BARRAID Amazing Cup Dispenser is designed to take your beverage-serving experience to the next level. With a large 3000 ml capacity, this dispenser is perfect for social events, ensuring you and your guests can enjoy drinks without the hassle of frequent refills. This multifunctional dispenser accommodates a wide variety of drinks, including beer, whisky, wine, and cocktails, adding versatility to your hosting capabilities. Adding to the visual appeal, the dispenser is equipped with multi-colored LED lights that create a sparkling, party-ready ambiance. The stunning golden finish brings elegance to any setting, while the ice tube feature ensures your drinks stay cold without getting diluted. With its easy-to-use design and spill-free pouring mechanism, this dispenser is convenient for both serving and cleaning. The BARRAID Amazing Cup Dispenser makes an impressive gift for friends, family, and colleagues who love to host gatherings or simply enjoy a quality drink. Whether for a holiday, housewarming, or any special occasion, this dispenser is a unique, functional, and stylish choice for any bar enthusiast.",
     "capacity": "3000 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=198",
     "gallery": [
-      "/barraid/products/198/gallery-1.png",
       "/barraid/products/198/gallery-2.png",
       "/barraid/products/198/gallery-3.png"
     ]
@@ -1026,14 +992,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/199.png",
+    "image": "/barraid/products/199/gallery-1.png",
     "code": "CBT-798",
     "availability": "In Stock",
     "description": "The BARRAID Amazing Cup Dispenser is designed to take your beverage-serving experience to the next level. With a large 3000 ml capacity, this dispenser is perfect for social events, ensuring you and your guests can enjoy drinks without the hassle of frequent refills. This multifunctional dispenser accommodates a wide variety of drinks, including beer, whisky, wine, and cocktails, adding versatility to your hosting capabilities. Adding to the visual appeal, the dispenser is equipped with multi-colored LED lights that create a sparkling, party-ready ambiance. The stunning golden finish brings elegance to any setting, while the ice tube feature ensures your drinks stay cold without getting diluted. With its easy-to-use design and spill-free pouring mechanism, this dispenser is convenient for both serving and cleaning. The BARRAID Amazing Cup Dispenser makes an impressive gift for friends, family, and colleagues who love to host gatherings or simply enjoy a quality drink. Whether for a holiday, housewarming, or any special occasion, this dispenser is a unique, functional, and stylish choice for any bar enthusiast.",
     "capacity": "3000 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=199",
     "gallery": [
-      "/barraid/products/199/gallery-1.png",
       "/barraid/products/199/gallery-2.png",
       "/barraid/products/199/gallery-3.png"
     ]
@@ -1046,14 +1011,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/200.png",
+    "image": "/barraid/products/200/gallery-1.png",
     "code": "CBT-798",
     "availability": "In Stock",
     "description": "The BARRAID Amazing Cup Dispenser is designed to take your beverage-serving experience to the next level. With a large 3000 ml capacity, this dispenser is perfect for social events, ensuring you and your guests can enjoy drinks without the hassle of frequent refills. This multifunctional dispenser accommodates a wide variety of drinks, including beer, whisky, wine, and cocktails, adding versatility to your hosting capabilities. Adding to the visual appeal, the dispenser is equipped with multi-colored LED lights that create a sparkling, party-ready ambiance. The stunning golden finish brings elegance to any setting, while the ice tube feature ensures your drinks stay cold without getting diluted. With its easy-to-use design and spill-free pouring mechanism, this dispenser is convenient for both serving and cleaning. The BARRAID Amazing Cup Dispenser makes an impressive gift for friends, family, and colleagues who love to host gatherings or simply enjoy a quality drink. Whether for a holiday, housewarming, or any special occasion, this dispenser is a unique, functional, and stylish choice for any bar enthusiast",
     "capacity": "3000 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=200",
     "gallery": [
-      "/barraid/products/200/gallery-1.png",
       "/barraid/products/200/gallery-2.png",
       "/barraid/products/200/gallery-3.png"
     ]
@@ -1066,14 +1030,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/206.png",
+    "image": "/barraid/products/206/gallery-1.png",
     "code": "BT-S9",
     "availability": "In Stock",
     "description": "The BARRAID 3L Draft Beer Tower with Sparkling Light Ice Tube brings a unique and stylish touch to any gathering. With a generous 3L (3000ml) capacity, this beverage dispenser is designed to keep your favorite drinks cool and fresh without diluting them. Its built-in ice tube includes sparkling lights, adding a fun, ambient glow that enhances the atmosphere. Constructed from durable, BPA-free materials, the tower boasts a sleek green design that fits perfectly in both casual and upscale settings. The easy-to-use tap ensures smooth, controlled pouring, reducing spills and making it a great choice for parties, game nights, and other social events. Ideal for dispensing beer, cocktails, soda, juice, and other cold drinks, this versatile drink tower is perfect for anyone looking to elevate their hosting experience. Whether for home entertaining or professional use, the BARRAID 3L Draft Beer Tower offers functionality, style, and convenience all in one.",
     "capacity": "3L",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=206",
     "gallery": [
-      "/barraid/products/206/gallery-1.png",
       "/barraid/products/206/gallery-2.png",
       "/barraid/products/206/gallery-3.png",
       "/barraid/products/206/gallery-4.png",
@@ -1088,14 +1051,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/207.png",
+    "image": "/barraid/products/207/gallery-1.png",
     "code": "BT-S9",
     "availability": "In Stock",
     "description": "The BARRAID 3L Draft Beer Tower with Sparkling Light Ice Tube brings a unique and stylish touch to any gathering. With a generous 3L (3000ml) capacity, this beverage dispenser is designed to keep your favorite drinks cool and fresh without diluting them. Its built-in ice tube includes sparkling lights, adding a fun, ambient glow that enhances the atmosphere. Constructed from durable, BPA-free materials, the tower boasts a sleek green design that fits perfectly in both casual and upscale settings. The easy-to-use tap ensures smooth, controlled pouring, reducing spills and making it a great choice for parties, game nights, and other social events. Ideal for dispensing beer, cocktails, soda, juice, and other cold drinks, this versatile drink tower is perfect for anyone looking to elevate their hosting experience. Whether for home entertaining or professional use, the BARRAID 3L Draft Beer Tower offers functionality, style, and convenience all in one.",
     "capacity": "3L",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=207",
     "gallery": [
-      "/barraid/products/207/gallery-1.png",
       "/barraid/products/207/gallery-2.png",
       "/barraid/products/207/gallery-3.png",
       "/barraid/products/207/gallery-4.png"
@@ -1109,14 +1071,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/208.png",
+    "image": "/barraid/products/208/gallery-1.png",
     "code": "BT-S9",
     "availability": "In Stock",
     "description": "The BARRAID 3L Draft Beer Tower with Sparkling Light Ice Tube brings a unique and stylish touch to any gathering. With a generous 3L (3000ml) capacity, this beverage dispenser is designed to keep your favorite drinks cool and fresh without diluting them. Its built-in ice tube includes sparkling lights, adding a fun, ambient glow that enhances the atmosphere. Constructed from durable, BPA-free materials, the tower boasts a sleek green design that fits perfectly in both casual and upscale settings. The easy-to-use tap ensures smooth, controlled pouring, reducing spills and making it a great choice for parties, game nights, and other social events. Ideal for dispensing beer, cocktails, soda, juice, and other cold drinks, this versatile drink tower is perfect for anyone looking to elevate their hosting experience. Whether for home entertaining or professional use, the BARRAID 3L Draft Beer Tower offers functionality, style, and convenience all in one.",
     "capacity": "3L",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=208",
     "gallery": [
-      "/barraid/products/208/gallery-1.png",
       "/barraid/products/208/gallery-2.png",
       "/barraid/products/208/gallery-3.png"
     ]
@@ -1129,16 +1090,16 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/209.png",
+    "image": "/barraid/products/209/gallery-1.jpg",
     "code": "BT-S10",
     "availability": "In Stock",
     "description": "The BARRAID Tripod Beer/Liquor Tower Dispenser is a must-have for parties, gatherings, and social events, designed to enhance any drinking experience. With an impressive 3-liter (3000 ml) capacity, this dispenser holds enough liquid to keep the fun going without frequent refills, making it ideal for sharing with family and friends. Whether you’re pouring beer, cocktails, juice, or any other beverage, this dispenser is a versatile addition to your barware collection. This dispenser is crafted with a sleek, modern tripod base that offers unmatched stability and style, keeping the tower securely in place even in lively party settings. The dispenser’s tap is designed for easy, smooth pouring, making it simple for guests to help themselves while minimizing spills and mess. Made from transparent, durable material, the BARRAID dispenser features volume indicators so you can easily monitor remaining beverage levels at a glance. Perfect for casual gatherings, sports events, BBQs, and celebrations, this beverage tower is versatile enough to fit in at home or at any professional bar setting. Its functional design and large capacity make it a great choice for entertaining, allowing you to enjoy a hands-free, hassle-free serving experience that’s both fun and convenient.",
     "capacity": "3000 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=209",
     "gallery": [
-      "/barraid/products/209/gallery-1.jpg",
       "/barraid/products/209/gallery-2.jpg",
-      "/barraid/products/209/gallery-3.jpg"
+      "/barraid/products/209/gallery-3.jpg",
+      "/barraid/products/209.jpg"
     ]
   },
   {
@@ -1149,14 +1110,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/210.png",
+    "image": "/barraid/products/210/gallery-1.png",
     "code": "BT-NT01",
     "availability": "In Stock",
     "description": "Add a touch of style and convenience to your drinking experience with the BARRAID Custom Tall Table Beer/Liquor Dispenser. With a generous 3L (3000 ml) capacity, this dispenser is designed to keep your guests’ favorite beverages flowing at any event. Whether you're hosting a party, running a bar, or adding flair to your home gatherings, this versatile dispenser brings a professional touch to any setting. Equipped with a unique multi-color LED lighting feature, the BARRAID dispenser enhances any atmosphere by illuminating the drink and creating an eye-catching centerpiece. Perfect for parties, pubs, or game nights, the lighting adds an extra level of excitement and is sure to impress guests. To ensure drinks stay cool without losing their flavor, the dispenser includes an integrated ice tube. Simply fill it with ice, and your beverages remain chilled without being diluted. The BPA-free construction ensures safe drinking, and the durable plastic is both shatter-resistant and lightweight, making it easy to carry and use in various environments. The user-friendly tap and handle make serving drinks effortless, allowing everyone to pour with ease and enjoy spill-free servings. Compatible with a wide range of drinks, including beer, wine, cocktails, and soft drinks, this dispenser is a fantastic addition to any home bar, pub, or party setup. Cleaning and maintenance are made simple thanks to the detachable parts, so you can keep the dispenser in pristine condition for future events. Choose BARRAID for a high-quality, stylish, and functional beverage dispenser that enhances any occasion.",
     "capacity": "3000 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=210",
     "gallery": [
-      "/barraid/products/210/gallery-1.png",
       "/barraid/products/210/gallery-2.png",
       "/barraid/products/210/gallery-3.png",
       "/barraid/products/210/gallery-4.png",
@@ -1171,14 +1131,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/212.png",
+    "image": "/barraid/products/212/gallery-1.png",
     "code": "BT-NT01",
     "availability": "In Stock",
     "description": "Add a touch of style and convenience to your drinking experience with the BARRAID Custom Tall Table Beer/Liquor Dispenser. With a generous 3L (3000 ml) capacity, this dispenser is designed to keep your guests’ favorite beverages flowing at any event. Whether you're hosting a party, running a bar, or adding flair to your home gatherings, this versatile dispenser brings a professional touch to any setting. Equipped with a unique multi-color LED lighting feature, the BARRAID dispenser enhances any atmosphere by illuminating the drink and creating an eye-catching centerpiece. Perfect for parties, pubs, or game nights, the lighting adds an extra level of excitement and is sure to impress guests. To ensure drinks stay cool without losing their flavor, the dispenser includes an integrated ice tube. Simply fill it with ice, and your beverages remain chilled without being diluted. The BPA-free construction ensures safe drinking, and the durable plastic is both shatter-resistant and lightweight, making it easy to carry and use in various environments. The user-friendly tap and handle make serving drinks effortless, allowing everyone to pour with ease and enjoy spill-free servings. Compatible with a wide range of drinks, including beer, wine, cocktails, and soft drinks, this dispenser is a fantastic addition to any home bar, pub, or party setup. Cleaning and maintenance are made simple thanks to the detachable parts, so you can keep the dispenser in pristine condition for future events. Choose BARRAID for a high-quality, stylish, and functional beverage dispenser that enhances any occasion.",
     "capacity": "3000 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=212",
     "gallery": [
-      "/barraid/products/212/gallery-1.png",
       "/barraid/products/212/gallery-2.png",
       "/barraid/products/212/gallery-3.png",
       "/barraid/products/212/gallery-4.png"
@@ -1192,14 +1151,13 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/218.png",
+    "image": "/barraid/products/218/gallery-1.png",
     "code": "BT-S23",
     "availability": "In Stock",
     "description": "The BARRAID Elite Tower/Dispenser/Decanter is a must-have for anyone looking to elevate their beverage service experience. With its 3000 ml (3 L) capacity, this dispenser is perfect for entertaining large groups without the hassle of constant refilling. Whether you're serving beer, whisky, wine, or creative cocktails, this tower is designed to make every pour smooth and convenient. Crafted from premium, BPA-free materials, the BARRAID Elite Tower guarantees durability and safety. Its sturdy construction ensures it can withstand frequent use, making it suitable for parties, casual home use, or even professional bar and pub settings. The vibrant blue finish adds a pop of color, blending seamlessly with various event themes or modern interiors. Functionality meets style with the easy-to-use tap, designed for smooth and precise pouring. Guests can serve themselves effortlessly, while the stable base keeps the dispenser secure. Cleaning and maintenance are equally simple, thanks to its detachable components. Whether you're hosting a backyard barbecue, a festive celebration, or running a busy bar, the BARRAID Elite Tower brings sophistication and practicality to the table. Its eye-catching design, generous capacity, and user-friendly features make it the perfect choice for serving beverages in style. Enhance your entertaining experience with the BARRAID Elite Tower – a reliable, stylish, and functional solution for all your beverage needs",
     "capacity": "3000 ml",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=218",
     "gallery": [
-      "/barraid/products/218/gallery-1.png",
       "/barraid/products/218/gallery-2.png",
       "/barraid/products/218/gallery-3.png"
     ]
@@ -1212,14 +1170,14 @@ export const products:BarRaidProduct[]=[
     "category": "Beer Towers",
     "price": 3599,
     "oldPrice": 4999,
-    "image": "/barraid/products/226.png",
+    "image": "/barraid/products/226/gallery-1.jpg",
     "code": "SD198",
     "availability": "2-3 Days",
     "description": "Elevate your parties and gatherings with this sleek 3-litre beverage dispenser, featuring a striking green base and transparent cylinder design. The tall, slender tower configuration adds a modern touch to any setting while maximising your counter or table space. The durable construction includes a precise dispensing tap that provides smooth, controlled pouring without drips or spills. Perfect for serving cold drinks, juices, or cocktails, this dispenser keeps beverages readily accessible for your guests. The wide-mouth top allows for easy filling and cleaning, while the clear container lets you monitor beverage levels at a glance. The stable base ensures secure placement, making it ideal for both indoor and outdoor entertaining. Whether hosting a casual get-together or a formal event, this practical dispenser combines style with functionality to keep your beverages flowing and your guests refreshed.",
     "capacity": "3 Litre",
     "sourceUrl": "https://www.barraid.com/index.php?route=product/product&product_id=226",
     "gallery": [
-      "/barraid/products/226/gallery-1.jpg"
+      "/barraid/products/226.jpg"
     ]
   }
 ];
