@@ -144,7 +144,7 @@ export default function EmailAutomationVideosPage() {
       {/* What's Included */}
       <section className="px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-black mb-12">✅ What's Included</h2>
+          <h2 className="text-3xl font-black mb-12">✅ What&apos;s Included</h2>
           <div className="grid gap-4 md:grid-cols-2">
             {[
               "Lead discovery from company domains (Hunter.io)",

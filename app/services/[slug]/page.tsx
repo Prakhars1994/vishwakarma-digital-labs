@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { serviceData, type ServiceSlug } from "../serviceData";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { getRelatedPortfolio } from "@/lib/portfolio";
+import { getServicePackages } from "@/lib/catalog";
 
 const whatsapp = "https://wa.me/918446000784?text=Hi%20Prakhar%2C%20I%20want%20to%20discuss%20a%20project%20with%20Vishwakarma%20Digital%20Labs.";
 
@@ -164,11 +166,22 @@ const seoBySlug: Record<ServiceSlug, { title: string; description: string }> = {
     description:
       "Automate repetitive business workflows, lead routing, reporting and operations with APIs, databases, webhooks and AI-assisted processing.",
   },
-  "email-automation": {
-    title: "Email Marketing Automation | AI Lead Generation & CRM Sync",
-    description:
-      "AI-powered email marketing system with intelligent lead discovery, automatic lead scoring, CRM integration, and personalized campaigns. Built for agencies and SaaS companies.",
-  },
+  "social-media-marketing": { title: "Social Media Marketing Agency | Content & Community", description: "Social media management, content calendars, creative production and reporting for growing businesses." },
+  "meta-ads": { title: "Facebook & Instagram Ads Management | Meta Ads Agency", description: "Meta Ads strategy, creative testing, lead generation and Click-to-WhatsApp campaigns from VDL." },
+  "google-ads": { title: "Google Ads Management | Search, Display & YouTube", description: "Google Ads management with keyword research, conversion tracking, budget monitoring and reporting." },
+  "performance-marketing": { title: "Performance Marketing Services | Paid Acquisition", description: "Conversion-focused paid acquisition, funnels, measurement and ongoing campaign optimization." },
+  "whatsapp-marketing": { title: "WhatsApp Lead Generation & Automation", description: "Compliant WhatsApp journeys, lead capture, qualification, CRM integration and follow-up automation." },
+  "ai-marketing-automation": { title: "AI Marketing Automation | Lead Qualification & Chatbots", description: "AI-assisted marketing workflows, chatbots, content planning, reporting and CRM integrations." },
+  "digital-marketing": { title: "Digital Marketing Services | Strategy, SEO, Ads & Growth", description: "Practical digital marketing systems across strategy, SEO, content, paid campaigns, landing pages, lead generation and reporting." },
+  "social-media-automation": { title: "Social Media Automation | Meta, Instagram & Lead Workflows", description: "Social content workflows, Meta lead capture, CRM routing, approvals, reporting and human-controlled automation." },
+  "content-writing": { title: "Content Writing Services | Website, SEO, Product & Campaign Copy", description: "Clear website, SEO, ecommerce, campaign, email, social and documentation content shaped around your audience and business goal." },
+  "shopify-development": { title: "Shopify Development Services | Stores, Themes & Integrations", description: "Shopify setup, theme customisation, product experience, integrations, conversion improvements and launch support." },
+  "wordpress-development": { title: "WordPress Development Services | Business Websites & WooCommerce", description: "Manageable WordPress websites, landing pages, blogs, WooCommerce and redesigns with practical SEO and maintenance foundations." },
+  "ecommerce-development": { title: "Ecommerce Development Services | Shopify, WooCommerce & Custom", description: "Product catalogues, cart, checkout, payments, operations, performance and growth-ready ecommerce experiences." },
+  "custom-software": { title: "Custom Software Development | Dashboards, Portals & SaaS", description: "Custom dashboards, portals, SaaS products, APIs and internal tools shaped around your business workflow." },
+  "seo-growth": { title: "SEO & Growth Services | Technical SEO, Content & Conversion", description: "Technical SEO, search intent, content planning, landing pages, local visibility, analytics and conversion improvements." },
+  "lead-generation": { title: "Lead Generation Systems | Capture, CRM & Follow-up", description: "Lead capture, qualification, CRM routing, approved follow-up and reporting systems for fewer missed opportunities." },
+  "email-automation": { title: "Email Marketing Automation | AI Lead Generation & CRM Sync", description: "AI-powered email marketing system with intelligent lead discovery, automatic lead scoring, CRM integration, and personalized campaigns." },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -225,6 +238,10 @@ function HeroVisual({ slug }: { slug: ServiceSlug }) {
     );
   }
 
+  if (slug === "email-automation") {
+    return <div className="rounded-xl border border-red-400/30 bg-red-900/10 p-6"><div className="flex items-center justify-between border-b border-red-400/30 pb-4 text-[11px] font-mono uppercase tracking-[0.2em] text-red-400"><span>email-system.live</span><span>🟢 ACTIVE</span></div><div className="mt-6 grid grid-cols-3 gap-2 text-center text-sm"><div className="rounded-lg border border-green-400/30 bg-green-400/5 p-3"><div className="text-2xl font-black text-green-400">2,458</div><div className="mt-1 text-xs text-slate-400">Leads Found</div></div><div className="rounded-lg border border-blue-400/30 bg-blue-400/5 p-3"><div className="text-2xl font-black text-blue-400">98%</div><div className="mt-1 text-xs text-slate-400">Valid Data</div></div><div className="rounded-lg border border-purple-400/30 bg-purple-400/5 p-3"><div className="text-2xl font-black text-purple-400">842</div><div className="mt-1 text-xs text-slate-400">Opened Emails</div></div></div><div className="mt-4 space-y-2 font-mono text-xs text-slate-300">{["Hunter.io lead discovery", "Data validation", "Lead scoring", "CRM sync", "AI personalization", "Real-time tracking"].map((item) => <div key={item} className="flex items-center gap-2"><span className="text-green-400">✓</span><span>{item}</span></div>)}</div></div>;
+  }
+
   if (slug === "mobile-app-development") {
     return (
       <div className="relative mx-auto w-full max-w-md">
@@ -235,20 +252,6 @@ function HeroVisual({ slug }: { slug: ServiceSlug }) {
           <div className="mt-5 rounded-[2rem] bg-gradient-to-br from-[#f43f8d] to-[#8b5cf6] p-5 text-white"><div className="text-xs">Good morning</div><div className="mt-2 text-2xl font-black">Your day,<br/>organized.</div></div>
           <div className="mt-4 grid grid-cols-2 gap-3"><div className="h-24 rounded-3xl bg-[#ffe4f0]"/><div className="h-24 rounded-3xl bg-[#e9dcff]"/></div>
           <div className="mt-3 h-20 rounded-3xl bg-[#dff8ff]"/>
-        </div>
-      </div>
-    );
-  }
-
-  if (slug === "email-automation") {
-    return (
-      <div className="border border-red-400/30 bg-red-900/10 p-6 rounded-xl">
-        <div className="flex items-center justify-between border-b border-red-400/30 pb-4 text-[11px] uppercase tracking-[0.2em] text-red-400 font-mono"><span>email-system.live</span><span>🟢 ACTIVE</span></div>
-        <div className="mt-6 space-y-3">
-          <div className="grid grid-cols-3 gap-2 text-center text-sm"><div className="border border-green-400/30 bg-green-400/5 p-3 rounded-lg"><div className="text-2xl font-black text-green-400">2,458</div><div className="text-xs text-slate-400 mt-1">Leads Found</div></div><div className="border border-blue-400/30 bg-blue-400/5 p-3 rounded-lg"><div className="text-2xl font-black text-blue-400">98%</div><div className="text-xs text-slate-400 mt-1">Valid Data</div></div><div className="border border-purple-400/30 bg-purple-400/5 p-3 rounded-lg"><div className="text-2xl font-black text-purple-400">842</div><div className="text-xs text-slate-400 mt-1">Opened Emails</div></div></div>
-          <div className="mt-4 space-y-2 font-mono text-xs text-slate-300">
-            {["✓ Hunter.io lead discovery", "✓ Data validation (India-optimized)", "✓ Lead scoring (5-factor)", "✓ CRM sync (HubSpot/Salesforce)", "✓ AI personalization", "✓ Real-time tracking"].map(item=><div key={item} className="flex items-center gap-2"><span className="text-green-400">{item.split(" ")[0]}</span><span>{item.slice(2)}</span></div>)}
-          </div>
         </div>
       </div>
     );
@@ -269,7 +272,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const service = serviceData[slug as ServiceSlug];
   if (!service) notFound();
   const typedSlug = slug as ServiceSlug;
-  const theme = themes[typedSlug];
+  const theme = themes[typedSlug as keyof typeof themes] || themes["business-automation"];
+  const relatedWork = getRelatedPortfolio(typedSlug);
+  const packages = getServicePackages(typedSlug);
+  const quoteUrl = `${whatsapp}%20I%20am%20interested%20in%20your%20${encodeURIComponent(service.eyebrow)}%20service.`;
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -349,6 +355,29 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><div className={`text-xs font-black uppercase tracking-[0.22em] ${theme.sectionEyebrow}`}>Relevant demos</div><h2 className="mt-3 text-3xl font-black">See the product thinking in action.</h2></div><Link href="/work" className={`text-sm font-bold ${theme.demoAction}`}>View all portfolio demos →</Link></div>
         <div className="mt-8 grid gap-4 md:grid-cols-3">{service.demos.map((demo) => <Link key={demo.href} href={demo.href} className={`group p-6 transition hover:-translate-y-1 ${theme.demoCard}`}><div className={`text-sm ${theme.demoMeta}`}>Interactive demo</div><div className="mt-2 text-xl font-black">{demo.label}</div><div className={`mt-6 font-bold ${theme.demoAction}`}>Open demo <span className="transition group-hover:translate-x-1">→</span></div></Link>)}</div>
       </section>
+
+      {relatedWork.length > 0 && (
+        <section className="mx-auto max-w-7xl px-5 pb-20 lg:px-8" aria-labelledby="related-work-title">
+          <div className={`text-xs font-black uppercase tracking-[0.22em] ${theme.sectionEyebrow}`}>Related VDL work</div>
+          <div className="mt-3 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div><h2 id="related-work-title" className="text-3xl font-black">Work relevant to this requirement.</h2><p className={`mt-3 max-w-2xl leading-7 ${theme.body}`}>Selected demos and public builds are matched to this service so you can see the kind of system VDL can adapt for your business.</p></div>
+            <Link href="/work" className={`text-sm font-bold ${theme.demoAction}`}>View all work →</Link>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {relatedWork.map((work) => <Link key={work.title} href={work.href} className={`group p-5 transition hover:-translate-y-1 ${theme.demoCard}`}><div className={`text-2xl ${theme.demoMeta}`}>{work.icon}</div><div className={`mt-4 text-[10px] font-black uppercase tracking-[0.16em] ${theme.demoMeta}`}>{work.label}</div><h3 className="mt-2 text-lg font-black">{work.title}</h3><p className={`mt-2 text-sm leading-6 ${theme.cardText}`}>{work.text}</p><div className={`mt-5 text-sm font-black ${theme.demoAction}`}>Open project →</div></Link>)}
+          </div>
+        </section>
+      )}
+
+      {packages.length > 0 && (
+        <section className="mx-auto max-w-7xl px-5 pb-20 lg:px-8" aria-labelledby="packages-title">
+          <div className={`text-xs font-black uppercase tracking-[0.22em] ${theme.sectionEyebrow}`}>Starting points</div>
+          <div className="mt-3 flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><h2 id="packages-title" className="text-3xl font-black">Choose a useful starting scope.</h2><p className={`mt-3 max-w-2xl leading-7 ${theme.body}`}>Starting prices make the conversation easier. The final quote depends on content, integrations, access, revisions and third-party costs.</p></div><a href={quoteUrl} target="_blank" rel="noreferrer" className={`text-sm font-bold ${theme.demoAction}`}>Ask for exact quote →</a></div>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {packages.map((pkg) => <article key={pkg.name} className={`p-6 ${theme.card}`}><div className={`text-xs font-black uppercase tracking-[0.16em] ${theme.demoMeta}`}>{pkg.timeline}</div><div className="mt-3 flex flex-wrap items-baseline justify-between gap-3"><h3 className="text-2xl font-black">{pkg.name}</h3><div className={`text-lg font-black ${theme.demoAction}`}>{pkg.price}</div></div><p className={`mt-3 leading-7 ${theme.cardText}`}>{pkg.summary}</p><div className="mt-5 flex flex-wrap gap-2">{pkg.includes.map((item) => <span key={item} className={`px-3 py-1.5 text-xs font-bold ${theme.chip}`}>{item}</span>)}</div><a href={`${quoteUrl}%20Package:%20${encodeURIComponent(pkg.name)}`} target="_blank" rel="noreferrer" className={`mt-6 inline-block px-5 py-3 text-sm font-black ${theme.cta}`}>{pkg.cta} →</a></article>)}
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-7xl px-5 pb-24 lg:px-8">
         <div className={`p-8 text-center sm:p-12 ${theme.final}`}><h2 className="text-4xl font-black">Ready to scope your project?</h2><p className={`mx-auto mt-4 max-w-2xl leading-7 ${theme.finalText}`}>Send the requirement, reference product or problem you want to solve. You will get a practical scope before development starts.</p><a href={whatsapp} target="_blank" rel="noreferrer" className={`mt-7 inline-block px-7 py-4 font-black transition ${theme.finalButton}`}>Start on WhatsApp →</a></div>

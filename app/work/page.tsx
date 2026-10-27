@@ -5,6 +5,14 @@ import SiteHeader from "@/components/SiteHeader";
 import { portfolioDemos } from "@/lib/portfolio";
 import { CONTACT, CURRENT_PULSE_URL, SITE_URL } from "@/lib/site";
 
+const githubBuilds = [
+  { name: "MultiPost AI", type: "Public repository · AI / content automation", description: "A public AI/content automation build available for prospects to inspect on GitHub.", url: "https://github.com/Prakhars1994/multipost-ai", accent: "from-violet-500/20 to-cyan-400/10", icon: "✦" },
+  { name: "Lead VDL Phase 4", type: "Public repository · lead generation", description: "A public lead-generation build candidate for exploring VDL’s growth and CRM capabilities.", url: "https://github.com/Prakhars1994/leadsvdl-phase4", accent: "from-sky-500/20 to-emerald-400/10", icon: "↗" },
+  { name: "RK Associate", type: "Public repository · business website", description: "A public professional-services website build, pending final project classification.", url: "https://github.com/Prakhars1994/rk-associate", accent: "from-amber-500/20 to-orange-400/10", icon: "⌂" },
+  { name: "Wangchuk Dossier", type: "Public repository · research / content", description: "A public dossier-style build candidate for research, content and structured information work.", url: "https://github.com/Prakhars1994/wangchuk-dossier", accent: "from-rose-500/20 to-fuchsia-400/10", icon: "▤" },
+  { name: "VDL Website Source", type: "Public repository · VDL platform", description: "The public source repository for the Vishwakarma Digital Labs website and its interactive demos.", url: "https://github.com/Prakhars1994/vishwakarma-digital-labs", accent: "from-orange-500/20 to-lime-400/10", icon: "V" },
+];
+
 export const metadata: Metadata = {
   title: "Work & Interactive Product Demos",
   description: "Explore CurrentPulse AI production work with administrator-controlled Current Affairs and News publishing, plus interactive web, AI, ecommerce, healthcare, CRM, real-estate, education and operations demos.",
@@ -62,6 +70,28 @@ export default function WorkPage() {
               <div className={`relative mt-auto flex items-center justify-between border px-4 py-3 text-sm font-black transition ${demo.button}`}><span>Launch full demo</span><span className="text-lg transition group-hover:translate-x-1">→</span></div>
             </Link>)}
           </div>
+
+          <section className="mt-20" aria-labelledby="github-builds-title">
+            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+              <div>
+                <div className="text-sm font-black uppercase tracking-[.2em] text-orange-300">Public builds</div>
+                <h2 id="github-builds-title" className="mt-3 text-4xl font-black">More work, directly from GitHub.</h2>
+                <p className="mt-4 max-w-3xl leading-8 text-slate-400">Explore additional public builds from the VDL GitHub account. These are repository links and are not automatically represented as paid client engagements.</p>
+              </div>
+              <a href={CONTACT.github} target="_blank" rel="noreferrer" className="text-sm font-bold text-orange-300 hover:text-orange-200">View GitHub profile ↗</a>
+            </div>
+            <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {githubBuilds.map((build) => (
+                <a key={build.url} href={build.url} target="_blank" rel="noreferrer" aria-label={`Open ${build.name} on GitHub`} className={`group relative flex min-h-[250px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br ${build.accent} p-6 transition hover:-translate-y-1 hover:border-orange-300/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300`}>
+                  <div className="flex items-start justify-between"><span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/10 text-xl font-black">{build.icon}</span><span className="text-lg text-white/50 transition group-hover:translate-x-1 group-hover:text-white">↗</span></div>
+                  <div className="mt-7 text-[10px] font-black uppercase tracking-[.18em] text-orange-200/80">{build.type}</div>
+                  <h3 className="mt-3 text-2xl font-black">{build.name}</h3>
+                  <p className="mt-3 leading-7 text-white/65">{build.description}</p>
+                  <div className="mt-auto pt-6 text-sm font-black text-orange-200">Open repository →</div>
+                </a>
+              ))}
+            </div>
+          </section>
 
           <p className="mt-6 text-sm leading-7 text-slate-500">Portfolio policy: CurrentPulse AI is presented as production work. Demo concepts are clearly labelled concepts and are intentionally excluded from search indexing even though they remain publicly accessible from this work hub.</p>
         </section>

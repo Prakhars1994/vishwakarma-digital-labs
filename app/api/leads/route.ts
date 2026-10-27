@@ -89,6 +89,16 @@ export async function POST(request: Request) {
     }
 
     const name = clean(body.name, 120);
+    const company = clean(body.company, 160);
+    const email = clean(body.email, 180);
+    const phone = clean(body.phone, 80);
+    const industry = clean(body.industry, 120);
+    const country = clean(body.country, 100);
+    const selectedPackage = clean(body.selectedPackage, 160);
+    const selectedDemo = clean(body.selectedDemo, 160);
+    const consentStatus = clean(body.consentStatus, 80);
+    const approvalStatus = clean(body.approvalStatus, 100);
+    const followUpDate = clean(body.followUpDate, 40);
     const contact = clean(body.contact, 80);
     const service = clean(body.service, 120);
     const budget = clean(body.budget, 120);
@@ -122,6 +132,22 @@ export async function POST(request: Request) {
       );
     }
 
+    const structuredDetails = [
+      details,
+      "",
+      "--- Lead preparation metadata ---",
+      `Company: ${company || "Not provided"}`,
+      `Email: ${email || "Not provided"}`,
+      `Phone: ${phone || contact}`,
+      `Industry: ${industry || "Not provided"}`,
+      `Country: ${country || "Not provided"}`,
+      `Selected package: ${selectedPackage || "Not selected"}`,
+      `Selected demo: ${selectedDemo || "Not selected"}`,
+      `Consent status: ${consentStatus || "Not reviewed"}`,
+      `Approval status: ${approvalStatus || "Draft"}`,
+      `Follow-up date: ${followUpDate || "Not scheduled"}`,
+    ].join("\n");
+
     const response = await fetch(`${supabaseUrl.replace(/\/$/, "")}/rest/v1/agency_leads`, {
       method: "POST",
       headers: {
@@ -130,7 +156,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
         Prefer: "return=minimal",
       },
-      body: JSON.stringify({ name, contact, service, budget, timeline, details, source }),
+      body: JSON.stringify({ name, contact: phone || contact, service, budget, timeline, details: structuredDetails, source }),
       cache: "no-store",
     });
 

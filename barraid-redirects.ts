@@ -1,4 +1,11 @@
-export const barRaidLegacyRedirects: any[] = [
+type LegacyRedirect = {
+  source: string;
+  destination: string;
+  permanent: boolean;
+  has?: Array<{ type: "query"; key: string; value: string }>;
+};
+
+export const barRaidLegacyRedirects: LegacyRedirect[] = [
   {
     "source": "/Beer-Glass/beer-boot-glass-blue",
     "destination": "/demos/barraid/product/barraid-blue-beer-boot-glass-650-ml-capacity-50",

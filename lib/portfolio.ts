@@ -136,3 +136,28 @@ export const portfolioDemos: PortfolioDemo[] = [
   },
 ];
 
+const serviceTags: Record<string, string[]> = {
+  "ai-development": ["AI Agent", "RAG", "Automation"],
+  "business-automation": ["Automation", "Lead Capture", "CRM", "Tracking", "Dashboard"],
+  "lead-generation": ["Lead Capture", "CRM", "Analytics", "Pipeline"],
+  "custom-software": ["SaaS", "Dashboard", "Portal", "CRM", "Tracking"],
+  "ecommerce-development": ["E-commerce", "Cart", "D2C"],
+  "shopify-development": ["E-commerce", "Cart", "D2C"],
+  "wordpress-development": ["Live Demo", "LMS", "Healthcare", "Listings"],
+  "web-development": ["Live Demo", "Booking", "Listings", "LMS", "E-commerce"],
+  "social-media-automation": ["Lead Capture", "Analytics", "Automation"],
+  "digital-marketing": ["Lead Capture", "Analytics", "Marketing", "E-commerce"],
+  "seo-growth": ["Live Demo", "Analytics", "Search"],
+  "content-writing": ["AI Agent", "Marketing", "Live Demo"],
+};
+
+export function getRelatedPortfolio(slug: string, limit = 4): PortfolioDemo[] {
+  const wanted = serviceTags[slug] ?? [];
+  return portfolioDemos
+    .map((demo) => ({ demo, score: demo.tags.reduce((sum, tag) => sum + (wanted.includes(tag) ? 2 : 0), 0) }))
+    .sort((a, b) => b.score - a.score)
+    .filter(({ score }) => score > 0)
+    .slice(0, limit)
+    .map(({ demo }) => demo);
+}
+

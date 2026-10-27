@@ -21,10 +21,10 @@ export default function SiteHeader() {
         </Link>
 
         <nav aria-label="Primary navigation" className="hidden items-center gap-7 text-sm text-slate-300 lg:flex">
-          <a href="/#services" className="transition hover:text-white">Services</a>
+          <Link href="/#services" className="transition hover:text-white">Services</Link>
           <Link href="/work" className="transition hover:text-white">Work</Link>
-          <a href="/#estimator" className="transition hover:text-white">Estimator</a>
-          <a href="/#process" className="transition hover:text-white">Process</a>
+          <Link href="/#estimator" className="transition hover:text-white">Estimator</Link>
+          <Link href="/#process" className="transition hover:text-white">Process</Link>
           <Link href="/about" className="transition hover:text-white">About</Link>
           <Link href="/contact" className="transition hover:text-white">Contact</Link>
           <a

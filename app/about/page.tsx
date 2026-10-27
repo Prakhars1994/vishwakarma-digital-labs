@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { CONTACT, OWNER, SITE_URL } from "@/lib/site";
@@ -17,7 +18,7 @@ export default function AboutPage() {
       <main id="main-content">
         <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
           <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]">
-            <div><div className="grid h-28 w-28 place-items-center rounded-[2rem] bg-gradient-to-br from-orange-400 to-orange-600 text-4xl font-black">PS</div><div className="mt-7 text-sm font-black uppercase tracking-[.22em] text-orange-300">Founder-led studio</div><h1 className="mt-3 text-5xl font-black">{OWNER.name}</h1><div className="mt-3 text-lg font-semibold text-slate-300">{OWNER.role}</div><a href={CONTACT.github} target="_blank" rel="noreferrer" className="mt-7 inline-block rounded-xl border border-white/15 px-5 py-3 font-semibold">GitHub ↗</a></div>
+            <div><div className="relative aspect-[4/5] max-w-sm overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl shadow-orange-500/10"><Image src="/prakharsingh-tuxedo.png" alt="Prakhar Singh, founder of Vishwakarma Digital Labs" fill priority sizes="(max-width: 1024px) 100vw, 360px" className="object-cover" /></div><div className="mt-7 text-sm font-black uppercase tracking-[.22em] text-orange-300">Founder-led studio</div><h1 className="mt-3 text-5xl font-black">{OWNER.name}</h1><div className="mt-3 text-lg font-semibold text-slate-300">{OWNER.role}</div><a href={CONTACT.github} target="_blank" rel="noreferrer" className="mt-7 inline-block rounded-xl border border-white/15 px-5 py-3 font-semibold">GitHub ↗</a></div>
             <div><p className="text-2xl leading-10 text-slate-200">{OWNER.summary}</p><p className="mt-7 text-lg leading-8 text-slate-400">Vishwakarma Digital Labs is an independent development studio focused on practical digital products rather than generic technology presentations. Work is scoped around the business outcome, the data and integrations involved, and the simplest reliable production architecture.</p><p className="mt-5 text-lg leading-8 text-slate-400">The portfolio is deliberately transparent: CurrentPulse AI is shown as production work, while interactive demo products are labelled as portfolio concepts. That distinction matters because credibility is more valuable than inflated claims.</p></div>
           </div>
 
