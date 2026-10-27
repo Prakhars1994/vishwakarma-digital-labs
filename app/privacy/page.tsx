@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { CONTACT } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Privacy Policy", description: "Privacy policy for Vishwakarma Digital Labs.", alternates: { canonical: "/privacy" } };
+export const metadata: Metadata = { title: "Privacy Policy", description: "Privacy policy for Vishwakarma Digital Labs.", alternates: { canonical: "/privacy" }, robots: { index: true, follow: true } };
 
 export default function PrivacyPage() {
   return (

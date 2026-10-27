@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { CONTACT } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Terms of Use", description: "Terms of use for Vishwakarma Digital Labs.", alternates: { canonical: "/terms" } };
+export const metadata: Metadata = { title: "Terms of Use", description: "Terms of use for Vishwakarma Digital Labs.", alternates: { canonical: "/terms" }, robots: { index: true, follow: true } };
 
 export default function TermsPage() {
   return (
