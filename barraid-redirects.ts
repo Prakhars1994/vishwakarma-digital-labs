@@ -521,16 +521,6 @@ export const barRaidLegacyRedirects: any[] = [
     "permanent": true
   },
   {
-    "source": "/privacy",
-    "destination": "/demos/barraid/privacy",
-    "permanent": true
-  },
-  {
-    "source": "/terms",
-    "destination": "/demos/barraid/terms",
-    "permanent": true
-  },
-  {
     "source": "/index.php",
     "destination": "/demos/barraid/product/barraid-blue-beer-boot-glass-650-ml-capacity-50",
     "permanent": true,
