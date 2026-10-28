@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { portfolioDemos } from "@/lib/portfolio";
-import { CONTACT, CURRENT_PULSE_URL, SITE_URL } from "@/lib/site";
+import { CONTACT, SITE_URL } from "@/lib/site";
 
 const githubBuilds = [
   { name: "MultiPost AI", type: "Public repository · AI / content automation", description: "A public AI/content automation build available for prospects to inspect on GitHub.", url: "https://github.com/Prakhars1994/multipost-ai", accent: "from-violet-500/20 to-cyan-400/10", icon: "✦" },
@@ -48,7 +48,7 @@ export default function WorkPage() {
               <h2 className="mt-4 text-4xl font-black">CurrentPulse AI</h2>
               <p className="mt-5 text-lg leading-8 text-slate-300">Administrator-controlled Current Affairs and News publishing, ResultPulse official-source exam monitoring, Supabase/PostgreSQL, editorial and sitemap quality gates, Cloudflare delivery and validated GitHub Actions deployments.</p>
               <div className="mt-7 flex flex-wrap gap-2">{["Next.js","React","Supabase","PostgreSQL","Cloudflare","GitHub Actions","Editorial quality gates"].map((item)=><span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300">{item}</span>)}</div>
-              <div className="mt-8 flex flex-wrap gap-4"><Link href="/work/currentpulse-ai" className="rounded-xl bg-white px-6 py-3 font-bold text-slate-950">Read case study →</Link><a href={CURRENT_PULSE_URL} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 px-6 py-3 font-semibold">Open live product ↗</a><a href={CONTACT.github} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 px-6 py-3 font-semibold">GitHub ↗</a></div>
+              <div className="mt-8 flex flex-wrap gap-4"><Link href="/work/currentpulse-ai" className="rounded-xl bg-white px-6 py-3 font-bold text-slate-950">Read case study →</Link><Link href="/contact" className="rounded-xl border border-white/15 px-6 py-3 font-semibold">Discuss a similar product →</Link><a href={CONTACT.github} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 px-6 py-3 font-semibold">GitHub ↗</a></div>
             </div>
             <div className="relative min-h-[330px] overflow-hidden rounded-2xl border border-white/10 bg-slate-950/80 p-5">
               <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-orange-500/15 blur-3xl" />
