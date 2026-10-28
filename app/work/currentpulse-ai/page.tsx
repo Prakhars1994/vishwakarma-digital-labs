@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
-import { CURRENT_PULSE_URL, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "CurrentPulse AI Case Study",
@@ -43,7 +43,7 @@ export default function CurrentPulseCaseStudy() {
               A live publishing and exam-information platform for Current Affairs, News, revision tools and official-source exam updates, with administrator-controlled editorial publishing and production-grade Cloudflare delivery.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <a href={CURRENT_PULSE_URL} target="_blank" rel="noreferrer" className="rounded-xl bg-orange-500 px-6 py-3 font-bold">View live product ↗</a>
+              <Link href="/contact" className="rounded-xl bg-orange-500 px-6 py-3 font-bold">Discuss a similar build →</Link>
               <Link href="/contact" className="rounded-xl border border-white/15 px-6 py-3 font-semibold">Build something similar →</Link>
             </div>
           </div>
