@@ -44,7 +44,6 @@ export default function CurrentPulseCaseStudy() {
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link href="/contact" className="rounded-xl bg-orange-500 px-6 py-3 font-bold">Discuss a similar build →</Link>
-              <Link href="/contact" className="rounded-xl border border-white/15 px-6 py-3 font-semibold">Build something similar →</Link>
             </div>
           </div>
         </section>
