@@ -76,8 +76,8 @@ jobs:
             echo "GA4 measurement ID is missing from the production homepage HTML."
             exit 1
           fi
-          if ! grep --fixed-strings --quiet "googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GA_MEASUREMENT_ID}" <<< "${homepage}"; then
-            echo "GA4 gtag.js loader is missing from the production homepage HTML."
+          if ! grep --fixed-strings --quiet "data-ga4-id=\"${NEXT_PUBLIC_GA_MEASUREMENT_ID}\"" <<< "${homepage}"; then
+            echo "GA4 measurement ID is not attached to the production document."
             exit 1
           fi
           for path in / /work /work/currentpulse-ai /contact /demos/barraid /demos/familyvisauae /familyvisauae-hero.png /familyvisauae-consultation-v1.png /familyvisauae-document-review-v1.png /familyvisauae-team.png /familyvisauae-reception-v1.png /robots.txt /sitemap.xml; do

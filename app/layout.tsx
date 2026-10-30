@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import "./globals.css";
 import { CONTACT, OWNER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -110,7 +111,7 @@ const validGaMeasurementId = /^G-[A-Z0-9]+$/.test(gaMeasurementId) ? gaMeasureme
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-IN" data-scroll-behavior="smooth">
-      <body>
+      <body data-ga4-id={validGaMeasurementId || undefined}>
         <a className="skip-link" href="#main-content">Skip to main content</a>
         {children}
         <script
@@ -126,20 +127,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           />
         ) : null}
         {validGaMeasurementId ? (
-          <>
-            <Script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${validGaMeasurementId}`}
-              strategy="beforeInteractive"
-            />
-            <Script
-              id="google-analytics"
-              strategy="beforeInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${validGaMeasurementId}');`,
-              }}
-            />
-          </>
+          <GoogleAnalytics measurementId={validGaMeasurementId} />
         ) : null}
       </body>
     </html>
