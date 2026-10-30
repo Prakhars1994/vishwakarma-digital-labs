@@ -1,4 +1,4 @@
-﻿import type { NextConfig } from "next";
+import type { NextConfig } from "next";
 import { barRaidLegacyRedirects } from "./barraid-redirects";
 
 const csp = [
@@ -10,8 +10,8 @@ const csp = [
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   "style-src 'self' 'unsafe-inline'",
-  "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://static.cloudflareinsights.com",
-  "connect-src 'self' https://challenges.cloudflare.com https://cloudflareinsights.com https://*.supabase.co wss://*.supabase.co",
+  "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://static.cloudflareinsights.com https://www.googletagmanager.com",
+  "connect-src 'self' https://challenges.cloudflare.com https://cloudflareinsights.com https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.supabase.co wss://*.supabase.co",
   "frame-src https://challenges.cloudflare.com",
   "worker-src 'self' blob:",
   "upgrade-insecure-requests",
@@ -39,4 +39,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
