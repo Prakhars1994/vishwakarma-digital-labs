@@ -71,6 +71,15 @@ jobs:
         run: |
           set -euo pipefail
           base="https://vdldigital.com"
+          homepage="$(curl --silent --show-error --fail --location --retry 3 --retry-delay 2 --max-time 30 "${base}/")"
+          if ! grep --fixed-strings --quiet "${NEXT_PUBLIC_GA_MEASUREMENT_ID}" <<< "${homepage}"; then
+            echo "GA4 measurement ID is missing from the production homepage HTML."
+            exit 1
+          fi
+          if ! grep --fixed-strings --quiet "googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GA_MEASUREMENT_ID}" <<< "${homepage}"; then
+            echo "GA4 gtag.js loader is missing from the production homepage HTML."
+            exit 1
+          fi
           for path in / /work /work/currentpulse-ai /contact /demos/barraid /demos/familyvisauae /familyvisauae-hero.png /familyvisauae-consultation-v1.png /familyvisauae-document-review-v1.png /familyvisauae-team.png /familyvisauae-reception-v1.png /robots.txt /sitemap.xml; do
             echo "Checking ${base}${path}"
             curl --silent --show-error --fail --location --retry 3 --retry-delay 2 --max-time 30 "${base}${path}" >/dev/null

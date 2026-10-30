@@ -130,11 +130,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <Script
               async
               src={`https://www.googletagmanager.com/gtag/js?id=${validGaMeasurementId}`}
-              strategy="afterInteractive"
+              strategy="beforeInteractive"
             />
             <Script
               id="google-analytics"
-              strategy="afterInteractive"
+              strategy="beforeInteractive"
               dangerouslySetInnerHTML={{
                 __html: `window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${validGaMeasurementId}');`,
               }}
