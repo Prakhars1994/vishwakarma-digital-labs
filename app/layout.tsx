@@ -104,6 +104,8 @@ const websiteSchema = {
 };
 
 const cloudflareAnalyticsToken = process.env.NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN || "";
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
+const validGaMeasurementId = /^G-[A-Z0-9]+$/.test(gaMeasurementId) ? gaMeasurementId : "";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -122,6 +124,22 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             data-cf-beacon={JSON.stringify({ token: cloudflareAnalyticsToken })}
             strategy="afterInteractive"
           />
+        ) : null}
+        {validGaMeasurementId ? (
+          <>
+            <Script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${validGaMeasurementId}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${validGaMeasurementId}');`,
+              }}
+            />
+          </>
         ) : null}
       </body>
     </html>

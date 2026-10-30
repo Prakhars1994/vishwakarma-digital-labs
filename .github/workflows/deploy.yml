@@ -16,6 +16,7 @@ concurrency:
 env:
   NEXT_TELEMETRY_DISABLED: "1"
   SITE_URL: https://vdldigital.com
+  NEXT_PUBLIC_GA_MEASUREMENT_ID: G-8C40ZK3GC5
 
 jobs:
   deploy:

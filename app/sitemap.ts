@@ -7,10 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${SITE_URL}/services`, changeFrequency: "monthly", priority: 0.9 },
     { url: SITE_URL, changeFrequency: "weekly", priority: 1 },
-    { url: `${SITE_URL}/services/web-development`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${SITE_URL}/services/mobile-app-development`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${SITE_URL}/services/ai-development`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${SITE_URL}/services/business-automation`, changeFrequency: "monthly", priority: 0.9 },
     ...Object.keys(serviceData).map((slug) => ({ url: `${SITE_URL}/services/${slug}`, changeFrequency: "monthly" as const, priority: 0.9 })),
     { url: `${SITE_URL}/solutions`, changeFrequency: "monthly", priority: 0.9 },
     ...solutionCollections.map((item) => ({ url: `${SITE_URL}/solutions/${item.slug}`, changeFrequency: "monthly" as const, priority: 0.85 })),
