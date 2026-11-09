@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./internal-page-theme.css";
 
 export const metadata: Metadata = {
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   title: { absolute: "FamilyVisaUAE | UAE Visa & Document Support" },
   description: "UAE visa, Emirates ID and document-support guidance with clear fee separation and WhatsApp-first help.",
   openGraph: {

@@ -18,5 +18,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/contact`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/privacy`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE_URL}/terms`, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${SITE_URL}/demos/ai-assistant`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/clinic`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/crm`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/ecommerce`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/home-services`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/lms`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/logistics`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/real-estate`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/restaurant`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/service-business`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/familyvisauae`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_URL}/demos/safalbandhan-new`, changeFrequency: "monthly", priority: 0.6 },
   ];
 }

@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
 
-export function demoMetadata(path: string, title: string, description: string): Metadata {
+export function demoMetadata(path: string, title: string, description: string, indexable = false): Metadata {
   const canonical = `${SITE_URL}${path}`;
   return {
     title,
     description,
     alternates: { canonical },
     robots: {
-      index: false,
+      index: indexable,
       follow: true,
-      googleBot: { index: false, follow: true },
+      googleBot: { index: indexable, follow: true },
     },
     openGraph: {
       title,

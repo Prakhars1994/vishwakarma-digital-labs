@@ -5,7 +5,7 @@ import Plans from "./Plans";
 import MemberPreview from "./MemberPreview";
 import Registration from "./Registration";
 import PlatformDepth from "./PlatformDepth";
-export const metadata = demoMetadata("/demos/safalbandhan-new", "SafalBandhan New | Premium Matrimonial Platform", "Premium matrimonial platform concept by Vishwakarma Digital Labs, featuring match discovery, privacy controls and family-first UX.");
+export const metadata = demoMetadata("/demos/safalbandhan-new", "SafalBandhan New | Premium Matrimonial Platform", "Premium matrimonial platform concept by Vishwakarma Digital Labs, featuring match discovery, privacy controls and family-first UX.", true);
 const profiles=[
 ["Aarohi Sharma","28","Shimla","MBA • HR Manager","https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80"],
 ["Raghav Verma","31","Chandigarh","B.Tech • Product Lead","https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80"],
