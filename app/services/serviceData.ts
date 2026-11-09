@@ -173,7 +173,7 @@ export const serviceData = {
     deliverables: ["Catalog and product information architecture", "Cart and checkout experience", "Payments, shipping and order workflows", "Search, filters and conversion paths", "Analytics, SEO and performance", "Admin, handover and support plan"],
     bestFor: ["Retail", "D2C", "Food", "Fashion", "Services", "Marketplaces"],
     process: ["Catalog audit", "Store plan", "UX direction", "Build", "Test", "Launch"],
-    demos: [{ label: "LumaCart demo", href: "/demos/ecommerce" }, { label: "Standalone store", href: "/standalone-ecommerce" }, { label: "View portfolio", href: "/work" }],
+    demos: [{ label: "LumaCart demo", href: "/demos/ecommerce" }, { label: "View portfolio", href: "/work" }],
   },
   "custom-software": {
     eyebrow: "Custom Software",
