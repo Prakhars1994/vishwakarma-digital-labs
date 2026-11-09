@@ -28,5 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/demos/real-estate`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/demos/restaurant`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/demos/service-business`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/demos/familyvisauae`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_URL}/demos/safalbandhan-new`, changeFrequency: "monthly", priority: 0.6 },
   ];
 }
