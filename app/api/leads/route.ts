@@ -59,47 +59,53 @@ async function verifyTurnstile(token: string, ip: string) {
   return result.success === true;
 }
 
-async function sendBrevoEmail(name: string, contact: string, service: string, budget: string, timeline: string, details: string) {
-  const apiKey = process.env.BREVO_API_KEY;
-  if (!apiKey) {
-    console.warn("Brevo API key not configured, skipping email");
+async function sendTwilioWhatsApp(name: string, contact: string, service: string, budget: string, timeline: string, details: string) {
+  const accountSid = process.env.TWILIO_ACCOUNT_SID;
+  const authToken = process.env.TWILIO_AUTH_TOKEN;
+  const twilioWhatsAppNumber = process.env.TWILIO_WHATSAPP_NUMBER || "whatsapp:+1234567890";
+  const recipientNumber = "whatsapp:+918446000784";
+
+  if (!accountSid || !authToken) {
+    console.warn("Twilio credentials not configured, skipping WhatsApp notification");
     return;
   }
 
   try {
-    const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+    const message = [
+      "🎉 *New Project Enquiry - Yatra Trails*",
+      "",
+      `*Name:* ${name}`,
+      `*Contact:* ${contact}`,
+      `*Service:* ${service}`,
+      `*Budget:* ${budget}`,
+      `*Timeline:* ${timeline}`,
+      "",
+      `*Details:*`,
+      details.slice(0, 500), // Limit length for WhatsApp
+    ].join("\n");
+
+    const auth = Buffer.from(`${accountSid}:${authToken}`).toString("base64");
+
+    const response = await fetch(`https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`, {
       method: "POST",
       headers: {
-        "api-key": apiKey,
-        "Content-Type": "application/json",
+        Authorization: `Basic ${auth}`,
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: JSON.stringify({
-        sender: { name: "Yatra Trails", email: "prakhars389@gmail.com" },
-        to: [{ email: "prakhars389@gmail.com" }],
-        subject: `New Project Enquiry – ${name}`,
-        htmlContent: `
-          <h2>New Project Enquiry</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Contact:</strong> ${contact}</p>
-          <h3>Project Details:</h3>
-          <ul>
-            <li><strong>Service:</strong> ${service}</li>
-            <li><strong>Budget:</strong> ${budget}</li>
-            <li><strong>Timeline:</strong> ${timeline}</li>
-          </ul>
-          <h3>Description:</h3>
-          <p>${details.replace(/\n/g, "<br />")}</p>
-        `,
-      }),
+      body: new URLSearchParams({
+        From: twilioWhatsAppNumber,
+        To: recipientNumber,
+        Body: message,
+      }).toString(),
       cache: "no-store",
     });
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("Brevo email send failed:", response.status, errorText.slice(0, 500));
+      console.error("Twilio WhatsApp send failed:", response.status, errorText.slice(0, 500));
     }
   } catch (error) {
-    console.error("Brevo email error:", error);
+    console.error("Twilio WhatsApp error:", error);
   }
 }
 
@@ -184,8 +190,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ saved: false, error: "Database write failed" }, { status: 502 });
     }
 
-    // Send notification email via Brevo (non-blocking, errors don't affect lead save)
-    void sendBrevoEmail(name, contact, service, budget, timeline, details);
+    // Send WhatsApp notification via Twilio (non-blocking, errors don't affect lead save)
+    void sendTwilioWhatsApp(name, contact, service, budget, timeline, details);
 
     return NextResponse.json({ saved: true });
   } catch (error) {
