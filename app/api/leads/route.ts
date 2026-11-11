@@ -59,6 +59,13 @@ async function verifyTurnstile(token: string, ip: string) {
   return result.success === true;
 }
 
+async function sendNotification(name: string, contact: string, service: string, budget: string, timeline: string, details: string) {
+  // Send email via Brevo
+  await sendBrevoEmail(name, contact, service, budget, timeline, details);
+  // Send WhatsApp via Meta
+  await sendMetaWhatsApp(name, contact, service, budget, timeline, details);
+}
+
 async function sendBrevoEmail(name: string, contact: string, service: string, budget: string, timeline: string, details: string) {
   const apiKey = process.env.BREVO_API_KEY;
   if (!apiKey) {
@@ -100,6 +107,43 @@ async function sendBrevoEmail(name: string, contact: string, service: string, bu
     }
   } catch (error) {
     console.error("Brevo email error:", error);
+  }
+}
+
+async function sendMetaWhatsApp(name: string, contact: string, service: string, budget: string, timeline: string, details: string) {
+  const phoneNumberId = process.env.META_WHATSAPP_PHONE_NUMBER_ID;
+  const accessToken = process.env.META_WHATSAPP_ACCESS_TOKEN;
+
+  if (!phoneNumberId || !accessToken) {
+    console.warn("Meta WhatsApp credentials not configured, skipping WhatsApp");
+    return;
+  }
+
+  try {
+    const message = `🎉 *New Project Enquiry - Yatra Trails*\n\n*Name:* ${name}\n*Contact:* ${contact}\n\n*Service:* ${service}\n*Budget:* ${budget}\n*Timeline:* ${timeline}\n\n*Details:*\n${details.slice(0, 400)}`;
+
+    const response = await fetch(`https://graph.instagram.com/v18.0/${phoneNumberId}/messages`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        messaging_product: "whatsapp",
+        recipient_type: "individual",
+        to: "8446000784",
+        type: "text",
+        text: { body: message },
+      }),
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("Meta WhatsApp send failed:", response.status, errorText.slice(0, 500));
+    }
+  } catch (error) {
+    console.error("Meta WhatsApp error:", error);
   }
 }
 
@@ -184,8 +228,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ saved: false, error: "Database write failed" }, { status: 502 });
     }
 
-    // Send email notification via Brevo (non-blocking, errors don't affect lead save)
-    void sendBrevoEmail(name, contact, service, budget, timeline, details);
+    // Send notifications via Brevo email + Meta WhatsApp (non-blocking, errors don't affect lead save)
+    void sendNotification(name, contact, service, budget, timeline, details);
 
     return NextResponse.json({ saved: true });
   } catch (error) {
