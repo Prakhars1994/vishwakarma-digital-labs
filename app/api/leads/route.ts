@@ -59,6 +59,50 @@ async function verifyTurnstile(token: string, ip: string) {
   return result.success === true;
 }
 
+async function sendBrevoEmail(name: string, contact: string, service: string, budget: string, timeline: string, details: string) {
+  const apiKey = process.env.BREVO_API_KEY;
+  if (!apiKey) {
+    console.warn("Brevo API key not configured, skipping email");
+    return;
+  }
+
+  try {
+    const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+      method: "POST",
+      headers: {
+        "api-key": apiKey,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        sender: { name: "Yatra Trails", email: "prakhars389@gmail.com" },
+        to: [{ email: "prakhars389@gmail.com" }],
+        subject: `New Project Enquiry – ${name}`,
+        htmlContent: `
+          <h2>New Project Enquiry</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Contact:</strong> ${contact}</p>
+          <h3>Project Details:</h3>
+          <ul>
+            <li><strong>Service:</strong> ${service}</li>
+            <li><strong>Budget:</strong> ${budget}</li>
+            <li><strong>Timeline:</strong> ${timeline}</li>
+          </ul>
+          <h3>Description:</h3>
+          <p>${details.replace(/\n/g, "<br />")}</p>
+        `,
+      }),
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("Brevo email send failed:", response.status, errorText.slice(0, 500));
+    }
+  } catch (error) {
+    console.error("Brevo email error:", error);
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const contentLength = Number(request.headers.get("content-length") || 0);
@@ -139,6 +183,9 @@ export async function POST(request: Request) {
       console.error("Lead save failed:", response.status, errorText.slice(0, 500));
       return NextResponse.json({ saved: false, error: "Database write failed" }, { status: 502 });
     }
+
+    // Send notification email via Brevo (non-blocking, errors don't affect lead save)
+    void sendBrevoEmail(name, contact, service, budget, timeline, details);
 
     return NextResponse.json({ saved: true });
   } catch (error) {
